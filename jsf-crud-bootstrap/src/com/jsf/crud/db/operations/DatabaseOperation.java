@@ -10,7 +10,8 @@ import java.util.Map;
 
 import javax.faces.context.FacesContext;
 
-import com.jsf.crud.StudentBean;
+import com.jsf.entidade.Student;
+
 
 public class DatabaseOperation {
 
@@ -34,13 +35,13 @@ public class DatabaseOperation {
 	}
 
 	/* Method To Fetch The Student Records From Database */
-//	public static ArrayList<StudentBean> getStudentsListFromDB() {
-//		ArrayList<StudentBean> studentsList = new ArrayList<StudentBean>();  
+//	public static ArrayList<Student> getStudentsListFromDB() {
+//		ArrayList<Student> studentsList = new ArrayList<Student>();  
 //		try {
 //			int contador = 0;
 //			
 //			while(contador < 10) {  
-//				StudentBean stuObj = new StudentBean(); 
+//				Student stuObj = new Student(); 
 //				stuObj.setId(contador);  
 //				stuObj.setName("11111111 "+contador);  
 //				stuObj.setEmail("setEmail "+contador);  
@@ -58,13 +59,13 @@ public class DatabaseOperation {
 //	}
 	
 	/* Method To Fetch The Student Records From Database */
-	public static ArrayList<StudentBean> getStudentsListFromDB() {
-		ArrayList<StudentBean> studentsList = new ArrayList<StudentBean>();  
+	public static ArrayList<Student> getStudentsListFromDB() {
+		ArrayList<Student> studentsList = new ArrayList<Student>();  
 		try {
 			stmtObj = getConnection().createStatement();    
 			resultSetObj = stmtObj.executeQuery("select * from student_record");    
 			while(resultSetObj.next()) {  
-				StudentBean stuObj = new StudentBean(); 
+				Student stuObj = new Student(); 
 				stuObj.setId(resultSetObj.getInt("student_id"));  
 				stuObj.setName(resultSetObj.getString("student_name"));  
 				stuObj.setEmail(resultSetObj.getString("student_email"));  
@@ -82,7 +83,7 @@ public class DatabaseOperation {
 	}
 
 	/* Method Used To Save New Student Record In Database */
-	public static String saveStudentDetailsInDB(StudentBean newStudentObj) {
+	public static String saveStudentDetailsInDB(Student newStudentObj) {
 		int saveResult = 0;
 		String navigationResult = "";
 		try {      
@@ -107,7 +108,7 @@ public class DatabaseOperation {
 
 	/* Method Used To Edit Student Record In Database */
 	public static String editStudentRecordInDB(int studentId) {
-		StudentBean editRecord = null;
+		Student editRecord = null;
 		System.out.println("editStudentRecordInDB() : Student Id: " + studentId);
 
 		/* Setting The Particular Student Details In Session */
@@ -118,7 +119,7 @@ public class DatabaseOperation {
 			resultSetObj = stmtObj.executeQuery("select * from student_record where student_id = "+studentId);    
 			if(resultSetObj != null) {
 				resultSetObj.next();
-				editRecord = new StudentBean(); 
+				editRecord = new Student(); 
 				editRecord.setId(resultSetObj.getInt("student_id"));
 				editRecord.setName(resultSetObj.getString("student_name"));
 				editRecord.setEmail(resultSetObj.getString("student_email"));
@@ -135,7 +136,7 @@ public class DatabaseOperation {
 	}
 
 	/* Method Used To Update Student Record In Database */
-	public static String updateStudentDetailsInDB(StudentBean updateStudentObj) {
+	public static String updateStudentDetailsInDB(Student updateStudentObj) {
 		try {
 			pstmt = getConnection().prepareStatement("update student_record set student_name=?, student_email=?, student_password=?, student_gender=?, student_address=? where student_id=?");    
 			pstmt.setString(1,updateStudentObj.getName());  
