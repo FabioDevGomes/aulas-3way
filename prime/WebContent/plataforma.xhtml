@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<h:body>
+	<h:form>
+		<p:growl id="growl" showDetail="true" sticky="true" /> 
+		<p:messages id="messages" autoUpdate="true"/>
+		<div align="center">
+			<h:panelGrid columns="1" style="margin-bottom:10px" cellpadding="5">
+				<h:outputText value="Escolha a Plataforma:" />
+				<p:selectOneButton value="#{selecionarPlataforma.option}">
+					<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+					<f:selectItem itemLabel="PS4" itemValue="PS4" />
+					<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+					<!-- 				 <p:ajax update="@form"/>   -->
+				</p:selectOneButton>
+			</h:panelGrid>
+		</div>
+		
+		<div align="center">
+			<p:commandButton value="Selecionar" update="imagens, growl" icon="ui-icon-check" />
+			<p:spacer />
+		</div>
+
+		<div align="center">
+			<p:galleria id="imagens" value="#{selecionarPlataforma.images}"
+				var="image" panelWidth="500" panelHeight="313" showCaption="true">
+				<p:graphicImage name="/imagens/#{image}"
+					alt="Descrição do Jogo #{image}" title="#{image}" />
+			</p:galleria>
+		</div>
+
+	</h:form>
+</h:body>
+</html>
+
