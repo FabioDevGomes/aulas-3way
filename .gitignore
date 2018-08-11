@@ -8,6 +8,8 @@ target/
 .project
 .settings
 .springBeans
+.metadata
+.recommenders
 bin/
 
 ### IntelliJ IDEA ###
