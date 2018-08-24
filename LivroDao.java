@@ -15,9 +15,8 @@ public class LivroDao {
 	Logger LOG = Logger.getGlobal();
 	
 	private static final String OBTER_POR_ID_SQL = "SELECT AUTOR, TITULO, COD_LIVRO, IMAGEM,PRECO, DESCRICAO FROM ESTOQUE WHERE COD_LIVRO = ?";
-	
 	private static final String CONSULTAR_SQL = "SELECT COD_LIVRO, TITULO, AUTOR, PRECO, IMAGEM, DESCRICAO FROM ESTOQUE WHERE TITULO LIKE ?";
-	
+
 	public Livro consultar (int codigo){
 		Livro livro = null;
 		try (Connection conexao = FabricaConexao.getConexao(); 
@@ -27,6 +26,7 @@ public class LivroDao {
 			ResultSet resultado = consulta.executeQuery();
 			
 			if(resultado.next()){
+				livro = new Livro();
 				livro.setAutor(resultado.getString("AUTOR"));
 				livro.setCodigo(resultado.getInt("COD_LIVRO"));
 				livro.setImagem(resultado.getString("IMAGEM"));
@@ -37,6 +37,7 @@ public class LivroDao {
 			
 			resultado.close();
 		}catch(SQLException e){
+			e.printStackTrace();
 			LOG.severe(e.toString());
 		}
 		return livro;
@@ -49,7 +50,7 @@ public class LivroDao {
 			
 			ResultSet resultado = consulta.executeQuery();
 			
-			if(resultado.next()){
+			while(resultado.next()){
 				Livro livro = new Livro();
 				livro.setAutor(resultado.getString("AUTOR"));
 				livro.setCodigo(resultado.getInt("COD_LIVRO"));
@@ -62,6 +63,7 @@ public class LivroDao {
 			
 			resultado.close();
 		}catch(SQLException e){
+			e.printStackTrace();
 			LOG.severe(e.toString());
 		}
 		return lista;
