@@ -20,7 +20,6 @@ public class LivroDao {
 //	private static final String CONSULTAR_SQL = "SELECT * FROM ESTOQUE WHERE TITULO LIKE ?";
 //	private static final String UPDATE_SQL = "UPDATE ESTOQUE SET TITULO = ?, AUTOR = ? WHERE COD_LIVRO = ?";
 
-
 	public Livro consultar(int codigo) {
 		Livro livro = null;
 		try (Connection conexao = FabricaConexao.getConexao();
@@ -76,11 +75,12 @@ public class LivroDao {
 
 	public void updateTitulo(Livro livro) {
 
-		//String sql = "UPDATE ESTOQUE SET TITULO = ?, AUTOR = ? " + " WHERE COD_LIVRO = ?";
+		// String sql = "UPDATE ESTOQUE SET TITULO = ?, AUTOR = ? " + " WHERE COD_LIVRO
+		// = ?";
 
 		// Cria uma conexão com o banco
 		// Cria um PreparedStatment, classe usada para executar a query
-		
+
 		try (Connection conexao = FabricaConexao.getConexao();
 				PreparedStatement consulta = conexao.prepareStatement(Sql.UPDATE_SQL.getSql());) {
 
@@ -96,8 +96,8 @@ public class LivroDao {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-		} 
-		
+		}
+
 //		finally {
 //
 //			// Fecha as conexões
@@ -115,5 +115,21 @@ public class LivroDao {
 //				e.printStackTrace();
 //			}
 //		}
+	}
+
+	public void removeById(int id) {
+
+		String sql = "DELETE FROM ESTOQUE WHERE COD_LIVRO = ?";
+
+		try (Connection conexao = FabricaConexao.getConexao();
+				PreparedStatement consulta = conexao.prepareStatement(sql);){
+
+			consulta.setInt(1, id);
+
+			consulta.execute();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
 	}
 }
