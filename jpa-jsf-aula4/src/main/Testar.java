@@ -17,7 +17,14 @@ public class Testar {
 		usuario.setMatricula("-----");
 		usuario.setUltimoAcesso(new Date());
 		
-		dao.inserirUsuario(usuario);
+//		dao.inserirUsuario(usuario);
+		
+		
+		for (Object objeto : dao.listarUsuario()) {
+			Usuario usuario2 = (Usuario) objeto;
+			System.out.println(usuario2.getMatricula());
+			
+		}// dao.listarUsuario();
 
 	}
 

@@ -1,10 +1,10 @@
 ﻿-- Table: public.usuario
 
--- DROP TABLE public.usuario;
+ DROP TABLE public.usuario;
 
 CREATE TABLE public.usuario
 (
-  id integer NOT NULL,
+  id integer NOT NULL ,
   username character varying(255) NOT NULL,
   password character varying(255) NOT NULL,
   lastaccess date,
