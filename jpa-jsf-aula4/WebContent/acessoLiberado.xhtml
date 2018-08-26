@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:messages id="messages" value="ff"/>
+		<input type="hidden" name="acessoLiberado" value="ok" />
+		<h:commandLink action="#{cardLoginMB.enviar}">
+			<p:graphicImage id="city" value="resources/imagens/Unlock.png"
+				width="250" height="190">
+			</p:graphicImage>
+		</h:commandLink>
+	</h:form>
+</h:body>
+</html>
