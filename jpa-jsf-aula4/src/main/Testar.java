@@ -11,9 +11,10 @@ public class Testar {
 		UsuarioDAO dao = new UsuarioDAO();
 		
 		Usuario usuario = new Usuario();
-		usuario.setId(7);
-		usuario.setNomeUsuario("teste 2");
-		usuario.setSenha("234");
+//		usuario.setId(7);
+		usuario.setNomeUsuario("---teste 2");
+		usuario.setSenha("---234");
+		usuario.setMatricula("-----");
 		usuario.setUltimoAcesso(new Date());
 		
 		dao.inserirUsuario(usuario);
