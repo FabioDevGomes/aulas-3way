@@ -1,4 +1,4 @@
-package generics;
+package generics1;
 
 import java.util.List;
 

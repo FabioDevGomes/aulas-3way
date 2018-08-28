@@ -11,7 +11,7 @@ public class Movimento<T> {
 	// uma colecao, deve manter a ordem de inserçao
 	private ArrayList<T> transacoes;
 
-	// Construtore
+	// Construtor
 	/**
 	 * Controi um Movimento vazio (sem transacoes).
 	 */
