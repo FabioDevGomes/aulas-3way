@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<title></title>
+	<script type="text/javascript">
+		function buscar(titulo){
+			alert(titulo);
+			var valor = prompt('digite a idade');
+			if(valor > 10){
+				alert('maior q 10');
+			}
+
+		}
+
+	</script>
+</head>
+<body onload="return buscar('nome dd')">
+	<div class="panel panel-primary">
+		<div class="panel-heading">Cadastro</div>
+			<div class="panel-body">
+				<!--<form method="post" action="">-->
+				<form >
+					<fieldset>
+						<div class="form-group">
+							<label>Nome Completo</label>
+							<input type="text" class="form-control" name="nome" required>
+						</div>
+						<div for="ligin" class="form-group">
+							<label>Usuário</label>
+							<input type="text" class="form-control" name="nome" id="login" required>
+						</div>
+					</fieldset>
+					<input type="submit" name="Salvar" class="btn btn-primary">
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
