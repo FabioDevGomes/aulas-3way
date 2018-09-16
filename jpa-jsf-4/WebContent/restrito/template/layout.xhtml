@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+    <h:outputStylesheet library="css" name="bootstrap.min.css" />
+    <h:outputStylesheet library="css" name="Footer-white.css" />
+    <title>JSF JPA Crud</title>
+    <style type="text/css">
+        .btnWidth {
+            width: 80px;
+        }
+        .col-sm-updated {
+    		padding-top: 7px;    		
+        }
+         .col-sm-updated a {
+         	margin-left: 30px;
+        	text-decoration: none !important;
+        }
+        .col-sm-27 {
+        	width: 27% !important;
+        }
+    </style>
+</h:head>
+
+<h:body>
+	<div id="page">
+		<div id="header">
+			<ui:insert name="header">
+				<ui:include src="/restrito/template/basicheader.xhtml" />
+			</ui:insert>
+		</div>
+		
+		<br/>
+		<br/>
+		<br/>
+		
+		<div id="content">
+			<ui:insert name="content">
+
+			</ui:insert>
+		</div>
+
+		<div id="footer">
+			<ui:insert name="footer">
+				<ui:include src="/restrito/template/basicfooter.xhtml" />
+			</ui:insert>
+		</div>
+	</div>
+
+</h:body>
+</html>
