@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.web.model.Livro;
 
@@ -45,11 +46,20 @@ public class ServletJSTL extends HttpServlet {
 		
 		request.setAttribute("listaLivrosNoAtributo", listaLivros);
 		
+		request.setAttribute("usuarioLogado", "Fábio Alves Gomes");
+		
+		
+		HttpSession session = request.getSession();
+//	    String username = (String)request.getAttribute("un");
+	    session.setAttribute("userName", "username na sessão direto do servlet");
+		
 		
 		
 		
 		RequestDispatcher rd = getServletContext().getRequestDispatcher("/listagemJstl.jsp");
 		rd.forward(request, response);
+	    
+//	    response.sendRedirect("/servlet-jsp-v2/listagemJstl.jsp");
 		
 	}
 
