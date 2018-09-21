@@ -2,4 +2,9 @@ Criar classe UsuárioService para tratar regras de negócio
 
 Somente essa classe terá acesso ao DAO
 
-Implementa regra para matrícula
+Implementa regra para matrícula M ou ADM
+
+Implementa regra para somente ADM poder editar usuários
+
+Criar mensagem de erro no tratamento da exceção passando o e.getMessage() como parâmetro
+
