@@ -14,7 +14,9 @@
 			<input type="text" name="color"	size="20px"> 
 			<input type="submit" value="submit">
 		</form>
+		<br/>
 		<c:out value="${Income}"/>  
+		<br/>
 		<c:out value="${usuario}"/>  
 	</body>
 </html>

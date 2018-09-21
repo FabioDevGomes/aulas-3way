@@ -40,19 +40,31 @@ public class ServletJSTL extends HttpServlet {
 		livro3.setDescricao("Livro feito pelo Fábio 3");
 		livro3.setTitulo("O Livro 3");
 		
+		Livro livro4 = new Livro();
+		livro4.setAutor("Fábio 3");
+		livro4.setDescricao("Livro feito pelo Fábio 3");
+		livro4.setTitulo("O Livro 3");
+		
+		Livro livro5 = new Livro();
+		livro5.setAutor("Fábio 3");
+		livro5.setDescricao("Livro feito pelo Fábio 3");
+		livro5.setTitulo("O Livro 3");
+		
 		listaLivros.add(livro);
 		listaLivros.add(livro2);
 		listaLivros.add(livro3);
+		listaLivros.add(livro4);
+		listaLivros.add(livro5);
 		
 		request.setAttribute("listaLivrosNoAtributo", listaLivros);
 		
-		request.setAttribute("usuarioLogado", "Fábio Alves Gomes");
+//		request.setAttribute("usuarioLogado", "Fábio Alves Gomes");
+		request.setAttribute("usuarioLogado", livro.getAutor());
 		
 		
 		HttpSession session = request.getSession();
 //	    String username = (String)request.getAttribute("un");
 	    session.setAttribute("userName", "username na sessão direto do servlet");
-		
 		
 		
 		
