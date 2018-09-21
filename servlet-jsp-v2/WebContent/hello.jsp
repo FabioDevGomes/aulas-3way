@@ -15,6 +15,7 @@
 			<input type="submit" value="submit">
 		</form>
 		<br/>
+		<label>Valores recuperados da sessão</label>
 		<c:out value="${Income}"/>  
 		<br/>
 		<c:out value="${usuario}"/>  
