@@ -1,0 +1,5 @@
+Criar classe UsuárioService para tratar regras de negócio
+
+Somente essa classe terá acesso ao DAO
+
+Implementa regra para matrícula
