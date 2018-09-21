@@ -1,0 +1,124 @@
+-----------------------03_Servlet_e_JSP_pages_deleted.pdf
+
+- slide 14 - após slide 20, Testar forward e sendRedirect
+
+		(you can use the same request attributes and the same 
+		request parameters when handling the new url. And the 
+		browser won't know the url has changed 
+		(because it has happened entirely on the server))
+
+
+		RequestDispatcher rd = getServletContext().getRequestDispatcher("/listagemJstl.jsp");
+		rd.forward(request, response);
+	    
+		response.sendRedirect("/servlet-jsp-v2/listagemJstl.jsp");
+
+
+- slide 16 - configurar página de erro e passar template usado como exemplo
+			404.jsp
+			
+			<error-page>
+				<error-code>404</error-code>
+				<location>/404.jsp</location>
+			</error-page>
+
+			<error-page>
+			    <location>/erroGeral.jsp</location>
+			</error-page>
+			
+
+
+- slide 20 - Exemplos a implemtentar de JSTL   https://www.journaldev.com/2090/jstl-tutorial-jstl-tags-example
+
+	Criar servlet que contenha uma lista de objetos Livro
+
+	setar listar na requisição - 
+			request.setAttribute("empList", empList);
+
+	redirecionar 
+			RequestDispatcher rd = getServletContext().getRequestDispatcher("/home.jsp");
+			rd.forward(request, response);
+
+
+	setar mais atributos 	
+		request.setAttribute("url", "https://www.journaldev.com");
+
+
+	converter projeto para Maven Project para adicionar as dependências
+	adicionar dependências:
+			<dependency>
+				<groupId>jstl</groupId>
+				<artifactId>jstl</artifactId>
+				<version>1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>taglibs</groupId>
+				<artifactId>standard</artifactId>
+				<version>1.1.2</version>
+			</dependency>q
+
+
+	percorer a lista na JSP usando JSTL:
+			<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+			<c:forEach items="${requestScope.empList}" var="emp">
+				<tr>
+					<td><c:out value="${emp.id}"></c:out></td>
+					<td><c:out value="${emp.name}"></c:out></td>
+					<td><c:out value="${emp.role}"></c:out></td>
+				</tr>
+			</c:forEach>
+
+			(The <c:out> tag can automatically escape XML tags so they aren't evaluated as actual tags.)
+
+	v2:
+			<c:forEach items="${requestScope.empList}" var="emp" varStatus="id">
+				<tr bgcolor="#${id.count % 2 == 0 ? 'aaee88' : 'ffffff' }" >
+					<td><c:out value="${emp.id}"></c:out></td>
+					<td><c:out value="${emp.name}"></c:out></td>
+					<td><c:out value="${emp.role}"></c:out></td>
+				</tr>
+			</c:forEach>
+
+			---------------
+
+			<c:set var="Income" scope="session" value="${4000*4}"/>  
+			<c:out value="${Income}"/>  
+
+			<c:remove var="income"/>  
+			<p>After Remove Value is: <c:out value="${income}"/></p>  
+			
+			---------------
+	
+	Testar tbm enviando do servlet para settar na session
+
+			<c:set var = "salary" scope = "session" value = "${2000*2}"/>
+			<c:if test = "${salary > 2000}">
+				<p>My salary is:  <c:out value = "${salary}"/><p>
+			</c:if>
+			
+	Testar tbm enviando do servlet para settar na session via HttpSession session = request.getSession();
+			
+			<c:out value="${sessionScope.userName}"/>  
+
+
+			---------------
+
+	
+
+
+
+	----- apenas mostrar que existe, não implementar
+
+			JSTL Core <c:choose>, <c:when>, <c:otherwise> Tag
+
+
+
+
+------Hello world JSF
+
+http://www.thejavageek.com/2013/06/17/creating-jsf2-hello-world-application-in-eclipse/
+
+
+
+
