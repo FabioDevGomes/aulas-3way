@@ -12,6 +12,8 @@ target/
 .recommenders
 bin/
 
+.~lock.Aulas.ods#
+
 ### IntelliJ IDEA ###
 .idea
 *.iws

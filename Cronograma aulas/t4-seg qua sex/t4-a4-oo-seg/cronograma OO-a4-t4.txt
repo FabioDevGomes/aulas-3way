@@ -5,12 +5,11 @@
 
 ============================= início aula ===================
 
-* 36) Faça um programa que leia do teclado 6 valores inteiros e positivos e: (25 min) 
+* - Faça um programa que leia do teclado 6 valores inteiros e positivos e: (25 min) 
 * - Calcule a média dos números lidos
 
 break: teste no for
-continue: teste no forzz
-
+continue: teste no for
 
 ------------------ slides_05_array.pdf
 
