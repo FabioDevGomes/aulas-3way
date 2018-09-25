@@ -1,0 +1,72 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>JSF JPA Crud Produto</title>
+</h:head>
+
+<h:body>
+
+<ui:composition template="/restrito/template/layout.xhtml">
+		<ui:define name="content">
+		
+		
+	<h:form>
+		<p:outputLabel
+			value="Login efetuado com sucesso! Bem vindo ao sistema!"></p:outputLabel>
+	</h:form>
+
+	<center>
+		<h2>
+			<h:outputText value="Lista de usuários cadastrados" />
+		</h2>
+	</center>
+	<h:form id="produtoForm">
+		<h:messages class="text text-danger" />
+		<h:dataTable id="produtoTable" binding="#{table}"
+			value="#{produtoManagedBean.produtoListDb()}" var="produto"
+			styleClass="table table-striped table-bordered tableUpdated">
+			<h:column>
+				<f:facet name="header">Código</f:facet>
+				<h:outputText value="#{produto.codigo}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Descrição</f:facet>
+				<h:outputText value="#{produto.descricao}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Quantidade</f:facet>
+				<h:outputText value="#{produto.quantidade}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">valor</f:facet>
+				<h:outputText value="#{produto.valor}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Update</f:facet>
+<!-- 				<h:commandButton action="#{produtoManagedBean.paginaEditar(produto)}" -->
+				<h:commandButton 
+					value="Atualizar" styleClass="btn btn-primary">
+					<f:param name="selectedSchoolId" value="#{produto.id}" />
+				</h:commandButton>
+			</h:column>
+			<h:column>
+				<f:facet name="header">Delete</f:facet>
+				<h:commandButton action="#{produtoManagedBean.exlcluirProdutoDb(produto)}"
+					value="Deletar" styleClass="btn btn-danger" />
+			</h:column>
+		</h:dataTable>
+		<center>
+			<h:commandButton action="novoProduto.xhtml?faces-redirect=true"
+				value="Adicionar novo Usuário" styleClass="btn btn-success btnSpace" />
+		</center>
+	</h:form>
+
+	</ui:define>
+	</ui:composition>
+	
+</h:body>
+</html>

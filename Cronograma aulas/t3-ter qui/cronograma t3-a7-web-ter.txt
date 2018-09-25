@@ -1,0 +1,3 @@
+exemplo de CRUD com JSP e Servlet
+
+https://danielniko.wordpress.com/2012/04/17/simple-crud-using-jsp-servlet-and-mysql/
