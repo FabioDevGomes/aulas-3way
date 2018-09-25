@@ -54,13 +54,14 @@ public class LivroController extends HttpServlet {
 		Livro livro = new Livro();
 		livro.setTitulo(request.getParameter("titulo"));
 		livro.setAutor(request.getParameter("autor"));
+		livro.setDescricao(request.getParameter("descricao"));
 		livro.setPreco(Double.parseDouble(request.getParameter("preco")));
-		String userid = request.getParameter("livroCodigo");
+		String codigoLivro = request.getParameter("livroCodigo");
 
-		if (userid == null || userid.isEmpty()) {
-			// dao.addLivro(user);
+		if (codigoLivro == null || codigoLivro.isEmpty()) {
+			 dao.save(livro);
 		} else {
-			livro.setCodigo(Integer.parseInt(userid));
+			livro.setCodigo(Integer.parseInt(codigoLivro));
 			 dao.updateTitulo(livro);
 		}
 		RequestDispatcher view = request.getRequestDispatcher(LISTAR_LIVROS);

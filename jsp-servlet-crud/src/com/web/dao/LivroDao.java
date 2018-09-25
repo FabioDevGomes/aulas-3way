@@ -16,7 +16,9 @@ public class LivroDao {
 	private static final String OBTER_POR_ID_SQL = "SELECT AUTOR, TITULO, COD_LIVRO, IMAGEM,PRECO, DESCRICAO FROM LIVRO WHERE COD_LIVRO = ?";
 	private static final String CONSULTAR_SQL = "SELECT COD_LIVRO, TITULO, AUTOR, PRECO, IMAGEM, DESCRICAO FROM LIVRO WHERE TITULO LIKE ?";
 	private static final String LISTAR_TODOS = "SELECT * FROM LIVRO ";
-	private static final String UPDATE_SQL = "UPDATE LIVRO SET TITULO = ?, AUTOR = ? WHERE COD_LIVRO = ?";
+	private static final String UPDATE_SQL = "UPDATE LIVRO SET TITULO = ?, AUTOR = ?, DESCRICAO = ?, PRECO = ? WHERE COD_LIVRO = ?";
+	private static final String INSERT_SQL = "INSERT INTO LIVRO(TITULO, AUTOR, DESCRICAO, PRECO, IMAGEM) VALUES(?, ?, ?, ?, 'VALOR/IMAGEM')";
+	private static final String DELETE_SQL = "DELETE FROM LIVRO WHERE COD_LIVRO = ?";
 	
 	public Livro consultar(int codigo) {
 		Livro livro = null;
@@ -100,7 +102,9 @@ public class LivroDao {
 
 			consulta.setString(1, livro.getTitulo());
 			consulta.setString(2, livro.getAutor());
-			consulta.setInt(3, livro.getCodigo());
+			consulta.setString(3, livro.getDescricao());
+			consulta.setDouble(4, livro.getPreco());
+			consulta.setInt(5, livro.getCodigo());
 
 			consulta.execute();
 		} catch (Exception e) {
@@ -109,10 +113,8 @@ public class LivroDao {
 	}
 
 	public void removeById(int id) {
-		String sql = "DELETE FROM LIVRO WHERE COD_LIVRO = ?";
-
 		try (Connection conexao = FabricaConexao.getConexao();
-				PreparedStatement consulta = conexao.prepareStatement(sql);) {
+				PreparedStatement consulta = conexao.prepareStatement(DELETE_SQL);) {
 
 			consulta.setInt(1, id);
 			consulta.execute();
@@ -122,28 +124,18 @@ public class LivroDao {
 		}
 	}
 
-//	public void save(Contato contato) {
-//		/*
-//		 * Isso é uma sql comum, os ? são os parâmetros que nós vamos adicionar na base
-//		 * de dados
-//		 */
-//		String sql = "INSERT INTO contatos(nome, idade, dataCadastro)" + " VALUES(?,?,?)";
-//
-//		try (Connection conexao = FabricaConexao.getConexao();
-//				PreparedStatement consulta = conexao.prepareStatement(sql);){
-//
-//			// Adiciona o valor do primeiro parâmetro da sql
-//			consulta.setString(1, contato.getNome());
-//			// Adicionar o valor do segundo parâmetro da sql
-//			consulta.setInt(2, contato.getIdade());
-//			// Adiciona o valor do terceiro parâmetro da sql
-//			consulta.setDate(3, new Date(contato.getDataCadastro().getTime()));
-//
-//			// Executa a sql para inserção dos dados
-//			consulta.execute();
-//
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
+	public void save(Livro livro) {
+		try (Connection conexao = FabricaConexao.getConexao();
+				PreparedStatement consulta = conexao.prepareStatement(INSERT_SQL);){
+			consulta.setString(1, livro.getTitulo());
+			consulta.setString(2, livro.getAutor());
+			consulta.setString(3, livro.getDescricao());
+			consulta.setDouble(4, livro.getPreco());
+
+			consulta.execute();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

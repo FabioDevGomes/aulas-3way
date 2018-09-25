@@ -14,6 +14,7 @@
                 <th>Código Livro</th>
                 <th>Título</th>
                 <th>Autor</th>
+                <th>Descrição</th>
                 <th>Preco</th>
                 <th colspan=2>Action</th>
             </tr>
@@ -24,6 +25,7 @@
                     <td><c:out value="${livro.codigo}" /></td>
                     <td><c:out value="${livro.titulo}" /></td>
                     <td><c:out value="${livro.autor}" /></td>
+                    <td><c:out value="${livro.descricao}" /></td>
                     <td><c:out value="${livro.preco}" /></td>
                     <td><a href="LivroController?action=editar&livroId=<c:out value="${livro.codigo}"/>">Update</a></td>
                     <td><a href="LivroController?action=deletar&livroId=<c:out value="${livro.codigo}"/>">Delete</a></td>

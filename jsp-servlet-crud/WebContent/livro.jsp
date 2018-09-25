@@ -14,11 +14,13 @@
 	<form method="POST" action='LivroController' name="frmAddLivro">
 			User ID : 
 			<input type="text" readonly="readonly" name="livroCodigo" value="${livro.codigo}" /> 
-			<br /> First Name : 
+			<br /> Título : 
 			<input type="text"	name="titulo" value="${livro.titulo}" /> 
-			<br /> Last Name : 
+			<br /> Autor : 
 			<input	type="text" name="autor" value="${livro.autor}" /> 
-			<br /> Email :
+			<br /> Descrição : 
+			<input	type="text" name="descricao" value="${livro.descricao}" /> 
+			<br /> Preço :
 			<input type="text" name="preco" value="${livro.preco}" /> 
 			<br /> 
 			<input	type="submit" value="Submit" />
