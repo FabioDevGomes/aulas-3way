@@ -1,0 +1,13 @@
+Ajustar para usar filtro na listagem
+
+	String buscarLivro = request.getParameter("buscarLivro");
+
+
+	if ((codigoLivro == null || codigoLivro.isEmpty()) && buscarLivro == null) {
+		//... adicionar listarTodos dentro de suas estruturas de decisão
+		request.setAttribute("livros", dao.listarTodos());
+
+
+	} else if (buscarLivro != null) {
+		List<Livro> livros = dao.consultar(buscarLivro);
+		request.setAttribute("livros", livros);

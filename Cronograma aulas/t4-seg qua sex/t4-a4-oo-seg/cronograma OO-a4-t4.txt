@@ -36,7 +36,6 @@ continue: teste no for
 	 de valor ímpar por -1 e os pares por +1.
 
 
----------------------- slides_05_array.pdf
 - Slide 7:
 
 - Slide 8:
