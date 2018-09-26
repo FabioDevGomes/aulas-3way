@@ -8,3 +8,20 @@ Implementa regra para somente ADM poder editar usuários
 
 Criar mensagem de erro no tratamento da exceção passando o e.getMessage() como parâmetro
 
+
+- Falar sobre difuculdades de configuração do CDI no Tomcat
+	Mostrar como seria a configuração e o uso (@PersistenceContext @Inect) em um servidor de aplicações
+
+
+
+-------------------- ajustar para realcionamento com a classe endereço ------------
+
+
+
+
+
+
+-------------------- integrar com API de buscar e preencher por CEP dos correios (exemplo no proj fluig)------------
+	
+
+

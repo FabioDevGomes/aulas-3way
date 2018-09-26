@@ -38,6 +38,10 @@ implementar exercício bácio.txt
 - slide 08 - for: 
  implementar apostila
 
+
+=======================fim da aula ========================================
+
+
 *** 36) Faça um programa que leia do teclado 6 valores inteiros e positivos e: (25 min) 
 *** - Calcule a média dos números lidos
 
@@ -46,19 +50,20 @@ continue: testar no for
 
 ----------------------- Array:
  1. Para cada conjunto de valores abaixo, escreva o código Java, que
-preencha um array com os valores:
-(Usando as duas formas de construir um array)
-a) 10 9 8 7 6 5 4 3 2 1
-b) 0 1 4 9 16 25 36 49 64 81 100
-c) 1 2 3 4 5 10 20 30 40 50
+	preencha um array com os valores:
+	(Usando as duas formas de construir um array)
 
- 1-1. Reescreva o código, agora usando laço(s), que
-preencha um array de double (de tamanho 5) com os valores do teclado, e exiba-os na mesma linha:
+	a) 10 9 8 7 6 5 4 3 2 1
+	b) 0 1 4 9 16 25 36 49 64 81 100
+	c) 1 2 3 4 5 10 20 30 40 50
+
+
+ 1-1. Reescreva o código, agora usando laço para
+ preencher um array de double (de tamanho 5) com os valores do teclado, e exiba-os na mesma linha:
+
 
  2. Crie um array de inteiros e retorne a quantidade de elementos do array que são números negativos.
-
-
-=======================fim da aula ========================================
+	altere os valores do array para conferir o resultado da contagem
 
 
  3. for Array int: 
