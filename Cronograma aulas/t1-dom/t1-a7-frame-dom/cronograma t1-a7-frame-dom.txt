@@ -1,8 +1,6 @@
 
 -------------------- ajustar para realcionamento com a classe endereço ------------
 - Criar classe UsuárioService para tratar regras de negócio
-
-
 - Somente essa classe (UsuarioService) terá acesso ao DAO
 
 
@@ -25,6 +23,30 @@
 	Mostrar como seria a configuração e o uso (@PersistenceContext @Inect) em um servidor de aplicações
 
 
+
+- Configurar link para listagem de endereços:
+	<h:outputLink class="nav-link" value="/jpa-jsf-v5/restrito/endereco/listagemEnderecoT.xhtml">Listagem Endereços</h:outputLink>
+
+--------------------- MD5 -----------------------------------------------------------------------------------------
+
+- Criar a classe Criptografia 
+
+	public class Criptografia {
+
+
+--------------------- relacionamento JPA --------------------------------------------------------------------------
+
+- Criar e configurar relacionamento na classe Endereço
+
+	public class Endereco {
+
+		@OneToOne(mappedBy = "endereco")
+		private Usuario usuario;
+
+- Configurar relacionamento na classe Usuario
+
+	@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER, orphanRemoval=true)
+	private Endereco endereco;
 
 
 
