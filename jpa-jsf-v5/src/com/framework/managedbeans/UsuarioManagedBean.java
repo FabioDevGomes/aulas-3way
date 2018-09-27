@@ -5,7 +5,7 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 import javax.xml.bind.ValidationException;
 
@@ -14,7 +14,7 @@ import com.framework.model.Usuario;
 import com.framework.service.UsuarioService;
 
 @ManagedBean
-@SessionScoped
+@ViewScoped
 public class UsuarioManagedBean {
 
 	private final String TELA_NOVO_USUARIO = "/restrito/novoUsuario.xhtml?faces-redirect=true";
@@ -22,14 +22,15 @@ public class UsuarioManagedBean {
 	private final String TELA_EDITAR_USUARIO = "/restrito/editarUsuarioT?faces-redirect=true&id=";
 	
 	private UsuarioDAO usuarioDAO = new UsuarioDAO();
-	private Usuario usuario;
+	private Usuario usuario = new Usuario();
 	private UsuarioService usuarioService = new UsuarioService();
 
 	@PostConstruct
 	public void init() {
 		FacesContext facesContext = FacesContext.getCurrentInstance();
-		Integer idUsuario = (Integer) facesContext.getExternalContext().getSessionMap().get("id");
-		if(idUsuario != null) {
+		String id = facesContext.getExternalContext().getRequestParameterMap().get("id");
+		if(id != null) {
+			Integer idUsuario = Integer.parseInt(facesContext.getExternalContext().getRequestParameterMap().get("id"));
 			this.usuario = usuarioDAO.getUsuario(idUsuario);
 		}
 	}

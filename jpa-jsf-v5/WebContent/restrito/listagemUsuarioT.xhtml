@@ -48,10 +48,22 @@
 				<h:outputText value="#{usuario.senha}" />
 			</h:column>
 			<h:column>
+				<f:facet name="header">Endereço</f:facet>
+				<h:outputText value="#{usuario.endereco.rua}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Endereço</f:facet>
+				<h:commandButton action="#{enderecoManagedBean.paginaEndereco(usuario)}" rendered="#{usuario.endereco.rua eq null}"
+					value="Incluir Endereço" styleClass="btn btn-primary" >
+				</h:commandButton>
+				<h:commandButton action="#{enderecoManagedBean.paginaEndereco(usuario)}" rendered="#{usuario.endereco.rua ne null}"
+					value="Alterar Endereço" styleClass="btn btn-primary" >
+				</h:commandButton>
+			</h:column>
+			<h:column>
 				<f:facet name="header">Update</f:facet>
 				<h:commandButton action="#{usuarioManagedBean.paginaEditar(usuario)}"
 					value="Atualizar" styleClass="btn btn-primary">
-					<f:param name="selectedSchoolId" value="#{usuario.id}" />
 				</h:commandButton>
 			</h:column>
 			<h:column>

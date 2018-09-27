@@ -1,0 +1,72 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>JSF JPA Crud Produto</title>
+</h:head>
+
+<h:body>
+
+<ui:composition template="/restrito/template/layout.xhtml">
+		<ui:define name="content">
+		
+	<center>
+		<h2>
+			<h:outputText value="Lista de endereços" />
+		</h2>
+	</center>
+	<h:form id="enderecoForm">
+		<h:messages class="text text-danger" />
+		<h:dataTable id="enderecoTable" binding="#{table}"
+			value="#{enderecoManagedBean.enderecoListDb()}" var="endereco"
+			styleClass="table table-striped table-bordered tableUpdated">
+			<h:column>
+				<f:facet name="header">Código</f:facet>
+				<h:outputText value="#{endereco.id}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Descrição</f:facet>
+				<h:outputText value="#{endereco.rua}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Quantidade</f:facet>
+				<h:outputText value="#{endereco.bairro}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">valor</f:facet>
+				<h:outputText value="#{endereco.municipio}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">valor</f:facet>
+				<h:outputText value="#{endereco.estado}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Morador</f:facet>
+				<h:outputText value="#{endereco.usuario.nomeUsuario}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Update</f:facet>
+				<h:commandButton 
+					value="Atualizar" styleClass="btn btn-primary">
+				</h:commandButton>
+			</h:column>
+			<h:column>
+				<f:facet name="header">Delete</f:facet>
+				<h:commandButton action="#{enderecoManagedBean.exlcluirEnderecoDb(endereco)}"
+					value="Deletar" styleClass="btn btn-danger" />
+			</h:column>
+		</h:dataTable>
+		<center>
+			<h:commandButton action="novoProduto.xhtml?faces-redirect=true"
+				value="Adicionar novo Usuário" styleClass="btn btn-success btnSpace" />
+		</center>
+	</h:form>
+
+	</ui:define>
+	</ui:composition>
+	
+</h:body>
+</html>

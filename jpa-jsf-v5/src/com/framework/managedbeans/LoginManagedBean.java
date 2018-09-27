@@ -8,16 +8,16 @@ import javax.faces.bean.ViewScoped;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import com.framework.db.UsuarioDAO;
 import com.framework.model.Usuario;
 
-@ManagedBean(name = "loginMB")
+@ManagedBean(name="loginMB")
 @ViewScoped
 public class LoginManagedBean {
 
 	private UsuarioDAO usuarioDAO = new UsuarioDAO();
-	
 	private Usuario usuario = new Usuario();
 
 	public String enviar() {

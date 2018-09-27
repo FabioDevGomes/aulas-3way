@@ -3,13 +3,18 @@ package com.framework.model;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Cacheable;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -34,8 +39,10 @@ public class Usuario {
 	@Temporal(TemporalType.DATE)
 	private Date ultimoAcesso;
 
-	@ManyToMany(mappedBy="clientes")
-	private List<Produto> produtos;
+//	@OneToOne(mappedBy = "usuario")
+	
+	@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER, orphanRemoval=true)
+	private Endereco endereco;
 
 	public String getNomeUsuario() {
 		return nomeUsuario;
@@ -77,11 +84,13 @@ public class Usuario {
 		this.matricula = matricula;
 	}
 
-	public List<Produto> getProdutos() {
-		return produtos;
+	public Endereco getEndereco() {
+		return endereco;
 	}
 
-	public void setProdutos(List<Produto> produtos) {
-		this.produtos = produtos;
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
+
+
 }

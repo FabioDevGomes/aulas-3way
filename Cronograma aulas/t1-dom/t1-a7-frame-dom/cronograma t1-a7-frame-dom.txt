@@ -1,20 +1,29 @@
-Criar classe UsuárioService para tratar regras de negócio
 
-Somente essa classe terá acesso ao DAO
+-------------------- ajustar para realcionamento com a classe endereço ------------
+- Criar classe UsuárioService para tratar regras de negócio
 
-Implementa regra para matrícula M ou ADM
 
-Implementa regra para somente ADM poder editar usuários
+- Somente essa classe (UsuarioService) terá acesso ao DAO
 
-Criar mensagem de erro no tratamento da exceção passando o e.getMessage() como parâmetro
+
+- Implementa regra para matrícula M ou ADM
+	private void validarMatricula(Usuario usuario) - em UsuarioService
+
+
+- Implementa regra para somente ADM poder editar usuários
+	if(!usuario.getMatricula().startsWith("ADM")) {
+
+
+- Criar mensagem de erro no tratamento da exceção passando o e.getMessage() como parâmetro
+	em: public String paginaEditar(Usuario usuario) {
+
+	e em: public String incluirUsuarioDb(Usuario usuario) {
+
 
 
 - Falar sobre difuculdades de configuração do CDI no Tomcat
 	Mostrar como seria a configuração e o uso (@PersistenceContext @Inect) em um servidor de aplicações
 
-
-
--------------------- ajustar para realcionamento com a classe endereço ------------
 
 
 

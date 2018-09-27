@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -12,16 +11,21 @@ import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
+import org.hibernate.CacheMode;
+
 import com.framework.model.Usuario;
 
-@Named
-@ApplicationScoped
+
 public class UsuarioDAO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("usuarios");
+	
+//	@PersistenceContext
+//	private EntityManager em;
 	private EntityManager em = factory.createEntityManager();
-	private EntityTransaction transaction = em.getTransaction();
+	
+//	private EntityTransaction transaction = em.getTransaction();
 
 	public Usuario getUsuario(String nomeUsuario, String senha) {
 
@@ -45,6 +49,7 @@ public class UsuarioDAO implements Serializable{
 	}
 
 	public void alterarUsuario() {
+		EntityTransaction transaction = em.getTransaction();
 		transaction.begin();
 		transaction.commit();
 	}
@@ -63,6 +68,7 @@ public class UsuarioDAO implements Serializable{
 	}
 
 	public boolean inserirUsuario(Usuario usuario) {
+		EntityTransaction transaction = em.getTransaction();
 		if (!transaction.isActive()) {
 			transaction.begin();
 		}
@@ -75,9 +81,27 @@ public class UsuarioDAO implements Serializable{
 			e.printStackTrace();
 			return false;
 		}
+
+	}
+	
+	public boolean mergeUsuario(Usuario usuario) {
+		EntityTransaction transaction = em.getTransaction();
+		if (!transaction.isActive()) {
+			transaction.begin();
+		}
+		
+		try {
+			em.merge(usuario);
+			transaction.commit();
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 
 	public boolean deletarUsuario(Usuario usuario) {
+		EntityTransaction transaction = em.getTransaction();
 		if (!transaction.isActive()) {
 			transaction.begin();
 		}
@@ -95,7 +119,10 @@ public class UsuarioDAO implements Serializable{
 
 	public List listarUsuario() {
 
-		Query queryObj = em.createQuery("SELECT u FROM Usuario u");
+		Query queryObj = em.createQuery("SELECT u FROM Usuario u ");
+
+		em.getEntityManagerFactory().getCache().evictAll();
+		
 		List usuariosList = queryObj.getResultList();
 		if (usuariosList != null && usuariosList.size() > 0) {
 			return usuariosList;
