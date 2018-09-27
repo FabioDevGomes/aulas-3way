@@ -1,0 +1,22 @@
+
+========repassar listagem JSTL=================
+
+
+exemplo de CRUD com JSP e Servlet
+
+https://danielniko.wordpress.com/2012/04/17/simple-crud-using-jsp-servlet-and-mysql/
+
+
+- criar dynamic web project
+
+- Converter para Maven project
+
+- Adicionar dependências de BD e JSTL
+
+- Copiar classes do projeto DAO para o projeto CRUD
+
+- Testar conexão
+
+- Implementar servlet
+
+- Implementar JSP's (2)
