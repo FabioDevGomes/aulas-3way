@@ -48,10 +48,6 @@ continue: teste no for
 * - Encontre o menor valor
 * - usar: Arrays.sort()
 
- 4. Crie um programa que recebe um array de inteiros positivos e substitui seus elementos
-de valor ímpar por -1 e os pares por +1, depois exiba os valores pra confirmar o resultado
-
-
 
 
 ------------ slides_06_base_da_programação_java_OO.pdf
@@ -61,6 +57,9 @@ de valor ímpar por -1 e os pares por +1, depois exiba os valores pra confirmar o
 
 - Slide 03:
  imlementar com os coméntários
+
+
+========================fim aula (reapasar classe/objetos) ========================
 
 - Slide 08:
  Ajusta código da classe Carro de acordo com os requisitos abaixo:
