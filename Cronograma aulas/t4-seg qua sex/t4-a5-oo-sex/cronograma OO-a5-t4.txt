@@ -74,6 +74,8 @@ Escrever um programa em java que receba dois números e exiba o resultado da sua 
 
  Escopo de variáveis (20 minutos)
  resolva o problema do escopo
+	mostrar: exercicio 4.1 apostila.png
+	exercicio 4.2 apostila.png
 
 
 
