@@ -21,7 +21,7 @@ Dentro do método ligar() Verificar se a variável/atributo "ligado" é igual a "fa
   se for, o método ligar deve alterar o seu valor para "true"
   se não for, retornar o texto "o carro já está ligado"
 
- Criar uma variável local do método para amazenar o retorno com o nome "retorno":
+ Criar uma variável local do método ligar() com o nome "retorno", para amazenar o retorno
   iniciar essa variável local, na primeira linha do método, com uma String vazia ""
   retornar essa variável como resposta do método "return retorno;"
 
@@ -30,7 +30,18 @@ Dentro do método ligar() Verificar se a variável/atributo "ligado" é igual a "fa
  uma outra classe chamada Cliente 
 
 
+Exercício:
+ Criar classe Conta Corrente e analisar quais seriam seus atributos e métodos
 
+	Titular
+	NumeroConta
+	saldo
+
+	depositar()
+	sacar()
+	transferir()
+
+Criar classe Caneta e analisar quais seriam seus atributos e métodos
 
 
 ------------ slides_07_metodo_construtores_membros_estaticos.pdf
@@ -51,10 +62,15 @@ Dentro do método ligar() Verificar se a variável/atributo "ligado" é igual a "fa
 
 - Slide 12: 
 
-Os métodos static ou métodos da classe são funções que não dependem de nenhuma variável de instância, quando invocados executam uma função sem a dependência do conteúdo de um objeto ou a execução da instância de uma classe, conseguindo chamar direto qualquer método da classe e também manipulando alguns campos da classe.
+Os métodos static ou métodos da classe são funções que não dependem de nenhuma variável de instância, 
+quando invocados executam uma função sem a dependência do conteúdo de um objeto ou a execução da 
+instância de uma classe, conseguindo chamar direto qualquer método da classe e também manipulando alguns campos da classe.
 
  Método main é estático
-Na execução de uma programa Java, a JVM (Java Virtual Machine) tenta chamar o método main da classe que foi especificada. Quando declarado o método main como static permite que a JVM invoque o main sem criar uma instância da classe, ou seja, a classe é conhecida como classe principal ou classe testadora, que efetuará os testes e chamadas das classes para a execuções dos programas.
+Na execução de uma programa Java, a JVM (Java Virtual Machine) tenta chamar o método main da classe que foi 
+especificada. Quando declarado o método main como static permite que a JVM invoque o main sem 
+criar uma instância da classe, ou seja, a classe é conhecida como classe principal ou classe testadora, 
+que efetuará os testes e chamadas das classes para a execuções dos programas.
 
  Arrays.sort(a, c); é estático
 
