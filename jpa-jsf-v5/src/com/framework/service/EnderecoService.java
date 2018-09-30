@@ -10,31 +10,24 @@ import com.framework.model.Usuario;
 
 public class EnderecoService {
 	
-	private EnderecoDAO produtoDAO = new EnderecoDAO();
+	private EnderecoDAO enderecoDAO = new EnderecoDAO();
 	
 	public void telaEdicao(Usuario usuario) throws ValidationException {
 		if(!usuario.getMatricula().startsWith("ADM")) {
-			throw new ValidationException("Somente usuário com perfil ADM podem acessar a página de edição");
+			throw new ValidationException("Somente usuï¿½rio com perfil ADM podem acessar a pï¿½gina de ediï¿½ï¿½o");
 		}
 	}
 
-	public void salvarEndereco(Endereco produto) throws ValidationException {
-		this.validarMatricula(produto);
-		produtoDAO.inserirEndereco(produto);
+	public void salvarEndereco(Endereco endereco) throws ValidationException {
+		enderecoDAO.inserirEndereco(endereco);
 	}
 	
-	private void validarMatricula(Endereco produto) throws ValidationException {
-//		if(produto.getQuantidade() < 10) {
-//			throw new ValidationException("A quantidade mínima de produtos deve ser 10!");
-//		}
-	}
-
 	public List listarEndereco() {
-		return produtoDAO.listarEndereco();
+		return enderecoDAO.listarEndereco();
 	}
 
 	public void deletarEndereco(Endereco endereco) {
-		produtoDAO.deletarEndereco(endereco);
+		enderecoDAO.deletarEndereco(endereco);
 	}
 	
 

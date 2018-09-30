@@ -28,9 +28,10 @@ public class UsuarioManagedBean {
 	@PostConstruct
 	public void init() {
 		FacesContext facesContext = FacesContext.getCurrentInstance();
-		String id = (String) facesContext.getExternalContext().getSessionMap().get("id");
+		
+		String id =  (String) facesContext.getExternalContext().getRequestParameterMap().get("id");
 		if(id != null) {
-			Integer idUsuario = Integer.parseInt(facesContext.getExternalContext().getRequestParameterMap().get("id"));
+			Integer idUsuario = Integer.parseInt(id);
 			this.usuario = usuarioDAO.getUsuario(idUsuario);
 		}
 	}
@@ -60,6 +61,14 @@ public class UsuarioManagedBean {
 
 	public String paginaEditar(Usuario usuario) {
 		try {
+			
+			FacesContext facesContext = FacesContext.getCurrentInstance();
+			String id = facesContext.getExternalContext().getSessionMap().get("id").toString();
+			if(id != null) {
+				Integer idUsuario = Integer.parseInt(id);
+				this.usuario = usuarioDAO.getUsuario(idUsuario);
+			}
+			
 			usuarioService.telaEdicao(this.usuario);
 			this.usuario = usuario;
 			
@@ -67,7 +76,7 @@ public class UsuarioManagedBean {
 			e.printStackTrace();
 
 			FacesContext context = FacesContext.getCurrentInstance();
-			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, e.getMessage(), "--"));
+			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, e.getMessage(), ""));
 			context.getExternalContext().getFlash().setKeepMessages(true);
 			
 			return TELA_LISTAGEM_USUARIO;

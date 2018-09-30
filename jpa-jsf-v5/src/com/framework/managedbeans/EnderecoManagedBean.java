@@ -25,19 +25,8 @@ public class EnderecoManagedBean {
 
 	private Endereco endereco = new Endereco();
 	private EnderecoService enderecoService = new EnderecoService();
-
-	private UsuarioService usuarioService = new UsuarioService();
 	private Usuario usuario = new Usuario();
 
-	@PostConstruct
-	public void init() {
-		FacesContext facesContext = FacesContext.getCurrentInstance();
-		Integer idUsuario = (Integer) facesContext.getExternalContext().getSessionMap().get("id");
-		if (idUsuario != null) {
-			this.setUsuario(usuarioService.consultarUsuario(idUsuario));
-		}
-	}
-	
 	public List enderecoListDb() {
 		return enderecoService.listarEndereco();
 	}

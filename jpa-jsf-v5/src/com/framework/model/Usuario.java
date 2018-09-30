@@ -39,9 +39,7 @@ public class Usuario {
 	@Temporal(TemporalType.DATE)
 	private Date ultimoAcesso;
 
-//	@OneToOne(mappedBy = "usuario")
-	
-	@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER, orphanRemoval=true)
+	@OneToOne(cascade=CascadeType.ALL)
 	private Endereco endereco;
 
 	public String getNomeUsuario() {
