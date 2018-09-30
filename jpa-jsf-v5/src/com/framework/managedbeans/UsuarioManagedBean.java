@@ -28,7 +28,7 @@ public class UsuarioManagedBean {
 	@PostConstruct
 	public void init() {
 		FacesContext facesContext = FacesContext.getCurrentInstance();
-		String id = facesContext.getExternalContext().getRequestParameterMap().get("id");
+		String id = (String) facesContext.getExternalContext().getSessionMap().get("id");
 		if(id != null) {
 			Integer idUsuario = Integer.parseInt(facesContext.getExternalContext().getRequestParameterMap().get("id"));
 			this.usuario = usuarioDAO.getUsuario(idUsuario);
@@ -51,7 +51,7 @@ public class UsuarioManagedBean {
 			e.printStackTrace();
 
 			FacesContext context = FacesContext.getCurrentInstance();
-			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, e.getMessage(), "--"));
+			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, e.getMessage(), ""));
 			context.getExternalContext().getFlash().setKeepMessages(true);
 			
 			return TELA_NOVO_USUARIO;
