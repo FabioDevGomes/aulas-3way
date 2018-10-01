@@ -1,9 +1,44 @@
 
 
+----------------------------- slides_07_metodo_construtores_membros_estaticos.pdf
+
+Os métodos static ou métodos da classe são funções que não dependem de nenhuma variável de instância, 
+quando invocados executam uma função sem a dependência do conteúdo de um objeto ou a execução da 
+instância de uma classe, conseguindo chamar direto qualquer método da classe e também manipulando alguns campos da classe.
+
+ Método main é estático
+Na execução de uma programa Java, a JVM (Java Virtual Machine) tenta chamar o método main da classe que foi 
+especificada. Quando declarado o método main como static permite que a JVM invoque o main sem 
+criar uma instância da classe, ou seja, a classe é conhecida como classe principal ou classe testadora, 
+que efetuará os testes e chamadas das classes para a execuções dos programas.
+
+ Arrays.sort(a, c); é estático
+
+ implementar Membros estáticos (10 min) :46
+
+- Slide 13:
+ implementar chamadas
+
+ implementar TestaSomaEstatica.java
+
+Escrever um programa em java que receba dois números e exiba o resultado da sua soma e sua multiplicação
+ - sem retorno (void) e imprima o resultado dentro do método
+ - Cada operação deve estar em um método stático diferente
+ - altere os métodos para retorna o resultado "void > double"
+ - retire o modificado static dos métodos
 
 
 
----------------- slides_08_herança_polimorfismo.pdf
+ Escopo de variáveis (20 minutos)
+ resolva o problema do escopo
+
+	mostrar: exercicio 4.1 apostila.png
+
+	exercicio 4.2 apostila (de duas formas, instanciando e alterando modificador).png
+
+
+
+------------------------------ slides_08_herança_polimorfismo.pdf
 
 
 - Slide 02:
