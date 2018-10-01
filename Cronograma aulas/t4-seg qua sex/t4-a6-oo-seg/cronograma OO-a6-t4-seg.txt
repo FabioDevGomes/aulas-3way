@@ -19,13 +19,15 @@ que efetuará os testes e chamadas das classes para a execuções dos programas.
 - Slide 13:
  implementar chamadas
 
- implementar TestaSomaEstatica.java
+
 
 Escrever um programa em java que receba dois números e exiba o resultado da sua soma e sua multiplicação
  - sem retorno (void) e imprima o resultado dentro do método
  - Cada operação deve estar em um método stático diferente
  - altere os métodos para retorna o resultado "void > double"
  - retire o modificado static dos métodos
+
+ - ex:  implementar TestaSomaEstatica.java
 
 
 
