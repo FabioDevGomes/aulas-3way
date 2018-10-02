@@ -1,0 +1,16 @@
+--------------------continuar implementação CRUD JSP, Servlet com as 4 operações -----------
+
+- verificar onde parou
+
+
+
+
+------------------- hello world JSF ----------------------
+implementar hello world com a turma
+
+
+Exercício:
+- implemente um projeto JSF que retorne pra tela 3 variáveis sendo elas: nome completo, idade e futura profissão; 
+Que serão inicializadas no método init() anotado com @PostConstruct
+
+- criar getter's para as variáveis

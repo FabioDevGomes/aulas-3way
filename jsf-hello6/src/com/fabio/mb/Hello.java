@@ -7,15 +7,16 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
 @RequestScoped
-@ManagedBean(name = "hello")
+@ManagedBean(name = "helloMapeamento")
 public class Hello implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
 	private String message;
 	private String message2;
 	
     @PostConstruct
     public void init(){
-        System.out.println(" Bean executado! hh ");
+        System.out.println(" Método init() executado na inicialização devido a anotação  @PostConstruct ");
     }
      
     public String getMessage(){

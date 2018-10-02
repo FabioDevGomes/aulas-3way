@@ -10,11 +10,10 @@ import javax.faces.bean.RequestScoped;
 @ManagedBean(name = "hello")
 public class Hello implements Serializable {
 	private static final long serialVersionUID = 1L;
-	private String message;
 	
     @PostConstruct
     public void init(){
-        System.out.println(" Bean executado! 2");
+        System.out.println(" Método init() executado na inicialização devido a anotação  @PostConstruct ");
     }
      
     public String getMessage(){
