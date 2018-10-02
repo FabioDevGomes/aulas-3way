@@ -51,7 +51,7 @@ Escrever um programa em java que receba dois números e exiba o resultado da sua 
 
 - Slide 05:
  implementar
- chamar o método mover da superClasse antes do println
+ **chamar o método mover da superClasse antes do println
 
 - Slide 06:
  implementar
@@ -63,7 +63,7 @@ Escrever um programa em java que receba dois números e exiba o resultado da sua 
 - Slide 09:
  implementar
 
- declare um método q que tenha um parâmetro do tipo Veiculo e, dentro desse método criado chame o método mover() do parâmetro passado, depois teste passando os tipos das subclasses de Veiculo (10min)
+ declare um método q que tenha um parâmetro do tipo Veiculo e, dentro desse método criado chame o método mover() do parâmetro declarado, depois teste passando os tipos das subclasses de Veiculo (10min)
 
 - Slide 10:
  implementar (9min) 
