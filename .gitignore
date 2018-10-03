@@ -11,6 +11,7 @@ target/
 .metadata
 .recommenders
 bin/
+.settings/
 
 .~lock.Aulas.ods#
 
