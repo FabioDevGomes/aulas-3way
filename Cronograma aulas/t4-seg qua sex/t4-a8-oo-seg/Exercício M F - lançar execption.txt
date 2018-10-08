@@ -1,0 +1,30 @@
+Implemente um programa que verifique se uma letra digitada é igual a "F" ou "M", 
+conforme a letra escrever "F - Feminino", "M - Masculino" ou "Sexo inválido" 
+caso seja digitado uma letra diferente das duas citadas	
+(pesquisar no google, "comparar String java")
+
+
+OBS: no caso de "sexo inválido" lançar sua própria exceção como por exemplo, 
+uma "SexoInvalidoExeption()"
+
+public class SaldoInsuficienteException extends Exception {
+	public SaldoInsuficienteException() {
+		super("Saldo insuficiente.");
+	}
+
+	public SaldoInsuficienteException( String mensagem ) {
+		super(mensagem);
+	}
+}
+
+lançar exceção:
+throw new SexoInvalidoExeption();
+
+
+
+==== depois de passar slides sobre arquivo ===
+altere o programa "lançar exeption própria" para gravar um log em um arquivo em
+C:/log/log.txt
+
+Crie a classe Log3way com o método gerarLog(String descrição) 
+chame esse método antes de lançar a SexoInvalidoExeption()
