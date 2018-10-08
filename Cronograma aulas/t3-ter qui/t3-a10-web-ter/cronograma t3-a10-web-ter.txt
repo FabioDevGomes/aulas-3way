@@ -1,6 +1,3 @@
---------------------continuar implementação CRUD JSP, Servlet com as 4 operações -----------
-
-- verificar onde parou
 
 
 ------------------- hello world JSF ----------------------

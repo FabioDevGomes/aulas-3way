@@ -12,12 +12,12 @@ declare uma variável do tipo Funcionário que receba uma instância (new) do tipo 
 - Slide 03:
  Adiciona método abstrato "tirarFerias()" na classe "Funcionário"
  - adicionar atributo booleano "emFerias"
- - no método "tirarFerias()" altere esse atributo para true 
+ - no método "tirarFerias()" altere esse atributo para true (na implementação das subclasses)
  - Alterar a classe para abstract  
 
 
 - Slide 04:
-  implementar com herança
+  implementar com, ou sem, herança das classes abstratas
 
 - Slide 05:
   implementar
@@ -29,7 +29,8 @@ declare uma variável do tipo Funcionário que receba uma instância (new) do tipo 
   implementar
 
 - Slide 11:
-  implementar
+  implementar, altere a string de retorno, cria mais métodos, 
+  teste a aplicação (em todos os exercícios se possível)
 
 - Slide 13:
   lambda mais comumente usado com coleções, ainda não vimos
