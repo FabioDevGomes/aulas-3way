@@ -1,47 +1,5 @@
 
 
------------------------------- slides_08_herança_polimorfismo.pdf
-
-
-- Slide 10:
- implementar (9min) 
-
- declare um método q que tenha um parâmetro do tipo array de Veiculos e; 
- dentro desse método criado chame o método mover() percorrendo o array em um for; 
- depois teste passando parâmetros dos tipos das subclasses de Veiculo  (10 min) :21
-
-- Slide 11:
- implementar
-
-	Nos métodos polimórficos criados, verifique a classe e imprima o nome de cada objeto passado por parâmetro
-
-	No exercício do do slide 10, chame o método move() somente se a instância da classe for do tipo Carro
-
-
-
-- Slide 12:
- explicar novamente a estrutura de declaração
-
-- Slide 14:
- Implementar métodos get set para atributos/variáveis do tipo int, Integer, long, Long e Array de String
- Depois use o método set para atribuir valores e o get para recuperar.
-
-
-----------Exercício final slide herança
-
-Crie as classes "Programador" e "GerenteProjetos", que também é um "Funcionário" (extends), e que possui um atributo "privado" número de 
-matrícula (faça o método Get e Set). 
-
-Crie na Funcionário o método exibirDados() e o sobrescreva na classe Programador e na classe GerenteProjetos.
-
- - no método exibirDados() retorne: 
-	"Funcionário de matrícula XXXXX";
-	"Programador de matrícula XXXXX";
-	"Gerente de matrícula XXXXX";
-	(para cada classe respectivamente)
-	
-Ex: Programador extends Funcionário 
-
 Teste a herança em uma quarta classe com o método main().
 
 declare uma variável do tipo Funcionário que receba uma instância (new) de Programador e chame o método exibeDados()
@@ -81,6 +39,32 @@ declare uma variável do tipo Funcionário que receba uma instância (new) do tipo 
 
 - Slide 15:
   implementar exemplos da pasta ENUM
+
+
+--------------------------- slides_10_excecões.pdf 
+
+Exception:
+ 
+
+slide 04 - (antes) mostrar estrura do bloco try catch (cerca de 10 min)
+ 
+
+slide 04 - implementar exemplo eclipse, mostrar diferença do e.printStackTrace(); na rastreabilidade (cerca de 25 min)
+ 
+
+slide 05 - alterar exemplo anterior para mult catch (cerca de 5 min)
+
+slide 06 - implemetar try com recursos (cerca de 12 min)
+ cada um em uma classe 
+
+
+slide 07 - implemetar throw e trhows (cerca de 15 min)
+ implementar primeira parte do "Exercício M F - lançar execption.txt"
+
+
+slide 09 - implemetar criar própria exeção e incluir no ex anterior (cerca de 15 min)
+ concluir implementação "Exercício M F - lançar execption.txt"
+
 
 
 
