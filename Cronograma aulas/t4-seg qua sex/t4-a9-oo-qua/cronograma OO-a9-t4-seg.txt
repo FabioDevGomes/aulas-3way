@@ -2,14 +2,7 @@
 
 --------------------------- slides_10_excecões.pdf 
 
-Exception:
- 
-
-slide 04 - (antes) mostrar estrura do bloco try catch (cerca de 10 min)
- 
-
-slide 04 - implementar exemplo eclipse, mostrar diferença do e.printStackTrace(); na rastreabilidade (cerca de 25 min)
- 
+...
 
 slide 05 - alterar exemplo anterior para mult catch (cerca de 5 min)
 
@@ -26,6 +19,53 @@ slide 07 - implemetar throw e trhows (cerca de 15 min)
 
 slide 09 - implemetar criar própria exeção e incluir no ex anterior (cerca de 15 min)
  concluir implementação "Exercício M F - lançar execption.txt"
+
+
+
+-------------------------- slides_11_java_collections.pdf
+
+
+slide 04 - implemetar
+ TesteArrayList.java
+ 
+slide 05 - implemetar
+ use o map.get(chave) para recuparar os valores
+
+ ContainsKey.java
+
+
+slide 07 - implemetar
+ 
+slide 09 - implemetar
+ crie outros ArrayLists que receba outros tipois de valores
+
+ crie um hashMap com chave do tipo String e valor do tipo Integer e
+ adicione alguns elementos nessa coleção de dados
+
+ percorra seus valores
+
+	Exemplo para percorrer um HashMap()
+	for (String chave : mapa.keySet()){
+
+
+slide 11 - implemetar 
+
+"sort reverse java"
+
+
+21:00
+-------- hasMap
+  Implementation: ArrayList implements List Interface while HashMap is an implementation of Map interface.
+
+ - implementas classe Detalhes.java (15 min)
+
+
+ exercício: crie um método que retorne o nome da pessoa buscando pelo número de CPF
+    cadastre as pessoas em um hashMap com chaves sendo o CPF (Long) e os valores sendo o Nome
+       (20 min)
+
+ se não existir a pessoa cadastrada exibir mensagem "pessoa não encontrada nos registros do hashMap"
+
 
 
 
