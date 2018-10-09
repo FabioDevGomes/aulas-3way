@@ -68,6 +68,9 @@ slide 06 - implemetar try com recursos (cerca de 12 min)
  cada um em uma classe 
 
 
+=================================== fim aula ===================================
+
+
 slide 07 - implemetar throw e trhows (cerca de 15 min)
  implementar primeira parte do "Exercício M F - lançar execption.txt"
 
