@@ -4,14 +4,22 @@
 	xmlns:h="http://java.sun.com/jsf/html">
 <h:head>
 	<title>Hello JSF!</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </h:head>
 <h:body>teste jsf 2 B
    <h:form>
-   Mensagens vindas do Managed Bean (@ManagedBean)
+   		Mensagens vindas do Managed Bean (@ManagedBean)
 		<h:outputText value="#{helloMapeamento.message}" /><br/>
 		<h:outputText value="#{helloMapeamento.message2}" />
 		
-		<h:outputLabel> Mensagens vindas do Managed Bean (@ManagedBean) e inicializadas no @PostConstruct</h:outputLabel>
+		<h:outputLabel>Mensagens vindas do Managed Bean (@ManagedBean) e inicializadas no @PostConstruct</h:outputLabel>
+		<div class="jumbotron text-center">
+		  <h1><h:outputText value="#{helloMapeamento.nomeCompleto}" /></h1>
+		  <p>Altere o tamanho dessa tela responsiva para ver o resultado!</p> 
+		  <p>Altere o tamanho dessa tela responsiva para ver o resultado!</p> 
+		</div>
 	</h:form>
 </h:body>
 </html>

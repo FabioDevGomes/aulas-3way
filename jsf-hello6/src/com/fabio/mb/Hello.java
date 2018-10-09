@@ -13,10 +13,12 @@ public class Hello implements Serializable {
 	
 	private String message;
 	private String message2;
+	private String nomeCompleto;
 	
     @PostConstruct
     public void init(){
         System.out.println(" Método init() executado na inicialização devido a anotação  @PostConstruct ");
+        nomeCompleto = "Fábio Alves Gomes";
     }
      
     public String getMessage(){
@@ -26,5 +28,13 @@ public class Hello implements Serializable {
     public String getMessage2(){
         return "Hello World JSF! 555";
     }
+
+	public String getNomeCompleto() {
+		return nomeCompleto;
+	}
+
+	public void setNomeCompleto(String nomeCompleto) {
+		this.nomeCompleto = nomeCompleto;
+	}
  
 }

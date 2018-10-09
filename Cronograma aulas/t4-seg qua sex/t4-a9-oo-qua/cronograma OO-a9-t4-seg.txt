@@ -1,0 +1,37 @@
+
+
+--------------------------- slides_10_excecões.pdf 
+
+Exception:
+ 
+
+slide 04 - (antes) mostrar estrura do bloco try catch (cerca de 10 min)
+ 
+
+slide 04 - implementar exemplo eclipse, mostrar diferença do e.printStackTrace(); na rastreabilidade (cerca de 25 min)
+ 
+
+slide 05 - alterar exemplo anterior para mult catch (cerca de 5 min)
+
+slide 06 - implemetar try com recursos (cerca de 12 min)
+ cada um em uma classe 
+
+
+=================================== fim aula ===================================
+
+
+slide 07 - implemetar throw e trhows (cerca de 15 min)
+ implementar primeira parte do "Exercício M F - lançar execption.txt"
+
+
+slide 09 - implemetar criar própria exeção e incluir no ex anterior (cerca de 15 min)
+ concluir implementação "Exercício M F - lançar execption.txt"
+
+
+
+
+
+
+
+
+
