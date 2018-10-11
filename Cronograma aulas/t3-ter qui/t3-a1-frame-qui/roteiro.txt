@@ -6,5 +6,8 @@ The Eclipse IDE provides excellent support for the Maven. This tooling is develo
 
 uso de aechetype para construção do projeto
 
+slide 05 - criar projeto maven para testar
+slide 08 - criar projeto web maven para testar
+slide 18 - mudar workspace e importar projeto maven
 slide 19 - estrutura em xml (pesquisar no google)
 slide 23 - problema da transitividade das dependências 
