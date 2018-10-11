@@ -10,7 +10,7 @@ slide 06 - implemetar try com recursos (cerca de 12 min)
  cada um em uma classe 
 
 
-=================================== fim aula ===================================
+=================================== fim aula anterior ===================================
 
 
 slide 07 - implemetar throw e trhows (cerca de 15 min)
@@ -52,6 +52,7 @@ slide 11 - implemetar
 
 "sort reverse java"
 
+========================================== término ======================
 
 21:00
 -------- hasMap
