@@ -42,7 +42,7 @@ slide 09 - implemetar
  crie um hashMap com chave do tipo String e valor do tipo Integer e
  adicione alguns elementos nessa coleção de dados
 
- percorra seus valores
+ percorra e exiba seus valores
 
 	Exemplo para percorrer um HashMap()
 	for (String chave : mapa.keySet()){
