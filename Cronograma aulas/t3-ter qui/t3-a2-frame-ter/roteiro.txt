@@ -3,7 +3,7 @@
 
 
 -criar projeto dynamic
-- baixar dependencias jsp
+- baixar dependencias jsf
 - baixar dependencias primefaces
 - baixar dependencias primefaces themes
 

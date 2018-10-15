@@ -37,6 +37,7 @@ public class SelecionarPlataforma {
  
     public void setOption(String option) {
     	FacesContext context = FacesContext.getCurrentInstance();
+    	String mensagem = "";
     	if(option != null && !option.equals("")) {
     		images = new ArrayList<String>();
     		if(option.equals("Xbox One")) {
@@ -48,10 +49,11 @@ public class SelecionarPlataforma {
     				images.add("jogo" + i + ".jpeg");
     			}
     		}
-    		context.addMessage(null, new FacesMessage("Successo",  "Plataforma selecionada com sucesso") );
+    		mensagem = "Plataforma selecionada com sucesso";
     	}else {
-    		context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro", "Selecione uma plataforma") );
+    		mensagem = "Todas as plataformas selecionadas";
     	}
+    	context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Successo",  mensagem) );
         this.option = option;
     }
 

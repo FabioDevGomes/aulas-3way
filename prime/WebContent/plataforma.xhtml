@@ -6,7 +6,7 @@
 </h:head>
 <h:body>
 	<h:form>
-		<p:growl id="growl" showDetail="true" sticky="true" /> 
+		<p:growl id="growl" showDetail="true" life="2000"/> 
 		<p:messages id="messages" autoUpdate="true"/>
 		<div align="center">
 			<h:panelGrid columns="1" style="margin-bottom:10px" cellpadding="5">
@@ -15,7 +15,12 @@
 					<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
 					<f:selectItem itemLabel="PS4" itemValue="PS4" />
 					<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
-					<!-- 				 <p:ajax update="@form"/>   -->
+					
+					<!-- teste com e sem <p:ajax -->
+					<p:ajax update="@form"/> 
+					
+					<!-- testar @form e id="imagens"-->
+					<p:ajax update="imagens"/>  
 				</p:selectOneButton>
 			</h:panelGrid>
 		</div>
@@ -27,7 +32,7 @@
 
 		<div align="center">
 			<p:galleria id="imagens" value="#{selecionarPlataforma.images}"
-				var="image" panelWidth="500" panelHeight="313" showCaption="true">
+				var="image" panelWidth="500" panelHeight="313" showCaption="true" effectSpeed="2000">
 				<p:graphicImage name="/imagens/#{image}"
 					alt="Descrição do Jogo #{image}" title="#{image}" />
 			</p:galleria>
