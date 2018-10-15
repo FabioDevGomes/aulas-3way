@@ -1,0 +1,76 @@
+=======================início da aula ========================================
+
+---------- 01 ( 47 min) :55
+
+Crie uma classe chamada Gerente para definir os objetos que representarão os gerentes do banco.
+Defina um método de aumento salarial nessa classe. 
+Que deve aumentar o salário com uma taxa fixa de 10%. 
+Depois, teste o método de aumento salarial definido na classe Gerente.
+e grave o salário do gerente em um arquivo.
+
+this.salario += this.salario * 0.1;
+
+---------- 02 (40 min) :45
+
+Crie uma classe chamada Conta com três atributos: Numero da Conta, Saldo e Limite Cheque Especial. Acrescente alguns métodos na classe Conta para realizar as operações de: 
+Deposito, 
+Saque, 
+Impressão de extrato (que retornará o saldo atual com um texto explicativo) 
+e consulta do saldo disponível (que retornará o saldo + limite). 
+
+Depois, teste os métodos definidos na classe Conta e grave o saldo do cliente em um arquivo.
+
+Altere o construto para receber um número de conta na criação do objeto
+
+---------- 03 :25
+
+Faça um programa que receba um nome completo na forma de uma String e
+mostre a abreviatura deste nome. A abreviatura deve vir separada por pontos. 
+Ex: Paulo Jose Almeida. Abreviatura: P. J. A.
+
+String.valueOf(nome.charAt(0))
+
+---------- 04
+
+Fazer uma classe ExArray com as seguintes características:
+
+Atributos: array de inteiros e duas variáveis para controlar o número
+atual e máximo de elementos inseridos no array
+
+Métodos:
+o Construtor que recebe o tamanho do array como parâmetro e
+inicializa o objeto (cria array)
+o public boolean adicionar(int n) – adiciona elemento ao array, 
+retornando true se bem sucedido e false caso contrário
+o public int calculaMedia() – retorna a média aritmética dos
+números armazenados no array
+
+Adaptar o exercício ExArray para:
+ Lançar exceção simples caso não seja possível adicionar o elemento
+
+(TestaExArray.java)
+
+
+--------- 05
+ 
+Criar a classe Pessoa com as seguintes características:
+• atributos: idade e dia, mês e ano de nascimento, nome da pessoa
+
+• métodos:
+ calculaIdade(), que recebe a data atual em dias, mês e anos e calcula e
+armazena no atributo idade a idade atual da pessoa
+
+ informaIdade(), que retorna o valor da idade
+
+ informaNome(), que retorna o nome da pessoa
+
+ ajustaDataDeNascimento(), que recebe dia, mês e ano de nascimento
+como parâmetros e preenche nos atributos correspondentes do objeto.
+
+ Criar dois objetos da classe Pessoa, um representando Albert Einstein (nascido
+em 14/3/1879) e o outro representando Isaac Newton (nascido em 4/1/1643)
+
+ Fazer uma classe principal que instancie os objetos, inicialize e mostre quais
+seriam as idades de Einstein e Newton caso estivessem vivos.
+
+
