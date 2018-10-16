@@ -57,13 +57,16 @@
 
 ------------------------- java_oo_slides_13_lendo_e_escrevendo_arquivos_pages_deleted.pdf
 
-- slide 06
+- slide 05
  implementar escrita
+
+- slide 05
+implementar leitura arquivo
 
 - slide 07
  antes, mostrar novas classes para escrita BufferedOutputStreamExample.java
 
- implementar leitura arquivo
+ 
 
 - slide 09
  implementar NIO2 do Eclipse
