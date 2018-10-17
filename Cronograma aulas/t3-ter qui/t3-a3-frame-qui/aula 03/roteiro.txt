@@ -1,0 +1,60 @@
+
+
+------------------ extracted_extracted_slide03_JPA.pdf
+slide 02:
+ pesquisar no google: "entidade jpa exemplo"
+
+slide 21:
+ Enity manager percorre todo o ecosistema da JPA
+
+
+------------------ após slides
+
+1 - 
+ criar projeto dynamic 
+
+2 - 
+ converter para maven
+
+3 -
+ adicionar dependências
+
+4 - 
+ configurar web.xml
+ 
+ configurar JPA: 
+  persistence.xml (pesquisar no google "persistence.xml jpa postgresql") META-IN
+  cirar entidade (pesquisar no google "entidade jpa exemplo")
+  anotações
+
+5 - 
+ concluir login
+
+6 -
+ baixar boostrap
+ implementar listagem 
+
+extra:
+ implementar exclusão
+
+
+
+----------------------------------------------------------
+
+
+Login com JPA
+https://www.devmedia.com.br/java-web-criando-uma-tela-de-login-com-jpa-jsf-primefaces-e-mysql/32456
+
+
+persistence.xml jpa postgresql
+https://gist.github.com/SergioDiniz/886723272d9fd95dd17ecb79b35b66e1
+
+
+It is mandatory to place persistence.xml in the project’s src/META-INF folder.
+
+
+
+<!-- 				<h:commandButton action="#{usuarioManagedBean.editSchoolDetailsById()}" -->
+
+<!-- 				<h:commandButton action="#{usuarioManagedBean.deleteSchoolById(usuario.id)}" -->
+
