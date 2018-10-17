@@ -42,12 +42,14 @@ public class UserLoginView {
 			message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Bem vindo", username);
 		} else {
 			loggedIn = false;
-			message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro ao logar na aplicação", "Credenciais inválidas");
+			message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro ao logar na aplicaï¿½ï¿½o", "Credenciais invï¿½lidas");
 		}
 
-		FacesContext.getCurrentInstance().addMessage(null, message);
+		FacesContext context = FacesContext.getCurrentInstance();
+		context.addMessage(null, message);
+		context.getExternalContext().getFlash().setKeepMessages(true);
 		PrimeFaces.current().ajax().addCallbackParam("loggedIn", loggedIn);
-
+		
 		try {
 			if(loggedIn) {
 				ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();

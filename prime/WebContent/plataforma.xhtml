@@ -32,13 +32,25 @@
 
 		<div align="center">
 			<p:galleria id="imagens" value="#{selecionarPlataforma.images}"
-				var="image" panelWidth="500" panelHeight="313" showCaption="true" effectSpeed="2000">
+				var="image" panelWidth="500" panelHeight="313" showCaption="true" effectSpeed="500">
 				<p:graphicImage name="/imagens/#{image}"
 					alt="Descrição do Jogo #{image}" title="#{image}" />
 			</p:galleria>
 		</div>
 
 	</h:form>
+	<script type="text/javascript">
+		function handleLoginRequest(xhr, status, args) {
+			if (args.validationFailed || !args.loggedIn) {
+				PF('dlg').jq.effect("shake", {
+					times : 5
+				}, 100);
+			} else {
+				PF('dlg').hide();
+				$('#loginLink').fadeOut();
+			}
+		}
+	</script>
 </h:body>
 </html>
 
