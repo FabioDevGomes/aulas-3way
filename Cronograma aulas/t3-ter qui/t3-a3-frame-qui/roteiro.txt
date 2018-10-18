@@ -4,6 +4,18 @@
 slide 02:
  pesquisar no google: "entidade jpa exemplo"
 
+slide 07:
+ distribuição das anotações numa entidade
+
+
+slide 09:
+ pra não ter q criar uma regra de sequence no BD usaremos @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+
+slide 17:
+ Implementar em método main
+
+
 slide 21:
  Enity manager percorre todo o ecosistema da JPA
 
