@@ -88,6 +88,7 @@ public class EnderecoDAO implements Serializable{
 		}
 	}
 
+	@SuppressWarnings("rawtypes")
 	public List listarEndereco() {
 
 		Query queryObj = em.createQuery("SELECT u FROM Endereco u");

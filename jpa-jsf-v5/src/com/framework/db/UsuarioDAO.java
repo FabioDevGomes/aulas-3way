@@ -3,15 +3,12 @@ package com.framework.db;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
-
-import org.hibernate.CacheMode;
 
 import com.framework.model.Usuario;
 
@@ -20,13 +17,8 @@ public class UsuarioDAO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("usuarios");
-	
-//	@PersistenceContext
-//	private EntityManager em;
 	private EntityManager em = factory.createEntityManager();
 	
-//	private EntityTransaction transaction = em.getTransaction();
-
 	public Usuario getUsuario(String nomeUsuario, String senha) {
 
 		try {
@@ -117,6 +109,7 @@ public class UsuarioDAO implements Serializable{
 		}
 	}
 
+	@SuppressWarnings("rawtypes")
 	public List listarUsuario() {
 
 		Query queryObj = em.createQuery("SELECT u FROM Usuario u ");

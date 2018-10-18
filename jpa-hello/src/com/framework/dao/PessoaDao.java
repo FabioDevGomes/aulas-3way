@@ -11,6 +11,10 @@ import com.framework.model.Pessoa;
 public class PessoaDao {
 
 	EntityManager entityManager;
+	
+	//	Nossa classe PessoaDao segue o padrão de projeto 
+	//	Singleton que garante que apenas uma instância dessa 
+	//	classe será criada durante toda a aplicação
 	private static PessoaDao instance;
 
 	public static PessoaDao getInstance() {
@@ -39,7 +43,7 @@ public class PessoaDao {
 			entityManager.getTransaction().begin();
 			entityManager.persist(Pessoa);
 			entityManager.getTransaction().commit();
-		} catch (Exception ex) {
+		} catch (Exception ex) {	
 			ex.printStackTrace();
 			entityManager.getTransaction().rollback();
 		}
@@ -57,6 +61,10 @@ public class PessoaDao {
 		return entityManager.createQuery("FROM " + Pessoa.class.getName()).getResultList();
 	}
 
+	
+	//	O método merge segue o mesmo princípio do método persist(), 
+	//	a única diferença é que o merge atualiza o registro e não 
+	//	apenas insere ele no banco
 	public void merge(Pessoa Pessoa) {
 		try {
 			entityManager.getTransaction().begin();
