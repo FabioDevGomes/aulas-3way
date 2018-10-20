@@ -20,7 +20,7 @@ public class StudentBean {
 //	private String gender;  
 //	private String address;
 
-	public ArrayList<Student>studentsListFromDB;
+	private ArrayList<Student>studentsListFromDB;
 	private Student Student = new Student();
 
 //	public int getId() {
@@ -73,11 +73,11 @@ public class StudentBean {
 	
 	@PostConstruct
 	public void init() {
-		studentsListFromDB = DatabaseOperation.getStudentsListFromDB();
+		setStudentsListFromDB(DatabaseOperation.getStudentsListFromDB());
 	}
 
 	public ArrayList<Student> studentsList() {
-		return studentsListFromDB;
+		return getStudentsListFromDB();
 	}
 	
 	public String saveStudentDetails(Student newStudentObj) {
@@ -102,5 +102,13 @@ public class StudentBean {
 
 	public void setStudent(Student student) {
 		Student = student;
+	}
+
+	public ArrayList<Student> getStudentsListFromDB() {
+		return studentsListFromDB;
+	}
+
+	public void setStudentsListFromDB(ArrayList<Student> studentsListFromDB) {
+		this.studentsListFromDB = studentsListFromDB;
 	}
 }

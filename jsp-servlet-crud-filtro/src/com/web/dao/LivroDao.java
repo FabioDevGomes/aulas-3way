@@ -13,8 +13,8 @@ import com.web.util.FabricaConexao;
 
 public class LivroDao {
 
-	private static final String OBTER_POR_ID_SQL = "SELECT AUTOR, TITULO, COD_LIVRO, IMAGEM,PRECO, DESCRICAO FROM LIVRO WHERE COD_LIVRO = ?";
-	private static final String CONSULTAR_SQL = "SELECT COD_LIVRO, TITULO, AUTOR, PRECO, IMAGEM, DESCRICAO FROM LIVRO WHERE TITULO LIKE ?";
+	private static final String OBTER_POR_ID_SQL = "SELECT * FROM LIVRO WHERE COD_LIVRO = ?";
+	private static final String CONSULTAR_SQL = "SELECT * FROM LIVRO WHERE TITULO LIKE ?";
 	private static final String LISTAR_TODOS = "SELECT * FROM LIVRO ";
 	private static final String UPDATE_SQL = "UPDATE LIVRO SET TITULO = ?, AUTOR = ?, DESCRICAO = ?, PRECO = ? WHERE COD_LIVRO = ?";
 	private static final String INSERT_SQL = "INSERT INTO LIVRO(TITULO, AUTOR, DESCRICAO, PRECO, IMAGEM) VALUES(?, ?, ?, ?, 'VALOR/IMAGEM')";

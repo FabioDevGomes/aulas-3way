@@ -49,7 +49,7 @@ public class SimpleCrudBean implements Serializable {
         util.redirectWithGet();
     }
     
-    public void edit(Student item) {
+    public void editMb(Student item) {
         beforeEditItem = item.clone();
         this.item = item;
         edit = true;

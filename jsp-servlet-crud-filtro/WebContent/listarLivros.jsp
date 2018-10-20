@@ -8,7 +8,7 @@
 <title>Livro</title>
 </head>
 <body>
-	<form method="post" action='LivroController' name="frmBuscarLivro">
+	<form method="get" action='LivroController' name="frmBuscarLivro">
 		<input type="text" name="buscarLivro" placeholder="Buscar por Título"/> 
 		<input	type="submit" value="Buscar" />
 	</form>
