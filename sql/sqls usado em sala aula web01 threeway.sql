@@ -51,5 +51,5 @@ INSERT INTO livro (TITULO,AUTOR,PRECO,IMAGEM) VALUES ('PARA ONDE ELA FOI?','FORM
 INSERT INTO livro (TITULO,AUTOR,PRECO,IMAGEM) VALUES ('O LIVRO DO CEMITERIO','GAILMAN, NEIL', 20.0, 'imagens/cemiterio.jpg');
 
 
-select * from ESTOQUE;
+select * from livro;
 
