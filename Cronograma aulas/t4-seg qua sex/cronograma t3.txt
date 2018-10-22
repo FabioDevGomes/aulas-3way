@@ -1,0 +1,47 @@
+﻿
+------------------------------------------------------pendencias
+*** implementado somente a consulta via jdbc
+
+implementar listagem dos resultado pelo for each
+
+============================================== início aula 02 =============
+
+
+Repassar listagem via JDBC
+
+- Ajustar estrutura if / while na listagem de livros
+
+- Alterar SQL para usar carctere * explicar como está atualmente
+ Testar as duas formas direto no BD 
+
+- Alterar nome do métod para "consultarTitulo() e consultarCodigo()"
+  consultarCodigo() é a chave primária então pode retornar apenas 1 resultado
+
+- implementar consultarCodigo()
+ Ocultar parte de atribuição das colunas para os atributos para tentarem implementar
+
+- implementar listarTodos() SELECT * FROM ESTOQUE
+
+- implementar updateTitulo() 
+ Observar se há implementação dos get set para os atributos
+ O sql de update poderia sim estar dentro do seu método, mas estamos seguindo outra arquitetura
+ 
+ Criar Enum para armazenar SQL's
+
+ Separar trecho de códigos de consulta e alteração em métodos
+
+- implementar delete() 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
