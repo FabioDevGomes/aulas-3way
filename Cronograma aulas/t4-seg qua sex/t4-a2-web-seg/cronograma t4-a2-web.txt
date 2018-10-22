@@ -17,6 +17,7 @@ implementar listagem dos resultado pelo for each
 ------------------- implementar DAO de livro (apostila e prijeto implementado no eclipse) --------------------
 
 
+
 Repassar listagem via JDBC
 
 - Ajustar estrutura if / while na listagem de livros
@@ -36,7 +37,7 @@ Repassar listagem via JDBC
  Observar se há implementação dos get set para os atributos
  O sql de update poderia sim estar dentro do seu método, mas estamos seguindo outra arquitetura
  
- (apenas se a turma estiver adiantada) Criar Enum para armazenar SQL's
+ Criar Enum para armazenar SQL's
 
  Separar trecho de códigos de consulta e alteração em métodos
 
