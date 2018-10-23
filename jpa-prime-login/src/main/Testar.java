@@ -12,12 +12,12 @@ public class Testar {
 		
 		Usuario usuario = new Usuario();
 //		usuario.setId(7);
-		usuario.setNomeUsuario("---teste 2");
-		usuario.setSenha("---234");
-		usuario.setMatricula("-----");
+		usuario.setNomeUsuario("Fábio Ivanov");
+		usuario.setSenha("123456");
+		usuario.setMatricula("m123456");
 		usuario.setUltimoAcesso(new Date());
 		
-//		dao.inserirUsuario(usuario);
+		dao.inserirUsuario(usuario);
 		
 
 	}
