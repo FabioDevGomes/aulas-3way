@@ -12,9 +12,9 @@ public class PessoaDao {
 
 	EntityManager entityManager;
 	
-	//	Nossa classe PessoaDao segue o padrão de projeto 
-	//	Singleton que garante que apenas uma instância dessa 
-	//	classe será criada durante toda a aplicação
+	//	Nossa classe PessoaDao segue o padrï¿½o de projeto 
+	//	Singleton que garante que apenas uma instï¿½ncia dessa 
+	//	classe serï¿½ criada durante toda a aplicaï¿½ï¿½o
 	private static PessoaDao instance;
 
 	public static PessoaDao getInstance() {
@@ -38,10 +38,10 @@ public class PessoaDao {
 		return entityManager;
 	}
 
-	public void persist(Pessoa Pessoa) {
+	public void persist(Pessoa pessoa) {
 		try {
 			entityManager.getTransaction().begin();
-			entityManager.persist(Pessoa);
+			entityManager.persist(pessoa);
 			entityManager.getTransaction().commit();
 		} catch (Exception ex) {	
 			ex.printStackTrace();
@@ -55,20 +55,20 @@ public class PessoaDao {
 
 	
 	//	utiliza o createQuery que recebe um JPQL 
-	//	(Java Persistence Query Language) que é uma alternativa ao SQL 
+	//	(Java Persistence Query Language) que ï¿½ uma alternativa ao SQL 
 	@SuppressWarnings("unchecked")
 	public List<Pessoa> findAll() {
 		return entityManager.createQuery("FROM " + Pessoa.class.getName()).getResultList();
 	}
 
 	
-	//	O método merge segue o mesmo princípio do método persist(), 
-	//	a única diferença é que o merge atualiza o registro e não 
+	//	O mï¿½todo merge segue o mesmo princï¿½pio do mï¿½todo persist(), 
+	//	a ï¿½nica diferenï¿½a ï¿½ que o merge atualiza o registro e nï¿½o 
 	//	apenas insere ele no banco
-	public void merge(Pessoa Pessoa) {
+	public void merge(Pessoa pessoa) {
 		try {
 			entityManager.getTransaction().begin();
-			entityManager.merge(Pessoa);
+			entityManager.merge(pessoa);
 			entityManager.getTransaction().commit();
 		} catch (Exception ex) {
 			ex.printStackTrace();
