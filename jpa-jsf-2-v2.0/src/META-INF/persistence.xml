@@ -16,9 +16,11 @@
              
                   <!-- dados da conexao -->
                   <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
-                  <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/user" />
+<!--                   <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/user" /> -->
+                  <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://go7875sx018.goiania.caixa:5432/user" />
                   <property name="javax.persistence.jdbc.user" value="postgres" />
-                  <property name="javax.persistence.jdbc.password" value="123456" />
+<!--                   <property name="javax.persistence.jdbc.password" value="123456" /> -->
+                  <property name="javax.persistence.jdbc.password" value="postgres" />
   
                   <!-- propriedades do hibernate -->
                   <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />

@@ -1,5 +1,6 @@
 package com.framework.managedbeans;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
@@ -14,8 +15,9 @@ public class UsuarioManagedBean {
 	
 	private UsuarioDAO usuarioDAO = new UsuarioDAO();
 	private Usuario usuario = new Usuario();
+	private List<Usuario> usuarioListDb = new ArrayList<>();
 	
-	public List usuarioListDb() {
+	public List getUsuarioListDb() {
 		return usuarioDAO.listarUsuario();
 	}
 

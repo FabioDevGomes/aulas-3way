@@ -33,7 +33,7 @@
 	</center>
 	<h:form id="usuarioForm">
 		<h:dataTable id="usuarioTable" binding="#{table}"
-			value="#{usuarioManagedBean.usuarioListDb()}" var="usuario"
+			value="#{usuarioManagedBean.usuarioListDb}" var="usuario"
 			styleClass="table table-striped table-bordered tableUpdated">
 			<h:column>
 				<f:facet name="header">Id</f:facet>
@@ -53,7 +53,7 @@
 			</h:column>
 			<h:column>
 				<f:facet name="header">Update</f:facet>
-				<h:commandButton action="#{usuarioManagedBean.usuarioListDb()}"
+				<h:commandButton action="#{usuarioManagedBean.getUsuarioListDb()}"
 					value="Atualizar" styleClass="btn btn-primary">
 					<f:param name="selectedSchoolId" value="#{usuario.id}" />
 				</h:commandButton>
