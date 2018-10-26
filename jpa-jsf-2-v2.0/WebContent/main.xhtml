@@ -1,29 +1,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
+	xmlns:f="http://java.sun.com/jsf/core">
 
 <h:head>
-	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"	http-equiv="X-UA-Conpatible" />
 	<h:outputStylesheet library="css" name="bootstrap.min.css" />
 	<title>JSF JPA Crud Exemplo</title>
 	<style type="text/css">
-.tableUpdated {
-	width: 90% !important;
-	margin: 17px 58px 0 !important;
-}
-
-.btnSpace {
-	margin: 17px;
-}
-</style>
+		.tableUpdated {
+			width: 90% !important;
+			margin: 17px 58px 0 !important;
+		}
+		
+		.btnSpace {
+			margin: 17px;
+		}
+	</style>
 
 </h:head>
 
 <h:body>
 	<h:form>
-		<p:outputLabel
-			value="Login efetuado com sucesso! Bem vindo ao sistema!"></p:outputLabel>
+		<h:outputText
+			value="Login efetuado com sucesso! Bem vindo ao sistema!"></h:outputText>
 	</h:form>
 
 	<center>
@@ -32,7 +30,7 @@
 		</h2>
 	</center>
 	<h:form id="usuarioForm">
-		<h:dataTable id="usuarioTable" binding="#{table}"
+		<h:dataTable id="usuarioTable" 
 			value="#{usuarioManagedBean.usuarioListDb}" var="usuario"
 			styleClass="table table-striped table-bordered tableUpdated">
 			<h:column>
