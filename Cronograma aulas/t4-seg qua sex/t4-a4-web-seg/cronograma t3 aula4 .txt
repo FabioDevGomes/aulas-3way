@@ -1,4 +1,4 @@
-
+﻿
 
 ----------------deleted_HTML5, CSS, Bootstrap, JavaScript, jQuery.pdf-----------------------
 
@@ -13,18 +13,7 @@ slide 15:
 	implementar bootstrap
 	usar <div class="col-sm-6">
 
-------------------------------------------------------------------------------------------------------------
-
-- imagem 09
- implementar JS inline
- alterar para atribuir um texto no lugar da data (JavaScript accepts both double and single quotes)
-
-- imagem 12
- implementar com o texto em português
- depois alterar tamanho da fonte
- depois ocultar parágrafo
- depois, inclua mais campos (<input>) e implemente a validação
-
+-----------------slide fábio--------------------------------------------------------------------------------
 
 - imagem 13
  implementar
@@ -39,11 +28,20 @@ slide 15:
 
 ------------------------------------------------------------------------------------------------------------
 
+slide 16:
+	Você deve saber que qualquer variável "declarada" 
+	sem let, var ou const tem escopo global, vale para 
+	todo o script.
 
 
 slide 18:
-	implementar JS
+	implementar JS prompt (crie um botão que chame a função)
 
+slide 25:
+	implementar função passando parâmetro na chamada
+
+slide 27:
+	O que realmente vimos na última aula
 
 slide 29:
 	explicar onSubmit, arquivo JS externo
