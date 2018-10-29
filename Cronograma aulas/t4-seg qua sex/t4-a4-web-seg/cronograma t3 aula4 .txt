@@ -1,0 +1,62 @@
+
+
+----------------deleted_HTML5, CSS, Bootstrap, JavaScript, jQuery.pdf-----------------------
+
+slide 12:
+	implementar para cnohecer novas tags HTML
+
+slide 13:
+	4 - baixar bootstrap
+
+
+slide 15:
+	implementar bootstrap
+	usar <div class="col-sm-6">
+
+------------------------------------------------------------------------------------------------------------
+
+- imagem 09
+ implementar JS inline
+ alterar para atribuir um texto no lugar da data (JavaScript accepts both double and single quotes)
+
+- imagem 12
+ implementar com o texto em português
+ depois alterar tamanho da fonte
+ depois ocultar parágrafo
+ depois, inclua mais campos (<input>) e implemente a validação
+
+
+- imagem 13
+ implementar
+ depois alterar para buscar o elemnto HTML (<p>) por pelo atributo id 
+
+
+- testar api third-party-apis
+
+ https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
+
+ https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/youtube/youtube.css
+
+------------------------------------------------------------------------------------------------------------
+
+
+
+slide 18:
+	implementar JS
+
+
+slide 29:
+	explicar onSubmit, arquivo JS externo
+
+
+slide 30:
+	implementar jquery.html
+
+
+slide 15 (voltar no exemplo):
+	usar onsubmit="buscar(nome)" --emxemplo js.html
+	usar <body onload="return buscar('nome dd')"> --emxemplo bootstrap.html
+
+
+
+
