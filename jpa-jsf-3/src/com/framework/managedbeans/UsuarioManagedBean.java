@@ -47,12 +47,11 @@ public class UsuarioManagedBean {
 	}
 
 	public String paginaEditar(Usuario usuario) {
-		this.usuario = usuario;
 		return "/restrito/editarUsuario?faces-redirect=true&id="+usuario.getId();
 	}
 
 	public String editarUsuarioDb(Usuario usuario) {
-		usuarioDAO.alterarUsuario();
+		usuarioDAO.alterarUsuario(usuario);
 		return "/restrito/main?faces-redirect=true";
 	}
 

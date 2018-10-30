@@ -40,8 +40,9 @@ public class UsuarioDAO {
 		}
 	}
 
-	public void alterarUsuario() {
+	public void alterarUsuario(Usuario usuario) {
 		transaction.begin();
+		em.persist(usuario);
 		transaction.commit();
 	}
 
