@@ -1,0 +1,144 @@
+﻿
+============================== início aula 5 ==========================
+Deletar tags não usadas no web.xml (welcome-file-list, <!--   <servlet> -->)
+
+Mudar nome da página index.xhtml para login.xhtml
+
+- LoginManagedBean
+ context.getExternalContext().getSessionMap().put("logado", false);
+
+
+- alterar em todos os locais do sistema "LoginMB" para "loginMB" usando o search do eclipse
+
+
+- criar filtro 
+
+	public class LoginFilter implements Filter {
+
+	 boolean logado = false;
+	 if(sess.getAttribute("logado") != null) {
+		 logado = (Boolean) sess.getAttribute("logado");
+	 }
+
+
+- mapear no web.xml
+ 	<filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>com.framework.filter.LoginFilter</filter-class>
+	</filter>
+       ****disable spell check 
+	<url-pattern>/restrito/*</url-pattern>
+
+
+
+- mudar diretório /login/login.xhtml - CTRL + H
+
+- criar diretório /restrito/ e mover .xhml's - CTRL + H
+
+- alterar return "/restrito/main.xhtml?faces-redirect=true"; - CTRL + H
+
+- alterar string school para usuário 
+	Se muitas ocorrências na mesma página substituir com CTRL + F
+
+
+----------- erro usuário já extiste 
+
+        <h:messages class="text text-danger"/>
+
+
+	public String incluirUsuarioDb(Usuario usuario) {
+		if (!usuarioDAO.inserirUsuario(usuario)) {
+			FacesContext context = FacesContext.getCurrentInstance();
+			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro: Usuário já existe!", "--"));
+
+			context.getExternalContext().getFlash().setKeepMessages(true);
+			return "/restrito/novoUsuario.xhtml?faces-redirect=true";
+		}
+		return "/restrito/main?faces-redirect=true";
+	}
+
+
+ ------------------ implementar update
+ 
+
+ XHML:
+
+ editar.xhtml:
+
+	Mesma página de inclusão, alterar somente 
+
+	<div class="col-sm-4">
+                <h:inputText id="usuario-id" readonly="true" value="#{usuarioManagedBean.usuario.id}" styleClass="form-control"/>
+            </div>
+
+	<h:commandButton value="Alterar" action="#{usuarioManagedBean.editarUsuarioDb(usuarioManagedBean.usuario)}" 				styleClass="btn btn-success btnWidth" /></div>
+
+
+ MB:
+
+	public String paginaEditar(Usuario usuario) {
+		this.usuario = usuario;
+		return "/restrito/editarUsuario?faces-redirect=true&id="+usuario.getId();
+	}
+
+	@PostConstruct
+	public void init() {
+		FacesContext facesContext = FacesContext.getCurrentInstance();
+		String idUsuario = (String) facesContext.getExternalContext().getRequestParameterMap().get("id");
+		if(idUsuario != null) {
+			this.usuario = usuarioDAO.getUsuario(Integer.parseInt(idUsuario));
+		}
+	}
+
+	public String editarUsuarioDb(Usuario usuario) {
+		usuarioDAO.alterarUsuario();
+		return "/restrito/main?faces-redirect=true";
+	}
+
+
+ DAO:
+	public void alterarUsuario() {
+		transaction.begin();
+		transaction.commit();
+	}
+
+=========== eliminando bugs ===================
+
+------------
+ Caso haja erro ao encontrar o Filter, configurar build path
+marcando jdk em order and export
+
+=========================================================
+
+
+------------ implementar uma tela para listagem de produtos
+ Criar Tabela produtos com o campos
+	- cod
+	- descricao
+	- fornecedor
+	- valor
+
+Criar Projeto dynamic com configurações do JSF e JPA
+
+Converter para maven project
+
+Adicionar dependências (pegar do projeto atual)
+
+Configure o persistence.xml
+	(use como modelo o projeto atual)
+
+Criar entidade Produto
+	Mapear com JPA somente calsse e id
+
+Criar ProdutosDAO
+	Criar método listarProdutos
+
+Criar produtoLisgem.xhtml
+
+Criar ProdutoMB
+	Criar método listarProdutos
+
+
+
+
+
