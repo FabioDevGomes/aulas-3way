@@ -1,0 +1,71 @@
+﻿
+-----------------slide fábio--------------------------------------------------------------------------------
+
+- imagem 13
+ implementar
+ depois alterar para buscar o elemnto HTML (<p>) por pelo atributo id 
+
+
+- testar api third-party-apis
+
+ https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
+
+ https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/youtube/youtube.css
+
+------------------------------------------------------------------------------------------------------------
+
+
+----------------deleted_HTML5, CSS, Bootstrap, JavaScript, jQuery.pdf-----------------------
+
+iniciar no slide 05:
+
+slide 08:
+	Como ficaria, mas não vamos implementar pq o foco não é CSS	
+
+slide 12:
+	implementar para cnohecer novas tags HTML
+
+slide 13:
+	4 - baixar bootstrap
+
+slide 15:
+	implementar bootstrap
+	exemplo bootstrap.html
+	usar <div class="col-sm-6">
+
+slide 16:
+	Você deve saber que qualquer variável "declarada" 
+	sem let, var ou const tem escopo global, vale para 
+	todo o script.
+
+slide 17:
+	=== é mais específico
+
+slide 18:
+	implementar JS prompt (crie um botão que chame a função)
+
+slide 24:
+	Array não tipado
+
+slide 25:
+	implementar função passando parâmetro na chamada através de um click num botão
+
+slide 27:
+	
+
+slide 28:
+	implementar jquery.html
+
+slide 30:
+	
+
+final:
+	adiiconar <div class="col-sm-6"> para ajustar
+
+	usar onsubmit="buscar(nome)" --(<form name="myForm" onsubmit="buscar(nome)">) exemplo js.html 
+
+	usar <body onload="return buscar('nome dd')"> --emxemplo bootstrap.html
+
+
+
+
