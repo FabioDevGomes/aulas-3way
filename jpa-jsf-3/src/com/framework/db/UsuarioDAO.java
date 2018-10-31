@@ -42,7 +42,7 @@ public class UsuarioDAO {
 
 	public void alterarUsuario(Usuario usuario) {
 		transaction.begin();
-		em.persist(usuario);
+		em.merge(usuario);
 		transaction.commit();
 	}
 
