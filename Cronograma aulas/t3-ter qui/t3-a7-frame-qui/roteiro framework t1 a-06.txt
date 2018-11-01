@@ -7,25 +7,28 @@
 	- fornecedor
 	- valor
 
+------------ implementar uma tela para listagem de produtos
+ Criar Tabela produtos com o campos
+	- cod;	- descricao;	- fornecedor;	- valor
+
 Criar Projeto dynamic com configurações do JSF e JPA
 
-Converter para maven project
-
-Adicionar dependências (pegar do projeto atual)
+Converter para maven project > Adicionar dependências (pegar do projeto atual)
 
 Configure o persistence.xml
 	(use como modelo o projeto atual)
 
 Criar entidade Produto
-	Mapear com JPA somente calsse e id
+	Mapear com JPA (somente classe e id)
 
-Criar ProdutosDAO
-	Criar método listarProdutos
+Criar ProdutosDAO > Criar método listarProdutos
 
 Criar produtoLisgem.xhtml
 
 Criar ProdutoMB
 	Criar método listarProdutos
+	
+Configurar web.xml para abrir página de listagem ao acessa contexto da aplicação
 
 
 
