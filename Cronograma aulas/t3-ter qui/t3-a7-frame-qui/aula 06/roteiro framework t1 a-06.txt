@@ -1,4 +1,4 @@
-
+﻿
 
 ------------ implementar uma tela para listagem de produtos
  Criar Tabela produtos com o campos
@@ -33,12 +33,21 @@ Criar ProdutoMB
 
 <welcome-file>login/login.xhtml</welcome-file>
 
-- facelets:
-	criar layout.xhtml
-	criar basicheader.xhtml
-	criar basicfooter.xhtml
 
-	buscar tempalte no https://getbootstrap.com/docs/4.0/examples/
+
+
+- extrair todo o CSS para um aruqivo chamado geral.css
+
+- facelets:
+
+- criar layout.xhtml
+ 	xmlns:ui="http://java.sun.com/jsf/facelets"
+	No início do arquivo temos a importação da biblioteca do Facelets diretamente na tag html.
+
+	criar header.xhtml
+	criar footer.xhtml
+
+	buscar template no https://getbootstrap.com/docs/4.0/examples/
 
 	adicionar HTML header
 

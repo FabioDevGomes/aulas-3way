@@ -6,8 +6,8 @@
 <h:head>
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
     <h:outputStylesheet library="css" name="bootstrap.min.css" />
-    <h:outputStylesheet library="css" name="Footer-white.css" />
-    <h:outputStylesheet library="css" name="usuario.css" />
+    <h:outputStylesheet library="css" name="footer-white.css" />
+    <h:outputStylesheet library="css" name="geral.css" />
     
     <title>JSF JPA Crud</title>
 </h:head>
@@ -16,7 +16,7 @@
 	<div id="page">
 		<div id="header">
 			<ui:insert name="header">
-				<ui:include src="/restrito/template/basicheader.xhtml" />
+				<ui:include src="/restrito/template/header.xhtml" />
 			</ui:insert>
 		</div>
 		
@@ -32,7 +32,7 @@
 
 		<div id="footer">
 			<ui:insert name="footer">
-				<ui:include src="/restrito/template/basicfooter.xhtml" />
+				<ui:include src="/restrito/template/footer.xhtml" />
 			</ui:insert>
 		</div>
 	</div>
