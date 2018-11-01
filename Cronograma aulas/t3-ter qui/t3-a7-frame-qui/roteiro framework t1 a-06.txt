@@ -1,0 +1,67 @@
+﻿
+
+------------ implementar uma tela para listagem de produtos
+ Criar Tabela produtos com o campos
+	- cod
+	- descricao
+	- fornecedor
+	- valor
+
+Criar Projeto dynamic com configurações do JSF e JPA
+
+Converter para maven project
+
+Adicionar dependências (pegar do projeto atual)
+
+Configure o persistence.xml
+	(use como modelo o projeto atual)
+
+Criar entidade Produto
+	Mapear com JPA somente calsse e id
+
+Criar ProdutosDAO
+	Criar método listarProdutos
+
+Criar produtoLisgem.xhtml
+
+Criar ProdutoMB
+	Criar método listarProdutos
+
+
+
+============================== início aula 6 ==========================
+
+<welcome-file>login/login.xhtml</welcome-file>
+
+
+
+
+- extrair todo o CSS para um aruqivo chamado geral.css
+
+- facelets:
+
+- criar layout.xhtml
+ 	xmlns:ui="http://java.sun.com/jsf/facelets"
+	No início do arquivo temos a importação da biblioteca do Facelets diretamente na tag html.
+
+	criar header.xhtml
+	criar footer.xhtml
+
+	buscar template no https://getbootstrap.com/docs/4.0/examples/
+
+	adicionar HTML header
+
+
+- Extrair CSS para arquivo externo
+
+
+
+
+
+
+
+
+
+
+
+
