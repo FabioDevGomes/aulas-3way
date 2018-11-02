@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
 <!DOCTYPE HTML>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
 	xmlns:h="http://java.sun.com/jsf/html" 
@@ -5,7 +6,6 @@
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
     <h:outputStylesheet library="css" name="bootstrap.min.css" />
     <title>JSF JPA Crud</title>
 </h:head>
@@ -15,7 +15,7 @@
 
 			<center>
 				<h2>
-					<h:outputText value="Gerar Novo UsuÃ¡rio" />
+					<h:outputText value="Gerar Novo Usuário" />
 				</h2>
 			</center>
 			<h:form id="usuarioBeanForm" styleClass="form-horizontal">
@@ -27,11 +27,11 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<h:outputLabel for="usuario-name" styleClass="control-label col-sm-4">Nome UsuÃ¡rio:</h:outputLabel>
+					<h:outputLabel for="usuario-name" styleClass="control-label col-sm-4">Nome Usuário:</h:outputLabel>
 					<div class="col-sm-4">
 						<h:inputText id="usuario-name" value="#{usuarioManagedBean.usuario.nomeUsuario}"
 							styleClass="form-control" required="true"
-							requiredMessage="O Nome de UsuÃ¡rio nÃ£o pode estar vazio" />
+							requiredMessage="O Nome de Usuário não pode estar vazio" />
 					</div>
 					<h:message for="usuario-name" styleClass="text text-danger" />
 				</div>
@@ -40,7 +40,7 @@
 					<div class="col-sm-4">
 						<h:inputText id="usuario-matricula" value="#{usuarioManagedBean.usuario.matricula}"
 							styleClass="form-control" required="true"
-							requiredMessage="matricula nÃ£o pode estar vazio" />
+							requiredMessage="matricula não pode estar vazio" />
 					</div>
 					<h:message for="usuario-matricula" styleClass="text text-danger" />
 				</div>
@@ -49,7 +49,7 @@
 					<div class="col-sm-4">
 						<h:inputText id="usuario-senha" value="#{usuarioManagedBean.usuario.senha}"
 							styleClass="form-control" required="true"
-							requiredMessage="senha nÃ£o pode estar vazio" />
+							requiredMessage="senha não pode estar vazio" />
 					</div>
 					<h:message for="usuario-senha" styleClass="text text-danger" />
 				</div>
@@ -63,7 +63,7 @@
 						</div>
 						<div class="col-sm-1" />
 						<div class="col-sm-updated">
-							<h:outputLink value="listagemUsuarioT.xhtml">Ver lista de usuÃ¡rios</h:outputLink>
+							<h:outputLink value="listagemUsuarioT.xhtml">Ver lista de usuários</h:outputLink>
 						</div>
 					</div>
 				</div>
