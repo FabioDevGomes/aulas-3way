@@ -31,6 +31,9 @@
 	criar tela para enviar parâmetro
 
 
+Exercício: mostrar nome e profissão na tela a partir de um formulário bootstrap
+
+
 
 ============================================= aula terminada =================
 
