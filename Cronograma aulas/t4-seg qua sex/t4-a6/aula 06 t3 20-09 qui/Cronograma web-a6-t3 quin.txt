@@ -1,4 +1,4 @@
------------------------03_Servlet_e_JSP_pages_deleted.pdf
+﻿-----------------------03_Servlet_e_JSP_pages_deleted.pdf
 
 - slide 14 - após slide 20, Testar forward e sendRedirect
 
@@ -11,6 +11,7 @@
 		RequestDispatcher rd = getServletContext().getRequestDispatcher("/listagemJstl.jsp");
 		rd.forward(request, response);
 	    
+		(perde o scopo das variáveis)
 		response.sendRedirect("/servlet-jsp-v2/listagemJstl.jsp");
 
 
