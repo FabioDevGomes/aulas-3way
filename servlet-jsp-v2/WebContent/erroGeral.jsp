@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Erro 404</title>
+		<title>Erro inesperado</title>
 		<link rel="stylesheet" type="text/css"	href="css/error.css">
 	</head>
 	<body>
@@ -17,7 +17,7 @@
 			<div class="cloud x5"></div>
 		</div>
 		<div class='c'>
-			<div class='_404'>Arro inesperado</div>
+			<div class='_404'>Erro inesperado</div>
 			<hr>
 			<div class='_1'>THE PAGE</div>
 			<div class='_2'>WAS NOT FOUND</div>
