@@ -81,6 +81,13 @@ public class SimpleCrudBean implements Serializable {
     }
     
     public List<Student> getList() {
+    	Student student = new Student();
+    	student.setEmail("teste@teste.com");
+    	student.setId(32l);
+    	student.setName("nome");
+    	
+    	list.add(student);
+    	
         return list;
     }
     

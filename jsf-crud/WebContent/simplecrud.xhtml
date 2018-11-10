@@ -8,52 +8,17 @@
     
 <body>
     <h3>List students</h3>
-    <h:form rendered="#{not empty simpleCrudBean.list}">
+<!--     <h:form rendered="#{not empty simpleCrudBean.list}"> -->
         <h:dataTable value="#{simpleCrudBean.list}" var="item">
             <h:column><f:facet name="header">ID</f:facet>#{item.id}</h:column>
             <h:column><f:facet name="header">Name</f:facet>#{item.name}</h:column>
             <h:column><f:facet name="header">Email</f:facet>#{item.email}</h:column>
-            <h:column>
-                <h:commandButton value="edit" action="#{simpleCrudBean.editMb(item)}" />
-            </h:column>
-            <h:column>
-                <h:commandButton value="delete" action="#{simpleCrudBean.delete(item)}" />
-            </h:column>
         </h:dataTable>
-    </h:form>
+<!--     </h:form> -->
     
     <h:panelGroup rendered="#{empty simpleCrudBean.list}">
         <p>Sem estudantes! por favor adicione.</p>
     </h:panelGroup>
     
-    <h:panelGroup rendered="#{!simpleCrudBean.edit}">
-        <h3>Adicionar Estudante</h3>
-        <h:form>
-            <p>Nome: <h:inputText value="#{simpleCrudBean.item.name}" /></p>
-			<p>Email: <h:inputText id="email" value="#{simpleCrudBean.item.email}" size="20" required="true" label="Email Address">
-						<f:validator validatorId="com.fabio.validator.EmailValidator" />
-					  </h:inputText>
-			</p>
-			<h:message for="email" style="color:red" />
-			<p>
-                <h:commandButton value="Adicionar" action="#{simpleCrudBean.add}" />
-                <h:commandButton value="Limpar campo" action="#{simpleCrudBean.resetAdd}" />
-            </p>
-        </h:form>
-    </h:panelGroup>
-    
-    <h:panelGroup rendered="#{simpleCrudBean.edit}">
-        <h3>Edit student #{simpleCrudBean.item.id}</h3>
-        <h:form>
-            <p>Name: <h:inputText value="#{simpleCrudBean.item.name}" /></p>
-            <p>
-                <h:commandButton value="save" action="#{simpleCrudBean.saveEdit}" />
-                <h:commandButton value="cancel" action="#{simpleCrudBean.cancelEdit}" />
-            </p>
-        </h:form>
-    </h:panelGroup>
-    <p>
-        <a href="#{appUrlStore.baseUrl}">Go back to index</a>
-    </p>
 </body>
 </html>
