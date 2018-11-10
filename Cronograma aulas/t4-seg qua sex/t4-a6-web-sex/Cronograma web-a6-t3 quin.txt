@@ -36,12 +36,12 @@
 	setar listar na requisição - 
 			request.setAttribute("empList", empList);
 
-	redirecionar 
+	redirecionar:
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/home.jsp");
 			rd.forward(request, response);
 
 
-	setar mais atributos 	
+	setar mais atributos: 	
 		request.setAttribute("url", "https://www.journaldev.com");
 
 
