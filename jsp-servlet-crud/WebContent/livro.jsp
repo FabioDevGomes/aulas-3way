@@ -4,12 +4,12 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-	<title>Add new livro</title>
+	<title>Adicionar livro</title>
 </head>
 <body>
 
 	<form method="POST" action='LivroController' name="frmAddLivro">
-			User ID : 
+			C�digo Livro : 
 			<input type="text" readonly="readonly" name="livroCodigo" value="${livro.codigo}" /> 
 			<br /> T�tulo : 
 			<input type="text"	name="titulo" value="${livro.titulo}" /> 
