@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+<title>Cadastro</title>
+</h:head>
+<h:body>
+	<ui:composition template="WEB-INF/template/layout.xhtml">
+		<ui:define name="content">
+			
+			<div class="container">
+				<h:form rendered="#{empty user}">
+					<div class="panel panel-primary painel-cadastro">
+						<div class="panel-heading">Cadastro</div>
+						<div  class="panel-body">
+						
+							<p:panelGrid>
+								<p:messages/>
+							
+								<div class="form-group">
+									<p:outputLabel value="Nome" for="nome"/>
+									<p:inputText id="nome" required="true" class="form-control"/>
+								</div>
+								
+								<div class="form-group">
+									<p:outputLabel value="Login" for="login"/>
+									<p:inputText id="login" required="true" class="form-control"
+										value="#{clienteBean.login}"/>
+								</div>
+								
+								<div class="form-group">
+									<p:outputLabel value="Senha" for="senha"/>
+									<p:password id="senha" required="true" class="form-control" 
+									value="#{clienteBean.senha}" match="ConfSenha" >
+										<f:validateLength minimum="6" ></f:validateLength>
+									</p:password>
+								</div>
+								
+								<div class="form-group">
+									<p:outputLabel value="Confirme sua Senha" for="ConfSenha"/>
+									<p:password id="ConfSenha" required="true" class="form-control"/>
+								</div>
+							</p:panelGrid>
+							<p:commandButton value="Cadastrar" icon="ui-icon-disk" 
+							action="#{clienteBean.cadastrar}" update="@form"/>
+						
+						</div>
+					</div>
+				</h:form>
+				
+				<h:form rendered="#{not empty user}">
+					<div class="panel panel-primary painel-cadastro">
+						<div class="panel-heading">Alterar Cadastro</div>
+						<div  class="panel-body">
+							<p:panelGrid>
+								<p:messages autoUpdate="true"/>
+																
+								<div class="form-group">
+									<p:outputLabel value="Nome" for="nome"/>
+									<p:inputText id="nome" value="#{clienteBean.nome}" class="form-control"
+									placeholder="#{clienteBean.cliente.nome}"/>
+								</div>
+								
+								<div class="form-group">
+									<p:outputLabel value="Endereço" for="endereco"/>
+									<p:inputText id="endereco" class="form-control" 
+									value="#{clienteBean.endereco}"/>
+								</div>
+								
+								<div class="form-group">
+									<p:outputLabel value="Bairro" for="bairro"/>
+									<p:inputText id="bairro" class="form-control"
+									value="#{clienteBean.bairro}"/>
+								</div>
+								
+								<div class="form-group">
+									<p:outputLabel value="Cidade" for="cidade"/>
+									<p:inputText id="cidade" class="form-control"
+									value="#{clienteBean.cidade}"/>
+								</div>
+								
+								<div class="form-group">
+									<p:outputLabel value="Estado" for="estado"/>
+									<p:inputText id="estado" class="form-control"
+									value="#{clienteBean.estado}"/>
+								</div>
+								
+								<div class="form-group">
+									<p:outputLabel value="CEP" for="cep"/>
+									<p:inputText id="cep" class="form-control"
+									value="#{clienteBean.cep}" placeholder="00000-000"/>
+								</div>
+								
+								<p:commandButton value="Cadastrar" icon="ui-icon-disk" 
+							action="#{clienteBean.alterarCadastro}" update="@form"/>
+								
+								
+							</p:panelGrid>
+					
+					
+						</div>
+					</div>
+							
+				
+				</h:form>
+			</div>
+			
+			
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<body>
+	<ui:composition>
+		<header> 
+			<nav class=" navbar navbar-primary navbar-static-top">
+				<div class="navbar-header">
+					<h:link value="TRIWAY Livraria" outcome="Home" class="navbar-brand"/>
+
+				<button class="navbar-toggle" type="button"
+					data-target="navbar-collapse" data-toggle="collapse">menu</button>
+				</div>
+	
+				
+				<h:form rendered="#{not empty user}" id="navbar-carrinho-user">
+					<ul class="nav navbar-nav collapse navbar-collapse navbar-right">
+						<li><h:link value="Olá, #{loginBean.usuario.nome}" /></li>
+						<li><h:commandLink value="Verificar Pedidos" action="#{pedidoBean.verificarPedido}"/></li>
+						<li><h:commandLink action="#{loginBean.sair}" value="Sair" /> </li>
+					</ul>
+				</h:form>
+					
+				<h:form rendered="#{empty user}" id="navbar-carrinho-nouser"> 
+					<ul class="nav navbar-nav collapse navbar-collapse navbar-right">		
+						<li><h:link value="Olá, Cliente" outcome="Login"/></li>
+						<li><h:link value="Ajuda"/></li>
+						<li><h:link value="Sair" outcome="Home"/></li>
+					</ul>
+				</h:form>
+					
+					
+				
+			</nav> 
+		</header>
+	</ui:composition>
+
+</body>
+</html>

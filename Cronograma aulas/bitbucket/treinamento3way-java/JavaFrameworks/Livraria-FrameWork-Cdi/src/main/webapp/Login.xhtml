@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+</h:head>
+<h:body>
+	<ui:composition template="WEB-INF/template/layout.xhtml">
+
+		
+		<ui:define name="content">
+			
+			<div class="container">
+				<div class="panel panel-primary login">
+					<div class="panel-heading">Login</div>
+					<div  class="panel-body">
+					<p:messages autoUpdate="true"/>
+						<h:form>
+							<p:panelGrid>
+								
+								<p:outputLabel value="Login" for="login"/><br/>
+								<p:inputText id="login" required="true" value="#{loginBean.login}"/>
+								
+								<p:outputLabel value="Senha" for="senha"/><br/>
+								<p:password id="senha" required="true" value="#{loginBean.senha}"/>
+							</p:panelGrid>
+							<p:commandButton value="Entrar" action="#{loginBean.autenticar}" 
+								icon="ui-icon-key" iconPos="right"/>
+						</h:form>
+						
+					</div>
+				</div>
+				<div class="login-cadastro">
+					
+						Novo no site?
+						<a href="Cadastro.xhtml">Faça seu cadastro aqui</a>
+					
+				</div>
+			</div>
+			
+			
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

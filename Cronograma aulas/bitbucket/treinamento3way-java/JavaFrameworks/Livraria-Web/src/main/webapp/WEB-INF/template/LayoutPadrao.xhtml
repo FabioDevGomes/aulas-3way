@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title><ui:insert name="titulo">Livraria</ui:insert></title>
+
+	<!-- Resetar as configurações iniciais de estilo -->
+	<h:outputStylesheet library="css" name="reset.css" />
+
+	<!-- Adicionar o bootstrap ao nosso projeto-->
+	<h:outputStylesheet library="css" name="bootstrap.css" />
+
+	<!-- Adicionar nosso arquivo css ao template do projeto -->
+	<h:outputStylesheet library="css" name="estilo.css" />
+
+
+
+</h:head>
+<h:body>
+	<ui:debug hotkey="v" />
+	<div class="page">
+
+		<div class="header container">
+			<ui:insert name="header">
+				<ui:include src="/WEB-INF/template/CabecalhoBasico.xhtml" />
+			</ui:insert>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<ui:insert name="sidebar">
+						<ui:include src="/WEB-INF/template/MenuBuscar.xhtml" />
+					</ui:insert>
+				</div>
+				<div class="col-md-9">
+					<ui:insert name="content">
+						<ui:include src="/WEB-INF/template/ConteudoBasico.xhtml" />
+					</ui:insert>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<ui:insert name="footer">
+				<ui:include src="/WEB-INF/template/RodapeBasico.xhtml" />
+			</ui:insert>
+		</div>
+	</div>
+</h:body>
+</html>

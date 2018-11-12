@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:body>
+	<ui:composition template="/WEB-INF/template/layoutCarrinho.xhtml">
+
+		<ui:define name="content">
+
+			<script type="text/javascript"
+				src="http://code.jquery.com/jquery.min.js"></script>
+			<script type="text/javascript" src="resources/js/Pgto.js"></script>
+
+			<div class="jumbotron">
+				<h:form rendered="#{carrinhoBean.carrinhoVazio}" id="jumbo-carrinho">
+					<h1>Ótima Escolha</h1>
+					<p>Obrigado por comprar na TriWay Livraria! Por favor, confirme
+						seus dados antes de efetivar a compra!</p>
+				</h:form>
+				<h:form rendered="#{carrinhoBean.carrinhoVazio == false}"
+					id="jumbo-carrinhoVazio">
+					<h1>Carrinho Vazio</h1>
+					<p>Adicione produtos ao seu carrinho de compras para continuar!</p>
+					<p:commandButton value="Continuar Comprando"
+						action="#{livroBean.pesquisar}" />
+				</h:form>
+			</div>
+
+			<div class="container ">
+
+				<p:panel rendered="#{carrinhoBean.carrinhoVazio}"
+					id="painel-compras">
+
+					<table class="table cart-items">
+						<thead>
+							<tr>
+								<th class="produto">Produto</th>
+								<th class="produto-preco">Preço</th>
+								<th class="quantidade">Quantidade</th>
+								<th class="preco-total">Total</th>
+								<th class="item-remove"></th>
+							</tr>
+						</thead>
+						<ui:repeat value="#{carrinhoBean.carrinho.itens}" var="item"
+							id="repeat">
+							<tbody id="tabela">
+								<tr class="produto-item">
+									<td class="produto-image"><img src="#{item.livro.imagem}" />
+									</td>
+									<td class="produto-nome"><h:form id="livro-titulo">
+											<h:commandLink action="#{livroBean.verLivro(item.codigo)}"
+												value="#{item.livro.titulo}" />
+										</h:form>
+										<div class="autor">
+											<h:outputLabel value="#{item.livro.autor}" />
+										</div></td>
+
+									<td class="produto-preco"><h:outputText
+											value="#{item.livro.preco}">
+											<f:convertNumber currencyCode="BRL" type="currency" />
+										</h:outputText></td>
+
+									<td class="quantidade"><h:form id="frm-item-qtd">
+											<p:commandButton value="  +  " id="addLivro">
+												<p:ajax
+													update="@form #{p:component('valor')} #{p:component('total1')} #{p:component('total2')}"
+													process="@all"
+													listener="#{carrinhoBean.adicionar(item.livro.codigo)}" />
+											</p:commandButton>
+
+											<h:outputText class="item-qtd" id="qtd" value="#{item.qtd}" />
+
+											<p:commandButton value="  -  " id="removeLivro">
+												<p:ajax
+													update="@form #{p:component('valor')} #{p:component('total1')} #{p:component('total2')}"
+													process="@all"
+													listener="#{carrinhoBean.retirar(item.livro.codigo)}" />
+											</p:commandButton>
+										</h:form></td>
+
+									<h:form id="frm-precoTotal">
+										<td class="preco-total" id="precoOut"><h:outputText
+												value="#{item.valor}" id="valor">
+												<f:convertNumber currencyCode="BRL" type="currency" />
+											</h:outputText></td>
+									</h:form>
+
+									<td class="item-remove"><h:form id="frm-item-remove">
+											<p:commandLink value="X"
+												action="#{carrinhoBean.remover(item.livro.codigo)}" update="@all" />
+										</h:form></td>
+								</tr>
+							</tbody>
+						</ui:repeat>
+					</table>
+
+					<div class="forma-pagamento">
+						<div class="row">
+							<div class="col-md-8">
+								<div class="panel panel-default">
+									<div class="panel-body">
+
+										<legend>Informações do cartão</legend>
+
+
+										<div class=" box">
+											<h:form id="tipo-cartao">
+												<h:panelGrid class="menu-bandeira">
+													<p:outputLabel value="Numero - CVV" for="num-cartao" />
+													<p:inputText id="num-cartao" />
+
+													<p:outputLabel value="Validade" for="val-cartao" />
+													<p:calendar id="val-cartao" />
+
+													<p:outputLabel value="Bandeira" for="bandeira-cartao" />
+													<p:selectOneButton id="bandeira-cartao"
+														value="#{carrinhoBean.cartao}">
+														<f:selectItem itemLabel="Visa" itemValue="VISA" />
+														<f:selectItem itemLabel="MasterCard" itemValue="MASTER" />
+														<f:selectItem itemLabel="American Express"
+															itemValue="AMEX" />
+														<p:ajax update="@this" process="@this"/>
+													</p:selectOneButton>
+													<p:spacer />
+								
+
+												</h:panelGrid>
+											</h:form>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<table class="table total-compra">
+									<tbody>
+										<tr>
+											<td>Total dos Produtos</td>
+											<td><h:form id="frm3">
+													<h:outputText value="#{carrinhoBean.carrinho.valor}"
+														id="total1">
+														<f:convertNumber currencyCode="BRL" type="currency" />
+													</h:outputText>
+												</h:form></td>
+										</tr>
+										<tr>
+											<td>Descontos</td>
+											<td>R$ 00,00</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>TOTAL:</td>
+											<td><h:form id="frm4">
+													<h:outputText value="#{carrinhoBean.carrinho.valor}"
+														id="total2">
+														<f:convertNumber currencyCode="BRL" type="currency" />
+													</h:outputText>
+												</h:form></td>
+										</tr>
+									</tfoot>
+								</table>
+
+
+							</div>
+						</div>
+					</div>
+					<h:form id="frm-formaPag">
+						<p:commandButton value="Finalizar compra"
+							action="#{pedidoBean.verificarPedido}"
+							actionListener="#{carrinhoBean.finalizarCompra()}" />
+
+						<p:commandButton value="Continuar Comprando" class="btn-resultado"
+							action="#{livroBean.pesquisar}" />
+
+					</h:form>
+				</p:panel>
+			</div>
+
+
+
+		</ui:define>
+
+	</ui:composition>
+
+
+</h:body>
+</html>

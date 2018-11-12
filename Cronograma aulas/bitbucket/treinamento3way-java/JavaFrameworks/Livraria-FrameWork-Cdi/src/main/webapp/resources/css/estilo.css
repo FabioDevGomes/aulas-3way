@@ -1,0 +1,546 @@
+body{
+	background-image: url(../resources/imagens/background.jpg);
+	color: #333;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	height: 100%;
+	margin: 0 2px;
+
+}
+
+header{
+	background-image: url(../resources/imagens/header-back.jpg);
+	clear: both;
+	opacity: 0.8;
+	
+	height: 110px;
+	position:static;
+	padding-bottom: 20px;
+	margin-bottom: 0;
+}
+
+.menu-opcoes{
+	position: relative;
+	float:right;
+	right:20px;
+	top:60px;
+	
+}
+.menu-opcoes ul{
+	font-size: 20px;
+}
+
+.menu-opcoes a{
+	color: #003366;
+}
+
+.menu-opcoes a:HOVER{
+	color: #729fcf;
+}
+
+.menu-opcoes a:ACTIVE{
+	color:#ad7fa8;
+}
+
+.menu-opcoes ul li{
+	display: inline;
+	margin-left: 20px;
+}
+
+
+#logo-livraria{
+	width: 300px;
+	position:relative;	
+	padding: 10px;
+	margin: 10px;
+}
+
+
+
+#img-destaque{
+	position:relative;
+	right: 120px;
+	float:right;
+	padding: 15px;
+	margin: 10px;
+	
+	
+}
+
+.busca,
+.menu-departamentos{
+	background-color: #dcdcdc;
+	font-weight: bold;
+	text-transform: uppercase;
+	
+	margin-right: 10px;
+	width: 230px;
+}
+
+.busca h2,
+.busca form,
+.menu-departamentos h2{
+	font-size:15px;
+	font-weight:bold;
+	margin: 10px;
+}
+
+.menu-departamentos li{
+	background-color: white;
+	margin-bottom: 1px;
+	padding: 5px 10px;
+}
+
+.menu-departamentos a{
+	color: #333;
+	text-decoration: none;
+}
+
+.busca input{
+	vertical-align: middle;
+}
+
+.busca input[type=search]{
+	width: 170px;
+}
+
+
+.busca,
+.menu-departamentos{
+	float:left;
+}
+
+.menu-departamentos li ul{
+	display: none;
+}
+
+.menu-departamentos li:HOVER ul{
+	display: block;
+}
+
+.menu-departamentos ul ul li{
+	background-color: #dcdcdc;
+}
+
+.menu-departamentos li li a:BEFORE{
+	content: '\261E ';
+	padding-right: 3px;
+}
+
+h1{
+	position: relative;
+	text-decoration: blink;
+	text-align:center;
+	font-size:large;
+	font-weight: bold;
+}
+
+
+
+.menu-departamentos{
+	clear: left;
+	margin-top: 2px;
+	padding-bottom: 10px;
+}
+
+.destaque{
+	float: left;
+}
+
+
+
+.container{
+	position: relative ;
+	padding: 0;
+	margin: 0 auto;
+	width: 1200px;
+	min-height:100%;
+}
+
+
+
+
+.painel{
+	position: relative;
+	right: 20px;
+	margin: 20px 15px;
+	padding: 10px;
+	width:1050px;
+	float:right;
+	background-color: #ad7fa8;
+	background: linear-gradient(#ad7fa8, #bebef4);
+	border-radius: 10px;
+	box-shadow: 3px 3px 2px #999;
+}
+
+.painel img{
+	width: 150px;
+}
+
+.painel h2{
+	text-shadow: 1px 1px 2px rgba(255,255,255,0.2);
+}
+
+.painel h2:before{
+	content:'\2756';
+	padding-right: 5px;
+	opacity: 0.4;
+}
+
+.painel li{
+	display: inline-block;
+	vetical-align: top;
+	width: 240px;
+	
+	margin:1px;
+	padding-botton: 10px;
+	transition: 0.7s;
+}
+
+.painel li:hover{
+	background: rgba(255,255,255,0.8);
+	box-shadow: 0 0 5px #333;
+	transition: box-shadow 0.7s;
+	transform: scale(1.1) rotate(-1deg);
+}
+
+
+
+.painel h2{
+	font-size: 24px;
+	font-weight:bold;
+	text-transform: uppercase;
+	
+	margin-bottom: 10px;
+}
+
+
+
+
+
+.tr-superior{
+	font-size: 20px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	
+	background-color: #eeeeec;
+	padding: 10px;
+	margin:10px;
+}
+
+tr{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	color: #000;
+}
+
+.tabela-carrinho{
+	width: 1000px;	
+}
+
+#login-msg{
+	color:red;
+	text-align: right;
+	text-decoration: underline;
+	position: relative;
+	top:10px;
+}
+#carrinho-msg{
+	color:red;
+	text-align: center;
+	text-decoration: underline;
+	position: relative;
+	
+	margin-bottom: 20px;
+}
+
+.login{
+	position: relative;
+	top: 50px;
+	
+	float: right;
+
+	font-size:medium;
+	font-weight:bold;
+	
+	width: 300px;
+	
+}
+.login-cadastro{
+	font-size:medium;
+	font-weight:bold;
+	
+	position: relative;
+	top: 500px;
+	left: 450px;
+}
+
+.login-cadastro a{
+	text-decoration: underline;
+}
+
+.login input{
+	padding: 5px;
+
+	margin-bottom: 15px;
+}
+
+.painel-cadastro{
+	width: 500px;
+	
+	position: relative;	
+	top: 50px;
+	left: 390px;
+	
+}
+
+.panel-body{
+	margin:5px;
+}
+
+.panel{
+	margin: 15px;
+	
+	position:relative;
+}
+
+.table-pedidos{
+	width:1020px;
+	padding: 30px;
+	position:relative;
+	margin: 0 90px; 
+	 
+}
+
+.btn-resultado{
+	margin: 3px;
+}
+
+.descr-livro{
+	padding: 5px;
+	margin: 2px;
+}
+
+#img-livro{
+	
+	width: 150px;
+	margin: 2px;
+	padding: 5px 1px;
+	float: left;
+	
+}
+.produto{
+	width:455px;
+	padding: 8px;
+}
+
+.cart-items .produto-preco{
+	width: 105px;
+	padding: 8px;
+}
+
+.quantidade{
+	width: 180px;
+	padding: 8px;
+}
+.preco-total{
+	width: 100px;
+	padding: 8px;
+}
+
+#painel-final{
+	margin: 20px 40px; 
+}
+#botao-voltar{
+	float:right;
+	margin-right: 40px;
+}
+.total-fim{
+	font-weight: bold;
+	font-size: large;
+	text-align: center;
+}
+
+
+.produto-nome { 
+	float:left;
+  	width: 286px;
+  	margin-top: 0;
+  	
+}
+.autor {
+    font-size: 12px;
+    color: #b2b2b2;
+}
+
+.cart {
+    margin-bottom: 15px;
+    border: 1px solid #b3b2b3;
+}
+
+.cart-items {
+    margin-top: 7px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.cart-items .produto-remove,
+.cart-items .produto-preco,
+.cart-items .quantidade-preco,
+.cart-items .quantidade,
+.cart-items .preco-total{
+  text-align: center;
+}
+
+
+.produto-image{
+	width: 115px;
+	float: left;
+
+}
+
+.produto-image img{
+	width: 105px;
+	height: 135px;
+}
+
+#alterar-senha{
+	font-size:15px;
+	font-weight: bold;
+	font-color:#cc0000;
+	margin: 5px;
+}
+
+.painel-fim{
+	margin: 30px;
+	width: 350px;
+	position: relative;
+	top: 15px;
+	left: 400px;
+	border:5px;
+	
+}
+
+.btn-fim{
+	
+	margin-bottom: 10px;
+	
+}
+
+.titulo{
+	font-weight: bold;
+	font-size: 23px;
+
+	padding: 5px 0;
+	margin-bottom: 5px;
+	color: #3465a4;
+}
+
+.verifica-pedidos{
+	font-size: 36px;
+	font-weight: bold;
+	
+	text-align: center;
+	
+	padding-top: 30px;
+	color: #011e7c; 
+	
+	
+	
+}
+
+.titulo-pedido{
+	font-weight: bold;
+	font-size: 23px;
+
+	padding: 10px 0;
+	margin: 15px;
+	color: #204a87;
+}
+
+.descricao{
+	
+	margin: 10px 0;
+	font-weight:100; 
+}
+
+.preco{
+	color: #204a87;
+	font-weight: bold;
+	padding-right: 10px;
+}
+
+
+.autor{
+	font-weight: bold;
+	color: gray;
+}
+.painel-resultado{
+	margin-bottom: 52px;
+}
+.painel-menu{
+	padding-left: 0; 
+}
+
+footer{
+	background-image: url(../resources/imagens/fundo-rodape2.png);
+	clear: both;
+	
+	padding: 20px 0;
+	margin-top: 10px;
+	width:100%;
+	
+	
+
+	position:absolute;
+	bottom:0;
+	z-index:999999;
+}
+
+.content{
+	margin-bottom: 100px;
+}
+
+#logo-rodape{
+		width: 230px;
+		
+		position: relative;
+		top: 15px;
+	}
+
+.social{
+	position: absolute;
+	top: 12px;
+	right: 0;
+}
+.social li{
+	float: left;
+	margin-left: 25px;
+}
+.social a{
+	height: 32px;
+	width: 32px;
+	
+	display: block;
+	text-indent: -9999px;
+}
+
+.social a[href*="facebook.com"]{
+	background-image: url(../resources/imagens/facebook.png);
+}
+
+.social a[href*="twitter.com"]{
+	background-image: url(../resources/imagens/twitter.png);
+}
+
+.social a[href*="plus.google.com"]{
+	background-image: url(../resources/imagens/googleplus.png);
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}

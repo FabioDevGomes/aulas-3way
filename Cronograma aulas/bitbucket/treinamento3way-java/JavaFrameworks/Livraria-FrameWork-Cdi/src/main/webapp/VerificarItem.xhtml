@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:body>	
+	<ui:composition template="/WEB-INF/template/layout.xhtml">
+	
+		<ui:define name="content">
+			<div class="container">
+				<p:panel header="Lista de Livros" id="painel-final">
+					<table class="table cart-items">
+						<thead>
+							<tr>
+								<th class="produto">Produto</th>
+								<th class="produto-preco">Preço</th>
+								<th class="quantidade">Quantidade</th>
+								<th class="preco-total">Total</th>
+								
+							</tr>
+						</thead>
+						<ui:repeat value="#{pedidoBean.itens}" var="item">
+							<tbody id="tabela">
+								<tr class="produto-item">
+									<td class="produto-image">
+										<img src="#{item.livro.imagem }" />
+									</td>
+									<td class="produto-nome"><h:form>
+											<h:commandLink action="#{pesquisaBean.verLivro(item.codigo)}"
+												value="#{item.livro.titulo}" />
+										</h:form></td>
+
+									<td class="produto-preco"><h:outputText
+											value="#{item.livro.preco}">
+											<f:convertNumber currencyCode="BRL" type="currency" />
+										</h:outputText></td>
+
+									<td class="quantidade">
+										<h:outputText id="qtd" value="#{item.qtd}" />
+									</td>
+
+									
+										<td class="preco-total" id="precoOut">
+										<h:outputText value="#{item.valor}" id="valor">
+												<f:convertNumber currencyCode="BRL" type="currency" />
+										</h:outputText></td>
+
+								</tr>
+							</tbody>
+						</ui:repeat>
+						
+						<tfoot>
+							<tr><td/><td/>
+								<td class="total-fim">
+									TOTAL:
+								</td>
+								<td class="total-fim">
+									<h:outputText value="#{pedidoBean.total}" class="preco" >
+										<f:convertNumber type="currency" currencyCode="BRL"/>
+									</h:outputText>
+								</td>
+							</tr>
+							
+						</tfoot>	
+						
+					</table>
+				</p:panel>
+				
+				<p:commandButton value="Voltar" action="#{pedidoBean.verificarPedido}" id="botao-voltar" />
+			</div>
+		</ui:define>
+		
+	</ui:composition>
+
+
+</h:body>
+</html>
