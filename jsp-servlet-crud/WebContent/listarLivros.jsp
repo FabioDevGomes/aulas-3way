@@ -32,6 +32,6 @@
             </c:forEach>
         </tbody>
     </table>
-    <p><a href="/jsp-servlet-crud/LivroController?action=insert">Livro</a></p>
+    <p><a href="LivroController?action=insert">Livro</a></p>
 </body>
 </html>

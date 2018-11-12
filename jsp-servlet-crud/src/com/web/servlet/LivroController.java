@@ -25,27 +25,27 @@ public class LivroController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String forward = "";
+		String pagina = "";
 		String action = request.getParameter("action");
 
 		if (action.equalsIgnoreCase("deletar")) {
 			int livroId = Integer.parseInt(request.getParameter("livroId"));
 			dao.removeById(livroId);
-			forward = LISTAR_LIVROS;
+			pagina = LISTAR_LIVROS;
 			request.setAttribute("livros", dao.listarTodos());
 		} else if (action.equalsIgnoreCase("editar")) {
-			forward = INSERIR_OU_EDITAR;
-			int codigoLivro = Integer.parseInt(request.getParameter("livroId"));
-			Livro livro = dao.consultar(codigoLivro);
+			pagina = INSERIR_OU_EDITAR;
+			int livroId = Integer.parseInt(request.getParameter("livroId"));
+			Livro livro = dao.consultar(livroId);
 			request.setAttribute("livro", livro);
 		} else if (action.equalsIgnoreCase("listarLivros")) {
-			forward = LISTAR_LIVROS;
+			pagina = LISTAR_LIVROS;
 			request.setAttribute("livros", dao.listarTodos());
 		} else {
-			forward = INSERIR_OU_EDITAR;
+			pagina = INSERIR_OU_EDITAR;
 		}
 
-		RequestDispatcher view = request.getRequestDispatcher(forward);
+		RequestDispatcher view = request.getRequestDispatcher(pagina);
 		view.forward(request, response);
 	}
 
