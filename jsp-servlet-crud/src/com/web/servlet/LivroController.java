@@ -27,32 +27,59 @@ public class LivroController extends HttpServlet {
 			throws ServletException, IOException {
 		String forward = "";
 		String action = request.getParameter("action");
-		String buscarLivro = request.getParameter("buscarLivro");
 
-		if (action != null && action.equalsIgnoreCase("deletar")) {
+		if (action.equalsIgnoreCase("deletar")) {
 			int livroId = Integer.parseInt(request.getParameter("livroId"));
 			dao.removeById(livroId);
 			forward = LISTAR_LIVROS;
 			request.setAttribute("livros", dao.listarTodos());
-		} else if (action != null && action.equalsIgnoreCase("editar")) {
+		} else if (action.equalsIgnoreCase("editar")) {
 			forward = INSERIR_OU_EDITAR;
 			int codigoLivro = Integer.parseInt(request.getParameter("livroId"));
 			Livro livro = dao.consultar(codigoLivro);
 			request.setAttribute("livro", livro);
-		} else if (action != null && action.equalsIgnoreCase("listarLivros")) {
+		} else if (action.equalsIgnoreCase("listarLivros")) {
 			forward = LISTAR_LIVROS;
 			request.setAttribute("livros", dao.listarTodos());
-		} else if (buscarLivro != null) {
-			List<Livro> livros = dao.consultar(buscarLivro);
-			request.setAttribute("livros", livros);
-			forward = LISTAR_LIVROS;
 		} else {
 			forward = INSERIR_OU_EDITAR;
-		} 
+		}
 
 		RequestDispatcher view = request.getRequestDispatcher(forward);
 		view.forward(request, response);
 	}
+
+//	@Override
+//	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+//			throws ServletException, IOException {
+//		String forward = "";
+//		String action = request.getParameter("action");
+//		String buscarLivro = request.getParameter("buscarLivro");
+//		
+//		if (action != null && action.equalsIgnoreCase("deletar")) {
+//			int livroId = Integer.parseInt(request.getParameter("livroId"));
+//			dao.removeById(livroId);
+//			forward = LISTAR_LIVROS;
+//			request.setAttribute("livros", dao.listarTodos());
+//		} else if (action != null && action.equalsIgnoreCase("editar")) {
+//			forward = INSERIR_OU_EDITAR;
+//			int codigoLivro = Integer.parseInt(request.getParameter("livroId"));
+//			Livro livro = dao.consultar(codigoLivro);
+//			request.setAttribute("livro", livro);
+//		} else if (action != null && action.equalsIgnoreCase("listarLivros")) {
+//			forward = LISTAR_LIVROS;
+//			request.setAttribute("livros", dao.listarTodos());
+//		} else if (buscarLivro != null) {
+//			List<Livro> livros = dao.consultar(buscarLivro);
+//			request.setAttribute("livros", livros);
+//			forward = LISTAR_LIVROS;
+//		} else {
+//			forward = INSERIR_OU_EDITAR;
+//		} 
+//		
+//		RequestDispatcher view = request.getRequestDispatcher(forward);
+//		view.forward(request, response);
+//	}
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -63,20 +90,19 @@ public class LivroController extends HttpServlet {
 		livro.setDescricao(request.getParameter("descricao"));
 		livro.setPreco(request.getParameter("preco") != null ? Double.parseDouble(request.getParameter("preco")) : 0);
 		String codigoLivro = request.getParameter("livroCodigo");
-		String buscarLivro = request.getParameter("buscarLivro");
-		
 
-		if ((codigoLivro == null || codigoLivro.isEmpty()) && buscarLivro == null) {
+		if ((codigoLivro == null || codigoLivro.isEmpty())) {
 			dao.save(livro);
 			request.setAttribute("livros", dao.listarTodos());
-		} else if (buscarLivro != null) {
-			List<Livro> livros = dao.consultar(buscarLivro);
-			request.setAttribute("livros", livros);
 		} else {
 			livro.setCodigo(Integer.parseInt(codigoLivro));
 			dao.updateTitulo(livro);
 			request.setAttribute("livros", dao.listarTodos());
 		}
+		
+		//refatorar para reduzir repetição de cídigo "request.setAttribute("
+		// usar lista para receber resultado do dao.listarTodos() e settar após bloco IF
+		
 		RequestDispatcher view = request.getRequestDispatcher(LISTAR_LIVROS);
 		view.forward(request, response);
 	}

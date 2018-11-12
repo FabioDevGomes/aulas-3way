@@ -2,11 +2,11 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="pu-livraria-cdi" transaction-type="RESOURCE_LOCAL">
 		<non-jta-data-source>java:jboss/ds/livraria</non-jta-data-source>
-		<class>model.Cliente</class>
-		<class>model.ItemCarrinho</class>
-		<class>model.Livro</class>
-		<class>model.Pedido</class>
-		<class>model.Usuario</class>
+		<class>br.com.triway.model.Cliente</class>
+		<class>br.com.triway.model.ItemCarrinho</class>
+		<class>br.com.triway.model.Livro</class>
+		<class>br.com.triway.model.Pedido</class>
+		<class>br.com.triway.model.Usuario</class>
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
 			<property name="hibernate.show_sql" value="true" />

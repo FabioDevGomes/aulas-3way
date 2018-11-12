@@ -16,3 +16,14 @@ https://danielniko.wordpress.com/2012/04/17/simple-crud-using-jsp-servlet-and-my
 - Implementar servlet
 
 - Implementar JSP's (2)
+
+
+
+------------
+basear no "emxemplo bootstrap.html" que está no github para ajustar a tela 
+de inclusão ao CSS bootstrap
+
+- Criar pastar css e colar arquivo bootstrap.css
+
+- usar tag <link rel="stylesheet" type="text/css" href="...">
+ para impostar arquivo CSS para a página

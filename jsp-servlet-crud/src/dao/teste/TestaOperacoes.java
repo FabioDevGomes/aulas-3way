@@ -3,7 +3,7 @@ package dao.teste;
 import com.web.dao.LivroDao;
 import com.web.model.Livro;
 
-public class Pesquisa {
+public class TestaOperacoes {
 	static LivroDao dao = new LivroDao();
 
 	public static void main(String[] args) {
@@ -39,7 +39,7 @@ public class Pesquisa {
 		}
 	}
 	
-	public static void excecutarDelete(int codigo) {
+	public static void testarDelete(int codigo) {
 		dao.removeById(codigo);
 	}
 
