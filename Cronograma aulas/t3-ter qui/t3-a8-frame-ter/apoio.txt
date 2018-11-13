@@ -1,0 +1,27 @@
+Ajustes:
+
+- Alinhar painal grid login: 
+	<div align="center"
+
+- Retirar bordas:
+	class="int-box"
+	
+	.ui-panelgrid td, .ui-panelgrid tr{
+    		border-style: none !important
+	}
+
+
+- limpeza;
+
+  listagemUsuarioT.xhtml:
+	<title>Controle de usuários</title>
+
+	<h:form>
+		<p:outputLabel value="Login efetuado com sucesso! Bem vindo ao sistema!"></p:outputLabel>
+	</h:form>
+
+  LoginManagedBean:
+	context.getExternalContext().getSessionMap().put("logado", false);
+
+
+	

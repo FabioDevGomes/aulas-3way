@@ -32,6 +32,9 @@
 	text-align: center;
 }
 
+.ui-panelgrid td, .ui-panelgrid tr{
+    border-style: none !important
+}
 
 /* html { */
 /*   position: relative; */

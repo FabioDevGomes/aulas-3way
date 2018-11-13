@@ -13,7 +13,6 @@ import com.framework.model.Usuario;
 public class LoginManagedBean {
 
 	private UsuarioDAO usuarioDAO = new UsuarioDAO();
-	
 	private Usuario usuario = new Usuario();
 
 	public String enviar() {
@@ -23,7 +22,6 @@ public class LoginManagedBean {
 			usuario = new Usuario();
 			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuário não encontrado!", "Erro no Login!"));
 			context.validationFailed();
-			context.getExternalContext().getSessionMap().put("logado", false);
 			 
 			return null;
 		} else {

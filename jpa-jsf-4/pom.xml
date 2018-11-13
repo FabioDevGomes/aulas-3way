@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>jpa-jsf-4</groupId>
@@ -38,8 +37,6 @@
 			<artifactId>postgresql</artifactId>
 			<version>42.2.4</version>
 		</dependency>
-
-
 		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
@@ -57,14 +54,6 @@
 			<artifactId>commons-io</artifactId>
 			<version>2.4</version>
 		</dependency>
-
-		<dependency>
-			<groupId>javax.enterprise</groupId>
-			<artifactId>cdi-api</artifactId>
-			<version>2.0</version>
-			<scope>provided</scope>
-		</dependency>
-
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-web-api</artifactId>
@@ -72,9 +61,9 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-		    <groupId>org.jboss.weld.servlet</groupId>
-		    <artifactId>weld-servlet</artifactId>
-		    <version>2.4.4.Final</version>
+			<groupId>org.jboss.weld.servlet</groupId>
+			<artifactId>weld-servlet-shaded</artifactId>
+			<version>3.0.5.Final</version>
 		</dependency>
 	</dependencies>
 	<build>

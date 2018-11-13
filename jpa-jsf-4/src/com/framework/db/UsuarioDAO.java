@@ -3,8 +3,6 @@ package com.framework.db;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -14,8 +12,6 @@ import javax.persistence.Query;
 
 import com.framework.model.Usuario;
 
-@Named
-@ApplicationScoped
 public class UsuarioDAO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	

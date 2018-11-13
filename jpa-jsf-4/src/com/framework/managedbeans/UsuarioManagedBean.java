@@ -7,7 +7,6 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
-import javax.inject.Inject;
 
 import com.framework.db.UsuarioDAO;
 import com.framework.model.Usuario;
@@ -39,7 +38,7 @@ public class UsuarioManagedBean {
 	public String incluirUsuarioDb(Usuario usuario) {
 		if (!usuarioDAO.inserirUsuario(usuario)) {
 			FacesContext context = FacesContext.getCurrentInstance();
-			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro: Usuário já existe!", "--"));
+			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro: Usuário já existe!", null));
 
 			context.getExternalContext().getFlash().setKeepMessages(true);
 			return "/restrito/novoUsuario.xhtml?faces-redirect=true";
