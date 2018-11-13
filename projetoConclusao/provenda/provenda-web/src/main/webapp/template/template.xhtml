@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+
+<body>
+	<p:layout fullPage="true">
+ 
+    <p:layoutUnit position="north" size="100" header="Topo" resizable="true" closable="true" collapsible="true">
+        <h:outputText value="North unit content." />
+    </p:layoutUnit>
+ 
+    <p:layoutUnit position="south" size="100" header="Roda-Pe" resizable="true" closable="true" collapsible="true">
+        <h:outputText value="South unit content." />
+    </p:layoutUnit>
+ 
+    <p:layoutUnit position="west" size="200" header="Menu" resizable="true" closable="true" collapsible="true">
+        <h:form>
+        	<p:menu toggleable="true">
+        		<p:submenu label="Cadastros" >
+	        		<p:menuitem><a href="/provenda-web/paginas/pessoaCadastro.xhtml">Pessoa</a></p:menuitem>
+	        	    <p:menuitem><a href="/provenda-web/paginas/produtoCadastro.xhtml">Produto</a></p:menuitem>
+        		</p:submenu>
+        			<p:submenu label="Venda" >
+        				<p:menuitem><a href="/provenda-web/paginas/venda.xhtml">Nova Venda</a></p:menuitem>
+        			
+        			</p:submenu>
+        	</p:menu>
+        </h:form>
+    </p:layoutUnit>
+ 
+    <p:layoutUnit position="center">
+        <ui:insert name="corpo" />
+    </p:layoutUnit>
+ 
+</p:layout>
+</body>
+
+
+</html>

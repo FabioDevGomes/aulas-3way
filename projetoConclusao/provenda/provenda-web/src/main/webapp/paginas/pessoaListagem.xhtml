@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+	
+<ui:composition template="/template/template.xhtml">
+
+<f:metadata>
+	<f:viewAction action="#{pessoaControladora.consultarTodos}" />
+</f:metadata>
+
+
+<ui:define name="corpo">
+
+	<h3> PESSOA LISTAGEM </h3>
+		
+	<h:form id="formListagem">
+	
+	<p:dataTable id="pessoas" var="pessoa" value="#{pessoaControladora.pessoas}">
+        <f:facet name="header">
+            Pessoas
+        </f:facet>
+        <p:column headerText="Codigo">
+            <h:outputText value="#{pessoa.codigo}" />
+        </p:column>
+        <p:column headerText="Nome">
+            <h:outputText value="#{pessoa.nome}" />
+        </p:column>
+       
+       
+        <p:column style="width:32px;text-align: center">
+             <p:commandButton  icon="ui-icon-search" title="Editar" action="#{pessoaControladora.editar(pessoa)}" />
+        </p:column>
+    </p:dataTable>
+	
+	
+	</h:form>
+
+</ui:define>	
+	
+</ui:composition>
+
+
+</html>

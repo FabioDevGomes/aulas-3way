@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+	
+<ui:composition template="/template/template.xhtml">
+
+<f:metadata>
+	<f:viewAction action="#{vendaControladora.inicializarTela}" />
+</f:metadata>
+
+<ui:define name="corpo">
+
+	<h3> VENDAS  </h3>
+	
+	<p:growl id="msg" />
+	
+	<h:form id="formVenda">
+		<p:inputText value="#{vendaControladora.cabecalho.dataVendaApresentar}" disabled="true"/>
+		
+		<h:panelGrid columns="3" style="margin-bottom : 15px; margin-top : 15px">
+			Pessoa 
+			<p:inputText value="#{vendaControladora.pessoaSelecionada.nome}" disabled="true" />
+			<p:commandButton value="Selecionar" onclick="PF('modalPessoa').show();"/>
+		</h:panelGrid>
+		
+		 <p:dataTable id="produtos" style="margin-top : 15px" var="produto"
+		  value="#{vendaControladora.produtos}"
+		  rows="3"
+		  paginator="true"
+		  rowsPerPageTemplate="3,5">
+	        <f:facet name="header">
+	            Produtos
+	        </f:facet>
+	        <p:column headerText="Codigo">
+	            <h:outputText value="#{produto.codigo}" />
+	        </p:column>
+	        <p:column headerText="Descrição">
+	            <h:outputText value="#{produto.descricao}" />
+	        </p:column>
+	        <p:column headerText="Selecioado">
+	        	<p:selectBooleanCheckbox value="#{produto.selecionado}" />
+	        </p:column>
+	       
+	    </p:dataTable>
+	    
+	    <p:commandButton value="Finalizar Venda" action="#{vendaControladora.finalizarVenda}" />
+		
+	</h:form>
+	
+	<p:dialog header="Modal Dialog" widgetVar="modalPessoa" modal="false" width="800">
+	    <p:dataTable id="pessoas" var="pessoa" value="#{vendaControladora.pessoas}">
+	        <f:facet name="header">
+	            Pessoas
+	        </f:facet>
+	        <p:column headerText="Codigo">
+	            <h:outputText value="#{pessoa.codigo}" />
+	        </p:column>
+	        <p:column headerText="Nome">
+	            <h:outputText value="#{pessoa.nome}" />
+	        </p:column>
+	       
+	       
+	        <p:column style="width:32px;text-align: center">
+	             <p:commandButton  icon="ui-icon-search" action="#{vendaControladora.selecionarPessoa(pessoa)}"
+	             				   oncomplete="PF('modalPessoa').hide();" update=":formVenda" />
+	        </p:column>
+	    </p:dataTable>
+	</p:dialog> 
+
+</ui:define>	
+	
+</ui:composition>
+
+
+</html>
