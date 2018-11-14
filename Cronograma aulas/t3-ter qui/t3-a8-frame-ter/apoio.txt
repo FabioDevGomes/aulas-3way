@@ -14,7 +14,7 @@ Ajustes:
 - limpeza;
 
   listagemUsuarioT.xhtml:
-	<title>Controle de usuários</title>
+	<title>Controle de usuários</title> (retirar e deixar somente na layout.xhtml)
 
 	<h:form>
 		<p:outputLabel value="Login efetuado com sucesso! Bem vindo ao sistema!"></p:outputLabel>
@@ -40,6 +40,7 @@ Ajustes:
 
 
 - Extrair CSS para arquivo externo
+	baixar e linkar CSS footer
 
 
 - ajustar footer com CSS:
