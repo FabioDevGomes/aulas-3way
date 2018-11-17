@@ -2,7 +2,8 @@
 - apresentar slides e implementar exemplos dele
 
 
--criar projeto dynamic
+-criar projeto dynamic com configurações do JSF
+- Converter para maven
 - baixar dependencias jsf
 - baixar dependencias primefaces
 - baixar dependencias primefaces themes
