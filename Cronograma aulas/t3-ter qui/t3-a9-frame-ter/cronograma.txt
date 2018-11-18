@@ -1,5 +1,9 @@
 Implementar parte de endereço e passar alterações em Usuário como exercício
 
+Criar link em header.xhtml
+	<h:outputLink class="nav-link" value="/jpa-jsf-v5/restrito/endereco/listagemEnderecoT.xhtml">Listagem Endereços</h:outputLink>
+
+
 Retirar coluna ID de endereço
 
 Retirar mapeamento da classe no persistence.xml
