@@ -24,23 +24,19 @@
 			value="#{enderecoManagedBean.enderecoListDb()}" var="endereco"
 			styleClass="table table-striped table-bordered tableUpdated">
 			<h:column>
-				<f:facet name="header">Código</f:facet>
-				<h:outputText value="#{endereco.id}" />
-			</h:column>
-			<h:column>
-				<f:facet name="header">Descrição</f:facet>
+				<f:facet name="header">Rua</f:facet>
 				<h:outputText value="#{endereco.rua}" />
 			</h:column>
 			<h:column>
-				<f:facet name="header">Quantidade</f:facet>
+				<f:facet name="header">Bairro</f:facet>
 				<h:outputText value="#{endereco.bairro}" />
 			</h:column>
 			<h:column>
-				<f:facet name="header">valor</f:facet>
+				<f:facet name="header">Município</f:facet>
 				<h:outputText value="#{endereco.municipio}" />
 			</h:column>
 			<h:column>
-				<f:facet name="header">valor</f:facet>
+				<f:facet name="header">Estado</f:facet>
 				<h:outputText value="#{endereco.estado}" />
 			</h:column>
 			<h:column>
@@ -48,21 +44,17 @@
 				<h:outputText value="#{endereco.usuario.nomeUsuario}" />
 			</h:column>
 			<h:column>
-				<f:facet name="header">Update</f:facet>
-				<h:commandButton 
+				<f:facet name="header">Atualizar</f:facet>
+				<h:commandButton action="#{enderecoManagedBean.paginaEndereco(endereco.usuario)}"  
 					value="Atualizar" styleClass="btn btn-primary">
 				</h:commandButton>
 			</h:column>
 			<h:column>
-				<f:facet name="header">Delete</f:facet>
+				<f:facet name="header">Excluir</f:facet>
 				<h:commandButton action="#{enderecoManagedBean.exlcluirEnderecoDb(endereco)}"
 					value="Deletar" styleClass="btn btn-danger" />
 			</h:column>
 		</h:dataTable>
-		<center>
-			<h:commandButton action="novoProduto.xhtml?faces-redirect=true"
-				value="Adicionar novo Usuário" styleClass="btn btn-success btnSpace" />
-		</center>
 	</h:form>
 
 	</ui:define>

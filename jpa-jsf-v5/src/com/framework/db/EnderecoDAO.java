@@ -4,9 +4,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Named;
-import javax.persistence.CacheStoreMode;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -48,11 +45,12 @@ public class EnderecoDAO implements Serializable{
 		}
 	}
 
-	public void alterarEndereco() {
+	public void alterarEndereco(Endereco endereco) {
 		transaction.begin();
+		em.merge(endereco);
 		transaction.commit();
 	}
-
+	
 	public boolean inserirEndereco(Endereco endereco) {
 		if (!transaction.isActive()) {
 			transaction.begin();

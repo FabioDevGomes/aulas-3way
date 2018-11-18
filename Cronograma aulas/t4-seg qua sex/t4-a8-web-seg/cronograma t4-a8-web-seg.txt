@@ -16,3 +16,8 @@ Ajustar para usar filtro na listagem
 	} else if (buscarLivro != null) {
 		List<Livro> livros = dao.consultar(buscarLivro);
 		request.setAttribute("livros", livros);
+
+
+Exercício:
+
+- implementação de Listagem e Inclusão usando JSP e Servlets

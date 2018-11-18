@@ -5,6 +5,7 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 import javax.xml.bind.ValidationException;
@@ -23,7 +24,9 @@ public class UsuarioManagedBean {
 	
 	private UsuarioDAO usuarioDAO = new UsuarioDAO();
 	private Usuario usuario = new Usuario();
-	private UsuarioService usuarioService = new UsuarioService();
+	
+	@ManagedProperty("#{usuarioService}")
+	private UsuarioService usuarioService;
 
 	@PostConstruct
 	public void init() {
@@ -46,7 +49,7 @@ public class UsuarioManagedBean {
 
 	public String incluirUsuarioDb(Usuario usuario) {
 		try {
-			usuarioService.salvarUsuario(usuario);
+			getUsuarioService().salvarUsuario(usuario);
 			return TELA_LISTAGEM_USUARIO;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -69,7 +72,7 @@ public class UsuarioManagedBean {
 				this.usuario = usuarioDAO.getUsuario(idUsuario);
 			}
 			
-			usuarioService.telaEdicao(this.usuario);
+			getUsuarioService().telaEdicao(this.usuario);
 			this.usuario = usuario;
 			
 		} catch (ValidationException e) {
@@ -96,6 +99,14 @@ public class UsuarioManagedBean {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+
+	public UsuarioService getUsuarioService() {
+		return usuarioService;
+	}
+
+	public void setUsuarioService(UsuarioService usuarioService) {
+		this.usuarioService = usuarioService;
 	}
 
 }

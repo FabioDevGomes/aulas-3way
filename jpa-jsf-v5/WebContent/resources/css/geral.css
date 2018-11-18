@@ -48,3 +48,21 @@
 .col-sm-27 {
 	width: 27% !important;
 }
+
+.ui-panelgrid td, .ui-panelgrid tr{
+    border-style: none !important
+}
+
+  .btnWidth {
+            width: 80px;
+        }
+        .col-sm-updated {
+    		padding-top: 7px;    		
+        }
+         .col-sm-updated a {
+         	margin-left: 30px;
+        	text-decoration: none !important;
+        }
+        .col-sm-27 {
+        	width: 27% !important;
+        }

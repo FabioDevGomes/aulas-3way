@@ -5,6 +5,7 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.xml.bind.ValidationException;
@@ -22,17 +23,19 @@ public class EnderecoManagedBean {
 	private final String TELA_NOVO_ENDERECO = "/restrito/endereco/novoEnderecoT.xhtml?faces-redirect=true";
 	private final String TELA_LISTAGEM_ENDERECO = "/restrito/endereco/listagemEnderecoT?faces-redirect=true";
 	private final String TELA_ENDERECO = "/restrito/endereco/novoEnderecoT?faces-redirect=true&id=";
+	private final String TELA_ENDERECO_EDITAR = "/restrito/endereco/editarEndereco?faces-redirect=true&id=";
 
-	private Endereco endereco = new Endereco();
-	private EnderecoService enderecoService = new EnderecoService();
-	private Usuario usuario = new Usuario();
+	@ManagedProperty("#{enderecoService}")
+	private EnderecoService enderecoService;
+	private Endereco endereco;
+	private Usuario usuario;
 
 	public List enderecoListDb() {
-		return enderecoService.listarEndereco();
+		return getEnderecoService().listarEndereco();
 	}
 
 	public void exlcluirEnderecoDb(Endereco endereco) {
-		 enderecoService.deletarEndereco(endereco);
+		 getEnderecoService().deletarEndereco(endereco);
 	}
 
 	public String incluirEnderecoDb(Endereco endereco) {
@@ -52,15 +55,26 @@ public class EnderecoManagedBean {
 	}
 
 	public String editarEnderecoDb(Endereco endereco) {
-		// produtoDAO.alterarEndereco();
-		return "/restrito/listagemProdutoT?faces-redirect=true";
+		try {
+			enderecoService.editarEndereco(endereco);
+		} catch (ValidationException e) {
+			e.printStackTrace();
+		}
+		return TELA_LISTAGEM_ENDERECO;
 	}
 
 	public String paginaEndereco(Usuario usuario) {
+		String tela = "";
 		this.usuario = usuario;
-		this.endereco = new Endereco();
+		if(usuario.getEndereco() != null) {
+			endereco = usuario.getEndereco();
+			tela = TELA_ENDERECO_EDITAR + usuario.getId();
+		}else {
+			this.endereco = new Endereco();
+			tela = TELA_ENDERECO + usuario.getId();
+		}
 
-		return TELA_ENDERECO + usuario.getId();
+		return tela;
 	}
 
 	public Endereco getProduto() {
@@ -86,6 +100,14 @@ public class EnderecoManagedBean {
 
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
+	}
+
+	public EnderecoService getEnderecoService() {
+		return enderecoService;
+	}
+
+	public void setEnderecoService(EnderecoService enderecoService) {
+		this.enderecoService = enderecoService;
 	}
 
 }

@@ -1,0 +1,67 @@
+Implementar parte de endereço e passar alterações em Usuário como exercício
+
+Retirar coluna ID de endereço
+
+Retirar mapeamento da classe no persistence.xml
+
+Permitir criação de endereço somente a partir de um usuário
+
+
+Resolvendo problemas de enconde 
+	<?xml version='1.0' encoding='ISO-8859-1' ?>
+
+
+Passar validações para a camada Service
+
+
+Configurar timeout
+	<session-config>
+		<session-timeout>1</session-timeout>
+	</session-config>
+
+
+Implementar regra 01:
+	if(!usuario.getMatricula().startsWith("ADM")) {
+		throw new ValidationException("Somente usuário com perfil ADM podem acessar a página de ediçao");
+	}
+
+
+Implementar regra 02:
+	if(!usuario.getMatricula().startsWith("M") && !usuario.getMatricula().startsWith("ADM")) {
+		throw new ValidationException("A matrícula do usuário de iniciar com M ou ADM!");
+	}
+
+
+axibir janela Progress 
+
+
+Encriptar senha
+	public String encriptarSenha(String senha) {
+		String senhaRetorno = "";
+		MessageDigest algorithm;
+		try {
+			algorithm = MessageDigest.getInstance("SHA-256");
+			byte messageDigest[] = algorithm.digest(senha.getBytes("UTF-8"));
+
+			StringBuilder hexString = new StringBuilder();
+			for (byte b : messageDigest) {
+				hexString.append(String.format("%02X", 0xFF & b));
+			}
+			senhaRetorno = hexString.toString();
+		} catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return senhaRetorno;
+
+	}
+
+
+Retirar coluna Senha
+	<h:column width="5">
+		<f:facet name="header">Senha</f:facet>
+		<h:outputText value="#{usuario.senha}" />
+	</h:column>
+
+

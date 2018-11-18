@@ -9,11 +9,7 @@
             <!-- provedor/implementacao do JPA -->
             <provider>org.hibernate.ejb.HibernatePersistence</provider>
   
-            <!-- entidade mapeada -->
-            <class>com.framework.model.Usuario</class>
-  
             <properties>
-             
                   <!-- dados da conexao -->
                   <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
                   <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/user" />

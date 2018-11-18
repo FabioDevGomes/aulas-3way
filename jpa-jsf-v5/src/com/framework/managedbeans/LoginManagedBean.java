@@ -4,6 +4,7 @@ import java.util.Map;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
@@ -12,6 +13,7 @@ import javax.inject.Named;
 
 import com.framework.db.UsuarioDAO;
 import com.framework.model.Usuario;
+import com.framework.service.UsuarioService;
 
 @ManagedBean(name="loginMB")
 @ViewScoped
@@ -19,9 +21,12 @@ public class LoginManagedBean {
 
 	private UsuarioDAO usuarioDAO = new UsuarioDAO();
 	private Usuario usuario = new Usuario();
+	
+	@ManagedProperty("#{usuarioService}")
+	private UsuarioService usuarioService;
 
 	public String enviar() {
-		usuario = usuarioDAO.getUsuario(usuario.getNomeUsuario(), usuario.getSenha());
+		usuario = usuarioDAO.getUsuario(usuario.getNomeUsuario(), getUsuarioService().encriptarSenha(usuario.getSenha()));
 		FacesContext context = FacesContext.getCurrentInstance();
 		if (usuario == null) {
 			usuario = new Usuario();
@@ -56,6 +61,14 @@ public class LoginManagedBean {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+
+	public UsuarioService getUsuarioService() {
+		return usuarioService;
+	}
+
+	public void setUsuarioService(UsuarioService usuarioService) {
+		this.usuarioService = usuarioService;
 	}
 
 }
