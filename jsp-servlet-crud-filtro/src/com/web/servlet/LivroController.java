@@ -63,10 +63,9 @@ public class LivroController extends HttpServlet {
 		livro.setDescricao(request.getParameter("descricao"));
 		livro.setPreco(request.getParameter("preco") != null ? Double.parseDouble(request.getParameter("preco")) : 0);
 		String codigoLivro = request.getParameter("livroCodigo");
-		String buscarLivro = request.getParameter("buscarLivro");
 		
 
-		if ((codigoLivro == null || codigoLivro.isEmpty()) && buscarLivro == null) {
+		if ((codigoLivro == null || codigoLivro.isEmpty())) {
 			dao.save(livro);
 			request.setAttribute("livros", dao.listarTodos());
 		} else {
