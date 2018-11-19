@@ -20,3 +20,12 @@ https://danielniko.wordpress.com/2012/04/17/simple-crud-using-jsp-servlet-and-my
 - Implementar servlet
 
 - Implementar JSP's (2)
+
+
+Entidade:
+
+Produto
+ nome
+ descrição
+ valor
+ quantidade
