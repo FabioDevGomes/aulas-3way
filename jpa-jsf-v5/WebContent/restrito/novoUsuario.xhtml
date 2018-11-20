@@ -34,7 +34,7 @@
         <div class="form-group">
         	<h:outputLabel for="usuario-senha" styleClass="control-label col-sm-4">Senha:</h:outputLabel>
             <div class="col-sm-4">
-                <h:inputText id="usuario-senha" value="#{usuarioManagedBean.usuario.senha}" styleClass="form-control" required="true" requiredMessage="senha não pode estar vazio" />
+                <h:inputSecret id="usuario-senha" value="#{usuarioManagedBean.usuario.senha}" styleClass="form-control" required="true" requiredMessage="senha não pode estar vazio" />
             </div>
             <h:message for="usuario-senha" styleClass="text text-danger" />
         </div>     

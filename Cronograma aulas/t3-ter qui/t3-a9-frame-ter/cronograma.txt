@@ -69,3 +69,10 @@ Retirar coluna Senha
 	</h:column>
 
 
+
+Revisar e ajustar nome das colunas nas telas de listagem
+
+
+
+
+

@@ -22,29 +22,6 @@ public class EnderecoDAO implements Serializable{
 	private EntityManager em = factory.createEntityManager();
 	private EntityTransaction transaction = em.getTransaction();
 
-	@SuppressWarnings("unchecked")
-	public List<Endereco> listarEnderecoDescricao(String descricaoEndereco) {
-
-		List<Endereco> enderecos = new ArrayList<>();
-		try {
-			enderecos = (List<Endereco>) em
-					.createQuery("SELECT u from Endereco u where u.descricao = LIKE CONCAT('%',:descricao,'%') ")
-					.setParameter("descricao", descricaoEndereco).getResultList();
-
-			return enderecos;
-		} catch (NoResultException e) {
-			return null;
-		}
-	}
-
-	public Endereco getEndereco(int id) {
-		try {
-			return em.find(Endereco.class, id);
-		} catch (NoResultException e) {
-			return null;
-		}
-	}
-
 	public void alterarEndereco(Endereco endereco) {
 		transaction.begin();
 		em.merge(endereco);
@@ -70,14 +47,14 @@ public class EnderecoDAO implements Serializable{
 		}
 	}
 
-	public boolean deletarEndereco(Endereco usuario) {
+	public boolean deletarEndereco(Endereco endereco) {
 		if (!transaction.isActive()) {
 			transaction.begin();
 		}
 
 		try {
-			em.merge(usuario);
-			em.remove(usuario);
+			em.merge(endereco);
+			em.remove(endereco);
 			transaction.commit();
 			return true;
 		} catch (Exception e) {

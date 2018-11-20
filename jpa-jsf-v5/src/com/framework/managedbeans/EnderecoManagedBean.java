@@ -2,7 +2,6 @@ package com.framework.managedbeans;
 
 import java.util.List;
 
-import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
@@ -10,11 +9,9 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.xml.bind.ValidationException;
 
-import com.framework.db.EnderecoDAO;
 import com.framework.model.Endereco;
 import com.framework.model.Usuario;
 import com.framework.service.EnderecoService;
-import com.framework.service.UsuarioService;
 
 @ManagedBean
 @SessionScoped
@@ -35,13 +32,13 @@ public class EnderecoManagedBean {
 	}
 
 	public void exlcluirEnderecoDb(Endereco endereco) {
-		 getEnderecoService().deletarEndereco(endereco);
+		getEnderecoService().deletarEndereco(endereco);
 	}
 
 	public String incluirEnderecoDb(Endereco endereco) {
 		try {
 			endereco.setUsuario(usuario);
-			enderecoService.salvarEndereco(endereco);
+			getEnderecoService().salvarEndereco(endereco);
 			return TELA_LISTAGEM_ENDERECO;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -56,7 +53,7 @@ public class EnderecoManagedBean {
 
 	public String editarEnderecoDb(Endereco endereco) {
 		try {
-			enderecoService.editarEndereco(endereco);
+			getEnderecoService().editarEndereco(endereco);
 		} catch (ValidationException e) {
 			e.printStackTrace();
 		}
@@ -75,15 +72,6 @@ public class EnderecoManagedBean {
 		}
 
 		return tela;
-	}
-
-	public Endereco getProduto() {
-		return getEndereco();
-	}
-	
-
-	public void setProduto(Endereco produto) {
-		this.setEndereco(produto);
 	}
 
 	public Usuario getUsuario() {

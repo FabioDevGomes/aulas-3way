@@ -23,9 +23,6 @@ public class Endereco {
 	private String municipio;
 	private String estado;
 	
-//	@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
-//	@JoinColumn(name="endereco_id")
-	
 	@OneToOne(mappedBy = "endereco")
 	private Usuario usuario;
 
