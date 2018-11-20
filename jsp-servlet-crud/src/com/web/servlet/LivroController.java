@@ -49,38 +49,6 @@ public class LivroController extends HttpServlet {
 		view.forward(request, response);
 	}
 
-//	@Override
-//	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-//			throws ServletException, IOException {
-//		String forward = "";
-//		String action = request.getParameter("action");
-//		String buscarLivro = request.getParameter("buscarLivro");
-//		
-//		if (action != null && action.equalsIgnoreCase("deletar")) {
-//			int livroId = Integer.parseInt(request.getParameter("livroId"));
-//			dao.removeById(livroId);
-//			forward = LISTAR_LIVROS;
-//			request.setAttribute("livros", dao.listarTodos());
-//		} else if (action != null && action.equalsIgnoreCase("editar")) {
-//			forward = INSERIR_OU_EDITAR;
-//			int codigoLivro = Integer.parseInt(request.getParameter("livroId"));
-//			Livro livro = dao.consultar(codigoLivro);
-//			request.setAttribute("livro", livro);
-//		} else if (action != null && action.equalsIgnoreCase("listarLivros")) {
-//			forward = LISTAR_LIVROS;
-//			request.setAttribute("livros", dao.listarTodos());
-//		} else if (buscarLivro != null) {
-//			List<Livro> livros = dao.consultar(buscarLivro);
-//			request.setAttribute("livros", livros);
-//			forward = LISTAR_LIVROS;
-//		} else {
-//			forward = INSERIR_OU_EDITAR;
-//		} 
-//		
-//		RequestDispatcher view = request.getRequestDispatcher(forward);
-//		view.forward(request, response);
-//	}
-
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

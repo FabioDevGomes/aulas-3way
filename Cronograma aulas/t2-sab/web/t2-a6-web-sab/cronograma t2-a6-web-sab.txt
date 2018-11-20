@@ -13,7 +13,7 @@ https://danielniko.wordpress.com/2012/04/17/simple-crud-using-jsp-servlet-and-my
 
 - Adicionar dependências de BD e JSTL
 
-- Copiar classes do projeto DAO para o projeto CRUD
+- Alterar  DAO para se ajustar a esse novo projeto
 
 - Testar conexão
 
