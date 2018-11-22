@@ -63,10 +63,10 @@ public class UsuarioManagedBean {
 	}
 
 	public String paginaEditar(Usuario usuario) {
+		FacesContext context = FacesContext.getCurrentInstance();
 		try {
 			
-			FacesContext facesContext = FacesContext.getCurrentInstance();
-			String id = facesContext.getExternalContext().getSessionMap().get("id").toString();
+			String id = context.getExternalContext().getSessionMap().get("id").toString();
 			if(id != null) {
 				Integer idUsuario = Integer.parseInt(id);
 				this.usuario = usuarioDAO.getUsuario(idUsuario);
@@ -77,9 +77,7 @@ public class UsuarioManagedBean {
 			
 		} catch (ValidationException e) {
 			e.printStackTrace();
-
-			FacesContext context = FacesContext.getCurrentInstance();
-			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, e.getMessage(), ""));
+			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, e.getMessage(), null));
 			context.getExternalContext().getFlash().setKeepMessages(true);
 			
 			return TELA_LISTAGEM_USUARIO;
