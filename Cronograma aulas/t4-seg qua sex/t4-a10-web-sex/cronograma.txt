@@ -4,6 +4,12 @@
 implementar hello world com a turma
 
 
+jsf-api 2.1.7
+jsf-impl 2.1.7
+primefaces 5.2
+
+
+
 Exercício:
 - implemente um projeto JSF que retorne pra tela 3 variáveis sendo elas: nome completo, idade e sexo; 
 Que serão inicializadas no método init() anotado com @PostConstruct

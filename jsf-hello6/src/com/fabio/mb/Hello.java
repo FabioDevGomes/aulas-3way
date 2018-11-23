@@ -19,14 +19,16 @@ public class Hello implements Serializable {
     public void init(){
         System.out.println(" Método init() executado na inicialização devido a anotação  @PostConstruct ");
         nomeCompleto = "Fábio Alves Gomes";
+        message = "Hello World JSF! 444";
+        message2 = "Hello World JSF! 555";
     }
      
     public String getMessage(){
-        return "Hello World JSF! 444";
+        return message;
     }
     
     public String getMessage2(){
-        return "Hello World JSF! 555";
+        return message2;
     }
 
 	public String getNomeCompleto() {
