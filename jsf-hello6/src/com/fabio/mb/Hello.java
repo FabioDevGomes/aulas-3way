@@ -1,15 +1,12 @@
 package com.fabio.mb;
 
-import java.io.Serializable;
-
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
 @RequestScoped
 @ManagedBean(name = "helloMapeamento")
-public class Hello implements Serializable {
-	private static final long serialVersionUID = 1L;
+public class Hello  {
 	
 	private String message;
 	private String message2;
