@@ -12,11 +12,11 @@ public class TestaDAO {
 //		implementar depois extrair para métodos
 		
 		incluirPessoa();
-		alterarPessoa();
-		
-		pessoaDao.removeById(1);
-		
-		listarTodasPessoas();
+//		alterarPessoa();
+//		
+//		pessoaDao.removeById(1);
+//		
+//		listarTodasPessoas();
 		
 	}
 
@@ -31,7 +31,7 @@ public class TestaDAO {
 	private static void incluirPessoa() {
 		Pessoa pessoa = new Pessoa();
 		pessoa.setCpf("456123789");
-		pessoa.setNome("Outro cara");
+		pessoa.setNome("Outro cara 24");
 		
 		pessoaDao.persist(pessoa);
 	}

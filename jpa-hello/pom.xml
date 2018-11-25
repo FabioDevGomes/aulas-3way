@@ -7,17 +7,17 @@
 	<packaging>war</packaging>
 	<dependencies>
 
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>4.2.0.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate.common</groupId>
-			<artifactId>hibernate-commons-annotations</artifactId>
-			<version>4.0.1.Final</version>
-			<classifier>tests</classifier>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.hibernate</groupId> -->
+<!-- 			<artifactId>hibernate-validator</artifactId> -->
+<!-- 			<version>4.2.0.Final</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.hibernate.common</groupId> -->
+<!-- 			<artifactId>hibernate-commons-annotations</artifactId> -->
+<!-- 			<version>4.0.1.Final</version> -->
+<!-- 			<classifier>tests</classifier> -->
+<!-- 		</dependency> -->
 		<dependency>
 			<groupId>org.hibernate.javax.persistence</groupId>
 			<artifactId>hibernate-jpa-2.0-api</artifactId>
