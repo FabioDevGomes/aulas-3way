@@ -6,15 +6,14 @@
 - Converter para maven
 - baixar dependencias jsf
 - baixar dependencias primefaces
-- baixar dependencias primefaces themes
+***- baixar dependencias primefaces themes
+***- configura theme no web.xml
 
-- configura theme no web.xml
+***Atraves de Themes
+***http://blog.algaworks.com/primefaces-com-bootstrap/
 
-Atraves de Themes
-http://blog.algaworks.com/primefaces-com-bootstrap/
-
-inserindo themas
-https://www.primefaces.org/themes/
+***inserindo themas
+***https://www.primefaces.org/themes/
 
 sistema selecionar jogo
 Login:
