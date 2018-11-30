@@ -42,7 +42,6 @@ public class SelecionarPlataforma {
 	}
 
 	public void setOption(String option) {
-		FacesContext context = FacesContext.getCurrentInstance();
 		String mensagem = "";
 		if (option != null && !option.equals("")) {
 			images = new ArrayList<String>();
@@ -57,6 +56,7 @@ public class SelecionarPlataforma {
 		} else {
 			mensagem = "Todas as plataformas selecionadas";
 		}
+		FacesContext context = FacesContext.getCurrentInstance();
 		context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Successo", mensagem));
 		this.option = option;
 	}
