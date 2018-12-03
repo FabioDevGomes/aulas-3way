@@ -16,7 +16,7 @@ public class TestaPersistencia {
 		
 		Pessoa pessoa = new Pessoa();
 		pessoa.setCpf("84209623253");
-		pessoa.setNome("Febioee 222");
+		pessoa.setNome("Febioee 2223344");
 		
 		entityManager.getTransaction().begin();
 		entityManager.persist(pessoa);
