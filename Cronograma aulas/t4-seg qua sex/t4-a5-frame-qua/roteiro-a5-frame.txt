@@ -1,0 +1,32 @@
+﻿Implemente a camada de acesso a dados e a de controle (CardLoginMB) simulando 
+o recebimento dos dados de acesso através de uma dada API...
+
+private void apiRecebeDadosCartao() {
+	String nomeUsuario = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap()
+			.get("nomeUsuario");
+
+	String matricula = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap()
+			.get("matricula");
+
+	usuario.setNomeUsuario(nomeUsuario);
+	usuario.setMatricula(matricula);
+
+}
+
+baseado no seguinte xhtml:
+
+<h:form>
+	<p:messages id="messages" />
+		
+	<input type="hidden" name="nomeUsuario" value="admin" />
+	<input type="hidden" name="matricula" value="20204433" />
+
+	<h:commandLink action="#{cardLoginMB.enviar}">
+		<p:graphicImage id="city" value="resources/imagens/insert-card.png"
+			width="250" height="190">
+		</p:graphicImage>
+	</h:commandLink>
+</h:form>
+
+Em caso de sucesso encaminha para a página /acessoLiberado
+

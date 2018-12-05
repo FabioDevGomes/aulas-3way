@@ -23,7 +23,7 @@ public class LoginManagedBean {
 					new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuário não encontrado!", "Erro no Login!"));
 			return null;
 		} else {
-			return "/main";
+			return "/listagemUsuarios";
 		}
 	}
 

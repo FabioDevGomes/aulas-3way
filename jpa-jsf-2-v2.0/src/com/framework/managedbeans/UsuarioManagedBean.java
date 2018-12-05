@@ -27,7 +27,7 @@ public class UsuarioManagedBean {
 	
 	public String incluirUsuarioDb(Usuario usuario) {
 		usuarioDAO.inserirUsuario(usuario);
-		return "/main";
+		return "/listagemUsuarios";
 	}
 
 	public Usuario getUsuario() {
