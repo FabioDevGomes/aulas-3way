@@ -32,7 +32,7 @@ public class UsuarioDAO {
 		}
 	}
 
-	public Usuario getUsuario(int id) {
+	public Usuario consultarUsuario(int id) {
 		try {
 			return em.find(Usuario.class, id);
 		} catch (NoResultException e) {

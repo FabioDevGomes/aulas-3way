@@ -21,7 +21,7 @@ public class UsuarioManagedBean {
 		return usuarioDAO.listarUsuario();
 	}
 
-	public void exlcluirUsuarioDb(Usuario usuario) {
+	public void excluirUsuarioDb(Usuario usuario) {
 		usuarioDAO.deletarUsuario(usuario);
 	}
 	

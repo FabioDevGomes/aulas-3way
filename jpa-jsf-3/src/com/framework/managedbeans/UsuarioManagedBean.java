@@ -24,9 +24,9 @@ public class UsuarioManagedBean {
 	@PostConstruct
 	public void init() {
 		FacesContext facesContext = FacesContext.getCurrentInstance();
-		String idUsuario = (String) facesContext.getExternalContext().getRequestParameterMap().get("id");
+		String idUsuario = facesContext.getExternalContext().getRequestParameterMap().get("id");
 		if(idUsuario != null) {
-			this.usuario = usuarioDAO.getUsuario(Integer.parseInt(idUsuario));
+			this.usuario = usuarioDAO.consultarUsuario(Integer.parseInt(idUsuario));
 		}
 	}
 
