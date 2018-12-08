@@ -20,7 +20,7 @@ public class Testar {
 //		dao.inserirUsuario(usuario);
 		
 		
-		for (Object objeto : dao.listarUsuario()) {
+		for (Object objeto : dao.listarUsuarios()) {
 			Usuario usuario2 = (Usuario) objeto;
 			System.out.println(usuario2.getMatricula());
 			

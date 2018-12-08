@@ -18,7 +18,7 @@ public class UsuarioManagedBean {
 	private List<Usuario> usuarioListDb = new ArrayList<>();
 	
 	public List getUsuarioListDb() {
-		return usuarioDAO.listarUsuario();
+		return usuarioDAO.listarUsuarios();
 	}
 
 	public void excluirUsuarioDb(Usuario usuario) {

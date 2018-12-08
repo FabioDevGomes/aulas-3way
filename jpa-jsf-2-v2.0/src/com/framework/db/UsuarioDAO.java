@@ -81,7 +81,7 @@ public class UsuarioDAO {
 		}
 	}
 
-	public List listarUsuario() {
+	public List listarUsuarios() {
 
 		Query queryObj = em.createQuery("SELECT u FROM Usuario u");
 		List usuariosList = queryObj.getResultList();
