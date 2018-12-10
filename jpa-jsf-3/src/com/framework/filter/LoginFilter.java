@@ -21,11 +21,11 @@ public class LoginFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		
-		 HttpSession sess = ((HttpServletRequest) request).getSession(true);
+		 HttpSession sessao = ((HttpServletRequest) request).getSession(true);
 		 //recuperar o atributo logado da sessão
 		 boolean logado = false;
-		 if(sess.getAttribute("logado") != null) {
-			 logado = (Boolean) sess.getAttribute("logado");
+		 if(sessao.getAttribute("logado") != null) {
+			 logado = (Boolean) sessao.getAttribute("logado");
 		 }
 
 		// caso a variável logado seja false saberemos que

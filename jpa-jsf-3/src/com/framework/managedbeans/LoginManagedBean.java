@@ -17,17 +17,15 @@ public class LoginManagedBean {
 
 	public String enviar() {
 		usuario = usuarioDAO.getUsuario(usuario.getNomeUsuario(), usuario.getSenha());
-		FacesContext context = FacesContext.getCurrentInstance();
 		if (usuario == null) {
 			usuario = new Usuario();
 			FacesContext.getCurrentInstance().addMessage(null,
 					new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuário não encontrado!", "Erro no Login!"));
 			FacesContext.getCurrentInstance().validationFailed();
-			
-			context.getExternalContext().getSessionMap().put("logado", false);
-			 
+
 			return null;
 		} else {
+			FacesContext context = FacesContext.getCurrentInstance();
 			context.getExternalContext().getSessionMap().put("logado", true);
 			return "/restrito/main.xhtml?faces-redirect=true";
 		}

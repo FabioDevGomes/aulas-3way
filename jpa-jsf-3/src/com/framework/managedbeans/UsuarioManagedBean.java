@@ -41,7 +41,7 @@ public class UsuarioManagedBean {
 	public String incluirUsuarioDb(Usuario usuario) {
 		if (!usuarioDAO.inserirUsuario(usuario)) {
 			FacesContext context = FacesContext.getCurrentInstance();
-			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro: Usuário já existe!", "--"));
+			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro: Usuário já existe!", null));
 			context.getExternalContext().getFlash().setKeepMessages(true);
 			
 			return "/restrito/novoUsuario.xhtml?faces-redirect=true";

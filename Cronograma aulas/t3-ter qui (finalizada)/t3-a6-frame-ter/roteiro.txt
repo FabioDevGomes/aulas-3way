@@ -111,9 +111,10 @@ marcando jdk em order and export
 =========================================================
 
 
------------- implementar uma tela para listagem de produtos
+------------ implementar uma tela para listagem e para inclusão de produtos
  Criar Tabela produtos com o campos
-	- cod
+	- cod (id)
+	- nome
 	- descricao
 	- fornecedor
 	- valor
