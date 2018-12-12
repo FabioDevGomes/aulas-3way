@@ -1,0 +1,57 @@
+Ajustes:
+
+- Alinhar painal grid login: 
+	<div align="center"
+
+- Retirar bordas:
+	class="int-box"
+	
+	.ui-panelgrid td, .ui-panelgrid tr{
+    		border-style: none !important
+	}
+
+
+- limpeza;
+
+  listagemUsuarioT.xhtml:
+	<title>Controle de usuários</title> (retirar e deixar somente na layout.xhtml)
+
+	<h:form>
+		<p:outputLabel value="Login efetuado com sucesso! Bem vindo ao sistema!"></p:outputLabel>
+	</h:form>
+
+  LoginManagedBean:
+	context.getExternalContext().getSessionMap().put("logado", false);
+
+
+
+---------------------
+
+<welcome-file>login/login.xhtml</welcome-file>
+
+- facelets:
+	criar layout.xhtml
+	criar basicheader.xhtml
+	criar basicfooter.xhtml
+
+	buscar tempalte no https://getbootstrap.com/docs/4.0/examples/
+
+	adicionar HTML header
+
+
+- Extrair CSS para arquivo externo
+	baixar e linkar CSS footer
+
+
+- ajustar footer com CSS:
+	#footer{
+		position:fixed;
+		bottom: 0;
+		background: #babdb6;
+		width: 100%;
+		text-align: center;
+	}
+
+
+
+	
