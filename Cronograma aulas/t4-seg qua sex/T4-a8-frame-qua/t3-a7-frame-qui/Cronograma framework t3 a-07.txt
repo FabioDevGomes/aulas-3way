@@ -9,7 +9,7 @@
 
 ------------ implementar uma tela para listagem de produtos
  Criar Tabela produtos com o campos
-     - cod;  - descricao;  - nome;  - fornecedor;  - valor
+     - cod; (id)  - descricao;  - nome;  - fornecedor;  - valor
 
 Criar Projeto dynamic com configurações do JSF e JPA
 
@@ -23,7 +23,7 @@ Criar entidade Produto
 
 Criar ProdutosDAO > Criar método listarProdutos()
 
-Criar produtoLisgem.xhtml
+Criar produtoListagem.xhtml
 
 Criar ProdutoMB
 	Criar método listarProdutos()
