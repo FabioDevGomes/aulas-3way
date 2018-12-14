@@ -4,14 +4,14 @@
 	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
-
+	<h:outputStylesheet library="css" name="geral.css" />
 </h:head>
 
 <h:body>
 	<h:form>
-		<div align="center" class="int-box">
+		<div align="center">
 			<p:messages id="messages" />
-			<p:panelGrid columns="2" styleClass="ui-noborder">
+			<p:panelGrid columns="2">
 				<p:outputLabel for="nomeUsuario" value="Nome Usuário:" />
 				<p:inputText id="nomeUsuario" value="#{loginMB.usuario.nomeUsuario}" />
 
