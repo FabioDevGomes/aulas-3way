@@ -15,7 +15,7 @@ public class Usuario {
        
       @Id
       @GeneratedValue(strategy=GenerationType.IDENTITY)
-      @Column(name="id", nullable=false, unique=true)
+      @Column(name="id")
       private int id;
        
       @Column(name="userName", nullable=false, unique=true)
@@ -24,7 +24,7 @@ public class Usuario {
       @Column(name="matricula")
       private String matricula;
        
-      @Column(name="password", nullable=false, unique=false)
+      @Column(name="password", nullable=false)
       private String senha;
   
       @Column(name="lastAccess")

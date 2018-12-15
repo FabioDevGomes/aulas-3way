@@ -34,7 +34,7 @@ public class UsuarioManagedBean {
 		return usuarioDAO.listarUsuario();
 	}
 
-	public void exlcluirUsuarioDb(Usuario usuario) {
+	public void excluirUsuarioDb(Usuario usuario) {
 		usuarioDAO.deletarUsuario(usuario);
 	}
 
@@ -42,9 +42,9 @@ public class UsuarioManagedBean {
 		if (!usuarioDAO.inserirUsuario(usuario)) {
 			FacesContext context = FacesContext.getCurrentInstance();
 			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro: Usuário já existe!", null));
-			context.getExternalContext().getFlash().setKeepMessages(true);
+//			context.getExternalContext().getFlash().setKeepMessages(true);
 			
-			return "/restrito/novoUsuario.xhtml?faces-redirect=true";
+			return "/restrito/novoUsuario";
 		}
 		return "/restrito/main?faces-redirect=true";
 	}
