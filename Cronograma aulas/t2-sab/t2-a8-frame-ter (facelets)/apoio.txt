@@ -4,11 +4,14 @@ Ajustes:
 	<div align="center"
 
 - Retirar bordas:
-	class="int-box"
 	
 	.ui-panelgrid td, .ui-panelgrid tr{
     		border-style: none !important
 	}
+
+
+Resolvendo problemas de enconde 
+	<?xml version='1.0' encoding='ISO-8859-1' ?>
 
 
 - limpeza;
