@@ -49,7 +49,7 @@ public class UsuarioManagedBean {
 
 	public String incluirUsuarioDb(Usuario usuario) {
 		try {
-			getUsuarioService().salvarUsuario(usuario);
+			usuarioService.salvarUsuario(usuario);
 			return TELA_LISTAGEM_USUARIO;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -72,7 +72,7 @@ public class UsuarioManagedBean {
 				this.usuario = usuarioDAO.getUsuario(idUsuario);
 			}
 			
-			getUsuarioService().telaEdicao(this.usuario);
+			usuarioService.telaEdicao(this.usuario);
 			this.usuario = usuario;
 			
 		} catch (ValidationException e) {
