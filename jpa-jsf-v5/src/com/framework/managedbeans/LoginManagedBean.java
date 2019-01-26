@@ -30,20 +30,19 @@ public class LoginManagedBean {
 		FacesContext context = FacesContext.getCurrentInstance();
 		if (usuario == null) {
 			usuario = new Usuario();
-			FacesContext.getCurrentInstance().addMessage(null,
+			context.addMessage(null,
 					new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuário não encontrado!", "Erro no Login!"));
-			FacesContext.getCurrentInstance().validationFailed();
+			context.validationFailed();
 			
-			context.getExternalContext().getSessionMap().put("logado", false);
-			 
 			return null;
 		} else {
 			
-			ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
+			ExternalContext externalContext = context.getExternalContext();
 			Map<String, Object> sessionMap = externalContext.getSessionMap();
 			sessionMap.put("id", usuario.getId());
 			
-			context.getExternalContext().getSessionMap().put("logado", true);
+			externalContext.getSessionMap().put("logado", true);
+			
 			return "/restrito/listagemUsuarioT.xhtml?faces-redirect=true";
 		}
 	}

@@ -3,6 +3,7 @@ package com.framework.service;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
@@ -59,7 +60,7 @@ public class UsuarioService {
 	public void mergeUsuario(Usuario usuario) {
 		usuarioDAO.mergeUsuario(usuario);
 	}
-
+	
 	private void validarMatricula(Usuario usuario) throws ValidationException {
 		if (!usuario.getMatricula().startsWith("M") && !usuario.getMatricula().startsWith("ADM")) {
 			throw new ValidationException("A matrícula do usuário de iniciar com M ou ADM!");
@@ -68,6 +69,10 @@ public class UsuarioService {
 
 	public void deletarUsuario(Usuario usuario) {
 		usuarioDAO.deletarUsuario(usuario);
+	}
+
+	public List listarUsuario() {
+		return usuarioDAO.listarUsuario();
 	}
 
 }
