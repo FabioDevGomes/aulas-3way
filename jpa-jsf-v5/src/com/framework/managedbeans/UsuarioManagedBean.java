@@ -35,12 +35,12 @@ public class UsuarioManagedBean {
 		String id =  (String) facesContext.getExternalContext().getRequestParameterMap().get("id");
 		if(id != null) {
 			Integer idUsuario = Integer.parseInt(id);
-			this.usuario = usuarioDAO.getUsuario(idUsuario);
+			this.usuario = usuarioService.consultarUsuario(idUsuario);
 		}
 	}
 
 	public List usuarioListDb() {
-		return usuarioDAO.listarUsuario();
+		return usuarioService.listarUsuario();
 	}
 
 	public void exlcluirUsuarioDb(Usuario usuario) {
@@ -49,7 +49,7 @@ public class UsuarioManagedBean {
 
 	public String incluirUsuarioDb(Usuario usuario) {
 		try {
-			getUsuarioService().salvarUsuario(usuario);
+			usuarioService.salvarUsuario(usuario);
 			return TELA_LISTAGEM_USUARIO;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -69,11 +69,11 @@ public class UsuarioManagedBean {
 			String id = context.getExternalContext().getSessionMap().get("id").toString();
 			if(id != null) {
 				Integer idUsuario = Integer.parseInt(id);
-				this.usuario = usuarioDAO.getUsuario(idUsuario);
+//				this.usuario = usuarioDAO.getUsuario(idUsuario);
+				usuarioService.consultarUsuario(idUsuario);
 			}
 			
-			getUsuarioService().telaEdicao(this.usuario);
-			this.usuario = usuario;
+			usuarioService.telaEdicao(this.usuario);
 			
 		} catch (ValidationException e) {
 			e.printStackTrace();
@@ -83,7 +83,7 @@ public class UsuarioManagedBean {
 			return TELA_LISTAGEM_USUARIO;
 		}
 		
-		return TELA_EDITAR_USUARIO+usuario.getId();
+		return TELA_EDITAR_USUARIO + usuario.getId();
 	}
 
 	public String editarUsuarioDb(Usuario usuario) {
