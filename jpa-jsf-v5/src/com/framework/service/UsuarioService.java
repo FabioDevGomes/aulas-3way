@@ -19,8 +19,15 @@ public class UsuarioService {
 	private UsuarioDAO usuarioDAO = new UsuarioDAO();
 
 	public void telaEdicao(Usuario usuario) throws ValidationException {
-		if (!usuario.getMatricula().startsWith("ADM")) {
-			throw new ValidationException("Somente usu√°rio com perfil ADM podem acessar a p√°gina de edi√ßao");
+//		//algoritmo problem·tico
+//		if (!usuario.getMatricula().startsWith("ADM")) {
+//			throw new ValidationException("Somente usu·rio com perfil ADM podem acessar a p·gina de ediÁ„o");
+//		}
+		
+		//melhor abordagem
+		String primeirosCaracteres = usuario.getMatricula().substring(0, 3);
+		if(!primeirosCaracteres.equalsIgnoreCase("ADM")) {
+			throw new ValidationException("Somente usu·rio com perfil ADM podem acessar a p·gina de ediÁ„o");
 		}
 	}
 

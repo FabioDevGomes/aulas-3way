@@ -26,8 +26,8 @@ public class LoginManagedBean {
 	private UsuarioService usuarioService;
 
 	public String enviar() {
-		usuario = usuarioDAO.getUsuario(usuario.getNomeUsuario(), getUsuarioService().encriptarSenha(usuario.getSenha()));
-//		usuario = usuarioDAO.getUsuario(usuario.getNomeUsuario(), usuario.getSenha());
+//		usuario = usuarioDAO.getUsuario(usuario.getNomeUsuario(), getUsuarioService().encriptarSenha(usuario.getSenha()));
+		usuario = usuarioDAO.getUsuario(usuario.getNomeUsuario(), usuario.getSenha());
 		FacesContext context = FacesContext.getCurrentInstance();
 		if (usuario == null) {
 			usuario = new Usuario();

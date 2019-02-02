@@ -70,7 +70,7 @@ public class UsuarioManagedBean {
 			if(id != null) {
 				Integer idUsuario = Integer.parseInt(id);
 //				this.usuario = usuarioDAO.getUsuario(idUsuario);
-				usuarioService.consultarUsuario(idUsuario);
+				this.usuario = usuarioService.consultarUsuario(idUsuario);
 			}
 			
 			usuarioService.telaEdicao(this.usuario);
