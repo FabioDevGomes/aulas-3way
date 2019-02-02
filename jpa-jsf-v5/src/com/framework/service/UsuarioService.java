@@ -52,12 +52,10 @@ public class UsuarioService {
 			}
 			senhaRetorno = hexString.toString();
 		} catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 		return senhaRetorno;
-
 	}
 
 	public Usuario consultarUsuario(Integer idUsuario) {
