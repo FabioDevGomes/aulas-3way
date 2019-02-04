@@ -3,12 +3,14 @@ Slide 01
 O que é java?
  - Buscar no Google
  - Abrir página da Oracle
+ - Explicar diferença entre JRE e JDK (e depois buscar no google)
  - (Não preciso do java pra acessar uma página web criada em java busca: "preciso da jre no cliente")
 
 Um pouco da história
  - Convenções de Código Java (nome de classe, nomes de variáveis, nomes de métodos)
 
 Onde encontro o java?
+ - (dar 4 min para que a turma leia o primeiro parágrafo)
  - (busca: "informações sobre java")
 
 Plataforma java
