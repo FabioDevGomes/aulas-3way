@@ -29,7 +29,7 @@ Final do slide:
  - Incluir comentários informando qual é a declatação da classe, o método main, e a linha q imprime no console 
  - Alterar a palavra static para pegar experiência com erro de compilação
 
---------------------------------------------
+-------------------------------------------- fim da aula 01 / t5 - 04/02
 Slide 02
 
 Slide 03:

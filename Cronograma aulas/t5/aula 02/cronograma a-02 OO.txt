@@ -1,15 +1,41 @@
-1 criar programa que declare duas (ou três) variáveis, inicialize (com nome e sobrenome) e imprima seu valor concatenado no console do eclipse.
+----------------------------------------------------
+java_oo_slides_02_identificadores_palavras-chave_tipos.pdf
+----------------------------------------------------
 
-- Declarar variáveis de classe wrappers para teste de atribuição de valores e mostrar métodos que elas possuem
+Slide 03:
+ - implementar Hello World no Eclipse
 
-- //mostar imagens e explicar o que é um objeto, criar a classe Numero e instanciá-la como exemplo
+Identificadores e palavras reservadas
+ - Fazer um programa que imprima as palavras reservadas que vc conhece até agora.
+
+Exercícios:
+Slide 04: declarar variáveis Slide2 pag. 4.
+
+Slide 05:
+tipo: String 	- nome: meuNome 	- valor: "Nome do implementador"; 
+tipo: int 	- nome: minhaIdade 	- valor: 25 (exemplo);
+...
+
+Slide 06: Declarar, Inicializar, Imprimir variáveis
+	Mostre o valor default das variáveis primitivas
+	(declare fora do método main sem inicializá-las)
+
+----------------------------------------------------
+java_oo_slides_03_operadores.pdf
+----------------------------------------------------
+
+1 criar programa que declare duas (ou três dependendo do seu sobrenome) variáveis, inicialize (com nome e sobrenome) e imprima seu valor concatenado com o operador + e exiba no console do eclipse.
 
 - declarar duas variáveis numéricas e implementar operadores aritiméticos (slide 2) (15 min)
 - declarar duas variáveis numéricas e implementar operadores relacionais sem "if" (slide 3) (15 min)
 - pegar dois resultados dos operadores relacionais e implementar operadores lógicos (slide 4) (10 min)
 - testar operadores de pré incremento e pós incremento (slide 9) (10 min) *explicar melhor
 - testar operador condicional ternário (maior de idade) (9 min)
-  -----fim slide 03
+
+
+----------------------------------------------------
+java_oo_slides_04_estruturas_de_controle.pdf
+----------------------------------------------------
 
 - Slide 02 - testar estrutura de controle "if" "if else" "if-else-if" (05 min)
 - Slide 03 - testar estrutura de controle "if" "if else" "if-else-if" mostrar compilação sem chaves {} (03 min)
@@ -34,9 +60,9 @@
 	(usar o operador resto da divisão)
 
 
-
-
 ==== terminar aula ========================================
+
+- //mostar imagens e explicar o que é um objeto, criar a classe Numero e instanciá-la como exemplo
 
 - testar estrutura de controle switch case
 - testar estruturas de repetição, break e continue na sequência (tem tudo no slide)
