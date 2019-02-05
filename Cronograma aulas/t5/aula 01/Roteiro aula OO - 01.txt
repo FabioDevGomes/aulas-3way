@@ -7,7 +7,7 @@ O que é java?
  - (Não preciso do java pra acessar uma página web criada em java busca: "preciso da jre no cliente")
 
 Um pouco da história
- - Convenções de Código Java (nome de classe, nomes de variáveis, nomes de métodos)
+ - Convenções de Código Java (nome de classe, nomes de variáveis, nomes de métodos - buscar no google)
 
 Onde encontro o java?
  - (dar 4 min para que a turma leia o primeiro parágrafo)
