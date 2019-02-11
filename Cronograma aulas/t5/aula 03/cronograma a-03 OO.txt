@@ -18,7 +18,9 @@ java_oo_slides_04_estruturas_de_controle.pdf
 ----------------------------------------------------
 
 - Slide 02 - testar estrutura de controle "if" "if else" "if-else-if" (05 min)
+
 - Slide 03 - testar estrutura de controle "if" "if else" "if-else-if" mostrar compilação sem chaves {} (03 min)
+
 - Slide 04 - testar estrutura de controle "if" "if else" "if-else-if" (10 min)
 - slide 04 - implementar exercício média aluno (exercício média aluno.txt) (13 min)
 
