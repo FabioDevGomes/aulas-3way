@@ -1,0 +1,88 @@
+----------------------------------------------------
+java_oo_slides_04_estruturas_de_controle.pdf
+----------------------------------------------------
+
+- Slide 02 - testar estrutura de controle "if" "if else" "if-else-if" (05 min)
+
+- Slide 03 - testar estrutura de controle "if" "if else" "if-else-if" mostrar compilação sem chaves {} (03 min)
+
+- Slide 04 - testar estrutura de controle "if" "if else" "if-else-if" (10 min)
+- slide 04 - implementar exercício média aluno (exercício média aluno.txt) (13 min)
+
+
+------------------- início aula 04 t5
+
+- slide 04 - implementar exercício: (20 min)
+	Faça um programa q leia 3 números e mostre o maior deles usando if else
+
+ Altere o programa pra ler os número do teclado
+  Scanner scanner = new Scanner(System.in);
+  int numero1 = scanner.nextInt();
+
+
+* - Faça um programa que leia do teclado 6 valores inteiros e positivos e: (25 min) 
+* - Calcule a média dos números lidos
+
+
+- slide 04 - implementar exercício: (15 min) 01
+	Implemente um programa que verifique se uma letra digitada é igual a "F" ou "M", conforme a letra escrever "F - Feminino"
+	"M - Masculino" ou "Sexo inválido" caso seja digitado uma letra diferente das duas citadas
+	(pesquisar no google, "comparar String java")
+
+
+- slide 04 - implementar exercício:
+	Faça um programa que leia dois números e retorne se ele é par ou impar
+	(usar o operador resto da divisão)
+
+
+----------------------------------------------------
+java_oo_slides_05_array.pdf
+----------------------------------------------------
+
+
+break: teste no for
+continue: teste no for
+
+- Slide 3
+	 1. Para cada conjunto de valores abaixo, escreva o código Java, que
+	preencha um array com os valores:
+	(Usando as duas formas de construir um array)
+	a) 10 9 8 7 6 5 4 3 2 1
+	b) 0 1 4 9 16 25 36 49 64 81 100
+	c) 1 2 3 4 5 10 20 30 40 50
+
+
+- Slide 4
+
+	 1-1. Reescreva o código, agora usando laços para alimentar e exibir o array, que
+	 preencha um array de double (de tamanho 5) com os valores do teclado, e exiba-os na mesma linha:
+
+
+	 2. Crie um array de inteiros (não precisar alimentar pelo teclado)
+	 e retorne a quantidade de elementos do array que são números negativos.
+
+
+	 4. Crie um método que recebe um array de inteiros positivos e substitui seus elementos
+	 de valor ímpar por -1 e os pares por +1.
+
+
+- Slide 7:
+
+- Slide 8:
+ Implementar
+
+- depois do último slide
+
+--- Implemtente um array de inteiros com 10 posições e:
+* - Encontre o maior valor
+* - Encontre o menor valor
+* - usar: Arrays.sort()
+
+
+
+
+
+- //mostar imagens e explicar o que é um objeto, criar a classe Numero e instanciá-la como exemplo
+
+- testar estrutura de controle switch case
+- testar estruturas de repetição, break e continue na sequência (tem tudo no slide)
