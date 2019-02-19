@@ -4,7 +4,7 @@ java_oo_slides_04_estruturas_de_controle.pdf
 
 
 - slide 04 - implementar exercício:
-	Faça um programa que leia dois números e retorne se ele é par ou impar
+	Faça um programa que leia dois números e retorne se eles são par ou impar
 	(usar o operador resto da divisão)
 
 
@@ -20,8 +20,8 @@ continue: teste no for
 	 1. Para cada conjunto de valores abaixo, escreva o código Java, que
 	preencha um array com os valores:
 	(Usando as duas formas de construir um array)
-	a) 10 9 8 7 6 5 4 3 2 1
-	b) 0 1 4 9 16 25 36 49 64 81 100
+	a) 10 9 8 7 6 5 4
+	b) 0 1 4 36 49 64 81 100
 	c) 1 2 3 4 5 10 20 30 40 50
 
 
@@ -33,10 +33,6 @@ continue: teste no for
 
 	 2. Crie um array de inteiros (não precisar alimentar pelo teclado)
 	 e retorne a quantidade de elementos do array que são números negativos.
-
-
-	 4. Crie um método que recebe um array de inteiros positivos e substitui seus elementos
-	 de valor ímpar por -1 e os pares por +1.
 
 
 - Slide 7:
@@ -53,10 +49,6 @@ continue: teste no for
 
 
 - //mostar imagens e explicar o que é um objeto, criar a classe Numero e instanciá-la como exemplo
-
-- testar estrutura de controle switch case
-- testar estruturas de repetição, break e continue na sequência (tem tudo no slide)
-
 
 ----------------------------------------------------
 slides_06_base_da_programação_java_OO.pdf
@@ -80,3 +72,7 @@ Dentro do método ligar() Verificar se a variável/atributo "ligado" é igual a "fa
  Criar uma variável local do método para amazenar o retorno com o nome "retorno":
   iniciar essa variável local, na primeira linha do método, com uma String vazia ""
   retornar essa variável como resposta do método "return retorno;"
+
+Método com Array:
+ 4. Crie um método que recebe um array de inteiros positivos e substitui seus elementos
+	 de valor ímpar por -1 e os pares por +1.
