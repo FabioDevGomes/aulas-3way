@@ -1,0 +1,100 @@
+
+----------------------------------------------------
+slides_06_base_da_programação_java_OO.pdf
+----------------------------------------------------
+
+- Slide 02:
+ mostrar imagens
+
+- Slide 03:
+ imlementar com os coméntários
+
+- Slide 08:
+ Ajusta código da classe Carro de acordo com os requisitos abaixo:
+
+ Criar a variável/atributo de classe do tipo "boolean" e com o nome "ligado" que recebe o valor "false";
+
+Dentro do método ligar() Verificar se a variável/atributo "ligado" é igual a "false":
+  se for, o método ligar deve alterar o seu valor para "true"
+  se não for, retornar o texto "o carro já está ligado"
+
+ Criar uma variável local do método para amazenar o retorno com o nome "retorno":
+  iniciar essa variável local, na primeira linha do método, com uma String vazia ""
+  retornar essa variável como resposta do método "return retorno;"
+
+- Slide 15:
+ Posso ter por exemplo uma classe chamada Conta que tem como variável/atributo 
+ uma outra classe chamada Cliente 
+
+
+Exercício:
+ Criar classe Conta Corrente e analisar quais seriam seus atributos e métodos
+
+	Titular
+	NumeroConta
+	saldo
+
+	depositar()
+	sacar()
+	transferir()
+
+Criar classe Caneta e analisar quais seriam seus atributos e métodos
+
+----------------------------------------------------
+slides_07_metodo_construtores_membros_estaticos.pdf
+----------------------------------------------------
+- Slide 08:
+ mostrar como são feitas as chamadas
+ incluir parâmetros... String, Integer
+
+- Slide 09:
+ implementar
+
+- Slide 10:
+ implementar
+
+- Slide 11:
+ implementar na classe Carro
+ sobrecarrege outro métodos e teste
+
+- Slide 12: 
+
+Método com Array:
+ 4. Crie um método que recebe um array de inteiros positivos e substitui seus elementos
+	 de valor ímpar por -1 e os pares por +1.
+
+
+Os métodos static ou métodos da classe são funções que não dependem de nenhuma variável de instância, 
+quando invocados executam uma função sem a dependência do conteúdo de um objeto ou a execução da 
+instância de uma classe, conseguindo chamar direto qualquer método da classe e também manipulando alguns campos da classe.
+
+ Método main é estático
+Na execução de uma programa Java, a JVM (Java Virtual Machine) tenta chamar o método main da classe que foi 
+especificada. Quando declarado o método main como static permite que a JVM invoque o main sem 
+criar uma instância da classe, ou seja, a classe é conhecida como classe principal ou classe testadora, 
+que efetuará os testes e chamadas das classes para a execuções dos programas.
+
+ Arrays.sort(a, c); é estático
+
+ implementar Membros estáticos (10 min) :46
+
+- Slide 13:
+ implementar chamadas
+
+
+Escrever um programa em java que receba dois números e exiba o resultado da sua soma e sua multiplicação
+ - sem retorno (void) e imprima o resultado dentro do método
+ - Cada operação deve estar em um método stático diferente
+ - altere os métodos para retorna o resultado "void > double"
+ - retire o modificado static dos métodos
+
+ - ex:  implementar TestaSomaEstatica.java
+
+
+ Escopo de variáveis (20 minutos)
+ resolva o problema do escopo
+
+	mostrar: exercicio 4.1 apostila.png
+
+	exercicio 4.2 apostila (de duas formas, instanciando e alterando modificador).png
+
