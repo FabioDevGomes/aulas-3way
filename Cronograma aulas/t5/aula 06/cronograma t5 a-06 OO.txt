@@ -45,7 +45,8 @@ slides_07_metodo_construtores_membros_estaticos.pdf
 ----------------------------------------------------
 - Slide 08:
  mostrar como são feitas as chamadas
- incluir parâmetros nos métodos... String nomeMotorista, Integer
+ incluir parâmetros nos métodos... String nomeMotorista
+	syso(nomeMotorista +" o carro está ligado");
 
 - Slide 09:
  implementar
