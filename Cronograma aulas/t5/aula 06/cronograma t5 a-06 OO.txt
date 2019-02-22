@@ -22,7 +22,7 @@ Dentro do método ligar() Verificar se a variável/atributo "ligado" é igual a "fa
   iniciar essa variável local, na primeira linha do método, com uma String vazia "";
   retornar essa variável como resposta do método "return retorno;"
 
-- Slide 15:
+- Slide 14:
  Posso ter por exemplo uma classe chamada Conta que tem como variável/atributo 
  uma outra classe chamada Cliente 
 
@@ -45,7 +45,8 @@ slides_07_metodo_construtores_membros_estaticos.pdf
 ----------------------------------------------------
 - Slide 08:
  mostrar como são feitas as chamadas
- incluir parâmetros nos métodos... String nomeMotorista, Integer
+ incluir parâmetros nos métodos... String nomeMotorista
+	syso(nomeMotorista +" o carro está ligado");
 
 - Slide 09:
  implementar
