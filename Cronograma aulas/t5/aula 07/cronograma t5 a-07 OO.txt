@@ -59,3 +59,77 @@ Escrever um programa em java que receba dois números e exiba o resultado da sua 
 
 	exercicio 4.2 apostila (de duas formas, instanciando e alterando modificador).png
 
+
+----------------------------------------------------
+slides_08_herança_polimorfismo.pdf
+----------------------------------------------------
+
+- Slide 02:
+ apresentar a palavra chave extends e implementar diagrama
+
+- Slide 04:
+ implementar
+
+- Slide 05:
+ implementar
+ **chamar o método mover da superClasse antes do println
+
+- Slide 06:
+ implementar
+
+- Slide 08:
+ implementar
+
+
+- Slide 09:
+ implementar
+
+ declare um método q que tenha um parâmetro do tipo Veiculo e, dentro desse método criado chame o método mover() do parâmetro declarado, depois teste passando os tipos das subclasses de Veiculo (10min)
+
+
+------------------------------------fim aula 6 t4 ------------------
+
+
+- Slide 10:
+ implementar (9min) 
+
+ declare um método q que tenha um parâmetro do tipo array de Veiculos e; 
+ dentro desse método criado chame o método mover() percorrendo o array em um for; 
+ depois teste passando parâmetros dos tipos das subclasses de Veiculo  (10 min) :21
+
+- Slide 11:
+ implementar
+
+	Nos métodos polimórficos criados, verifique a classe e imprima o nome de cada objeto passado por parâmetro
+
+	No exercício do do slide 10, chame o método move() somente se a instância da classe for do tipo Carro
+
+
+- Slide 12:
+ explicar novamente a estrutura de declaração
+
+- Slide 14:
+ Implementar métodos get set para atributos/variáveis do tipo int, Integer, long, Long e Array de String
+ Depois use o método set para atribuir valores e o get para recuperar.
+
+----------Exercício final slide herança
+
+Crie as classes "Programador" e "GerenteProjetos", que também é um "Funcionário" (extends), e que possui um atributo "privado" número de 
+matrícula (faça o método Get e Set). 
+
+Crie na Funcionário o método exibirDados() e o sobrescreva na classe Programador e na classe GerenteProjetos.
+
+ - no método exibirDados() retorne: 
+	"Funcionário de matrícula XXXXX";
+	"Programador de matrícula XXXXX";
+	"Gerente de matrícula XXXXX";
+	
+Ex: Programador extends Funcionário 
+
+Teste a herança em uma quarta classe com o método main().
+
+declare uma variável do tipo Funcionário que receba uma instância (new) de Programador e chame o método exibeDados()
+declare uma variável do tipo Funcionário que receba uma instância (new) do tipo GerenteProjetos e chame o método exibeDados()
+
+---------------------------------------------------------
+
