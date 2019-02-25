@@ -18,12 +18,12 @@ slides_07_metodo_construtores_membros_estaticos.pdf
  implementar na classe Carro
  sobrecarrege outros métodos e teste
 
-- Slide 12: 
-
 Método com Array:
  4. Crie um método que recebe um array de inteiros positivos e substitui seus elementos
 	 de valor ímpar por -1 e os pares por +1.
 
+
+- Slide 12: 
 
 Os métodos static ou métodos da classe são funções que não dependem de nenhuma variável de instância, 
 quando invocados executam uma função sem a dependência do conteúdo de um objeto ou a execução da 
@@ -72,10 +72,12 @@ slides_08_herança_polimorfismo.pdf
 
 - Slide 05:
  implementar
- **chamar o método mover da superClasse antes do println
+ **chamar o método mover da superClasse antes do println, no construtor
+ adicionar retorno 'String' no método mover() e mostrar no console do eclipse
 
 - Slide 06:
  implementar
+ alterar super classe para modificador 'final'
 
 - Slide 08:
  implementar
