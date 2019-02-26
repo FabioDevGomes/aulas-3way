@@ -70,6 +70,8 @@ slides_08_herança_polimorfismo.pdf
 - Slide 04:
  implementar
 
+------------------------------------fim aula 7 t5 ------------------
+
 - Slide 05:
  implementar
  **chamar o método mover da superClasse antes do println, no construtor
