@@ -1,0 +1,88 @@
+
+
+Teste a herança em uma quarta classe com o método main().
+
+declare uma variável do tipo Funcionário que receba uma instância (new) de Programador e chame o método exibeDados()
+declare uma variável do tipo Funcionário que receba uma instância (new) do tipo GerenteProjetos e chame o método exibeDados()
+
+=================================== fim aula ===================================
+
+-------------------------- Slides_09_classes_abstratas_internas_e_interfaces_pages_deleted.pdf
+
+- Slide 03:
+ "abstract" > ";"
+ 
+ Adiciona método abstrato "tirarFerias()" na classe 
+ "Funcionário"
+ - Alterar a super-classe para abstract 
+ 
+ - adicionar na super-classe o atributo 
+  booleano "emFerias" inicializado com "false"
+ 
+ - no método "tirarFerias()" das subclasses altere 
+  esse atributo para true 
+
+
+
+
+- Slide 04:
+  implementar com, ou sem, herança das classes abstratas
+
+- Slide 05:
+  implementar
+
+- Slide 07:
+  implementar
+
+- Slide 08:
+  implementar
+
+- Slide 11:
+  implementar, altere a string de retorno, cria mais métodos, 
+  teste a aplicação (em todos os exercícios se possível)
+
+- Slide 13:
+  lambda mais comumente usado com coleções, ainda não vimos
+
+- Slide 14:
+  lambda mais comumente usado com coleções, ainda não vimos
+
+- Slide 15:
+  implementar exemplos da pasta ENUM
+
+
+--------------------------- slides_10_excecões.pdf 
+
+Exception:
+ 
+
+slide 04 - (antes) mostrar estrura do bloco try catch (cerca de 10 min)
+ 
+
+slide 04 - implementar exemplo eclipse, mostrar diferença do e.printStackTrace(); na rastreabilidade (cerca de 25 min)
+ 
+
+slide 05 - alterar exemplo anterior para mult catch (cerca de 5 min)
+
+slide 06 - implemetar try com recursos (cerca de 12 min)
+ cada um em uma classe 
+
+
+=================================== fim aula ===================================
+
+
+slide 07 - implemetar throw e trhows (cerca de 15 min)
+ implementar primeira parte do "Exercício M F - lançar execption.txt"
+
+
+slide 09 - implemetar criar própria exeção e incluir no ex anterior (cerca de 15 min)
+ concluir implementação "Exercício M F - lançar execption.txt"
+
+
+
+
+
+
+
+
+
