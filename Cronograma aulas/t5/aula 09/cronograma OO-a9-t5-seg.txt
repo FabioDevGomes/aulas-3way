@@ -1,32 +1,23 @@
 
 
-Teste a herança em uma quarta classe com o método main().
-
-declare uma variável do tipo Funcionário que receba uma instância (new) de Programador e chame o método exibeDados()
-declare uma variável do tipo Funcionário que receba uma instância (new) do tipo GerenteProjetos e chame o método exibeDados()
-
-=================================== fim aula ===================================
-
 -------------------------- Slides_09_classes_abstratas_internas_e_interfaces_pages_deleted.pdf
 
 - Slide 03:
  "abstract" > ";"
  
+----
  Adiciona método abstrato "tirarFerias()" na classe 
  "Funcionário"
  - Alterar a super-classe para abstract 
- 
  - adicionar na super-classe o atributo 
   booleano "emFerias" inicializado com "false"
- 
  - no método "tirarFerias()" das subclasses altere 
   esse atributo para true 
-
-
+----
 
 
 - Slide 04:
-  implementar com, ou sem, herança das classes abstratas
+  implementar com, ou sem, herança das classes abstratas (- a subclasse felino)
 
 - Slide 05:
   implementar
