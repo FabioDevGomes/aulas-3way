@@ -5,7 +5,7 @@
 - Slide 03:
  "abstract" > ";"
  
-----
+----não usar nessa turma-----
  Adiciona método abstrato "tirarFerias()" na classe 
  "Funcionário"
  - Alterar a super-classe para abstract 
@@ -13,7 +13,7 @@
   booleano "emFerias" inicializado com "false"
  - no método "tirarFerias()" das subclasses altere 
   esse atributo para true 
-----
+-----------------------------
 
 
 - Slide 04:

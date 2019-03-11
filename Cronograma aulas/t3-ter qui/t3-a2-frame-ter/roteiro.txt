@@ -1,0 +1,37 @@
+
+- apresentar slides e implementar exemplos dele
+
+
+-criar projeto dynamic com configurações do JSF
+- Converter para maven
+- baixar dependencias jsf
+- baixar dependencias primefaces
+***- baixar dependencias primefaces themes
+***- configura theme no web.xml
+
+***Atraves de Themes
+***http://blog.algaworks.com/primefaces-com-bootstrap/
+
+***inserindo themas
+***https://www.primefaces.org/themes/
+
+sistema selecionar jogo
+Login:
+https://www.primefaces.org/showcase/ui/overlay/dialog/loginDemo.xhtml
+
+redireciona:
+https://www.primefaces.org/showcase/ui/input/oneButton.xhtml
+
+exibe imagens
+<h:panelGroup rendered="#{bean.id > 0}" id="hello">
+
+https://www.primefaces.org/showcase/ui/multimedia/galleria.xhtml
+
+- usa <p:ajax update="@form"/> 
+- Centralizar imagens
+- usar mensagem depois de selecionar plataforma <p:messages
+- depois trocar para FacesMessage grow <p:growl
+
+
+- Brinque um pouco mude o tema, procure em http://www.primefaces.org/themes, veja o quanto e
+  simples mudar o tema de um sistema desenvolvido em Primefaces.
