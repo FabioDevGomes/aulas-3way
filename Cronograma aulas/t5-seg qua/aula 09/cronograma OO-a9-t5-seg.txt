@@ -49,6 +49,7 @@ Exception:
 
 slide 04 - (antes) mostrar estrura do bloco try catch (cerca de 10 min)
  
+==================== fim aula 09 t5 ================================
 
 slide 04 - implementar exemplo eclipse, mostrar diferença do e.printStackTrace(); na rastreabilidade (cerca de 25 min)
  
@@ -58,8 +59,6 @@ slide 05 - alterar exemplo anterior para mult catch (cerca de 5 min)
 slide 06 - implemetar try com recursos (cerca de 12 min)
  cada um em uma classe 
 
-
-=================================== fim aula ===================================
 
 
 slide 07 - implemetar throw e trhows (cerca de 15 min)
