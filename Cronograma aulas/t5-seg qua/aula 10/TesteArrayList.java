@@ -13,22 +13,22 @@ public class TesteArrayList {
 		System.out.println(listaString + ", size = " + listaString.size());
 
 		// Adiciona itens ao ArrayList
-		listaString.add("Robaum");
-		listaString.add("Usurpa");
-		listaString.add("Omitte");
+		listaString.add("Contrato");
+		listaString.add("Documento");
+		listaString.add("Nota Fiscal");
 
 		System.out.println(listaString + ", size = " + listaString.size());
 
 		// Remove item, usa equals e hashCode
-		listaString.remove("Usurpa");
+		listaString.remove("Documento");
 		System.out.println(listaString + ", size = " + listaString.size());
 
 		// Checa se a lista contem o elemento especificado
-		Boolean contem = listaString.contains("Omitte");
-		System.out.println("A lista contem Omitte = " + contem);
+		Boolean contem = listaString.contains("Nota Fiscal");
+		System.out.println("A lista contem Nota Fiscal = " + contem);
 
-		contem = listaString.contains("Paumdu");
-		System.out.println("A lista contem Paumdu = " + contem);
+		contem = listaString.contains("Documento");
+		System.out.println("A lista contem Documento = " + contem);
 	}	
 	//	Adicione mais 3 elementos na lista
 	//	Verifique o tamanho
