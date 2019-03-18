@@ -50,9 +50,6 @@ slide 11 - implemetar
 
 "sort reverse java"
 
-========================================== término ======================
-
-21:00
 -------- hasMap
   Implementation: ArrayList implements List Interface while HashMap is an implementation of Map interface.
 
@@ -129,6 +126,35 @@ implementar leitura arquivo
 
 - leia um texto qualquer do teclado e grave-o em um arquivo
 - leia um texto em um arquivo e grave-o em outro; divida a parte de leitura em um método e a parte de escrita em outro
+
+
+
+
+--------------------------Reforço t5 a10/a11--------
+- crie outros ArrayLists que receba outros tipois de dados (Integer, Long, Double)
+
+
+- crie um hashMap com chave do tipo String e valor do tipo Integer e
+ adicione alguns elementos nessa coleção de dados
+
+ percorra e exiba seus valores
+
+	Exemplo para percorrer um HashMap()
+	for (String chave : mapa.keySet()){
+
+------------------------- java_oo_slides_13_lendo_e_escrevendo_arquivos_pages_deleted.pdf
+
+- slide 05
+ implementar escrita
+
+- slide 06
+implementar leitura arquivo
+
+
+- leia um texto qualquer do teclado e grave-o em um arquivo
+- leia um texto em um arquivo e grave-o em outro; divida a parte de leitura em um método e a parte de escrita em outro
+
+
 
 
 
