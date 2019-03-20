@@ -1,0 +1,37 @@
+﻿
+
+
+- Slide 19: início aula 02 web
+
+
+- Slide 21:
+ implementar lab
+ Usar classe exemplo do lab.pdf pag 6 - Criar e testar a classe FabricaConexao
+
+ Usar classe exemplo do eclipse
+
+----------------------------------- fim aula ----------------------------------------
+
+
+- Slide 22:
+ implementar obter (usar script do github para criação da tabela 'Cliente')
+aulas-3way\sql\sqls usado em sala aula web01 threeway.sql
+
+- Slide 23:
+ implementar inserir
+
+- Slide 24:
+ implementar alterar
+
+- Slide 28:
+ implementar salvar
+
+- Slide 31:
+ implementar remover
+
+------------------------------------------------------pendencias
+*** implementado somente a consulta via jdbc
+
+implementar listagem dos resultado pelo for esch
+
+------------------------------

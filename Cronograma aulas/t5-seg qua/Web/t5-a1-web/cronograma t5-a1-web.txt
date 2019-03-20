@@ -58,7 +58,7 @@
 --------------------------------previsão fim t5 a1
 
 
-- Slide 31:
+- Slide 21:
  implementar lab
  Usar classe exemplo do lab.pdf pag 6 - Criar e testar a classe FabricaConexao
 
@@ -67,19 +67,19 @@
 ----------------------------------- fim aula ----------------------------------------
 
 
-- Slide 32:
+- Slide 22:
  implementar obter
 
-- Slide 33:
+- Slide 23:
  implementar inserir
 
-- Slide 34:
+- Slide 24:
  implementar alterar
 
-- Slide 38:
+- Slide 28:
  implementar salvar
 
-- Slide 41:
+- Slide 31:
  implementar remover
 
 ------------------------------------------------------pendencias
