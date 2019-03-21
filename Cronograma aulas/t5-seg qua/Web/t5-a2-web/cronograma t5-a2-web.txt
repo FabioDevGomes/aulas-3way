@@ -20,6 +20,8 @@ aulas-3way\sql\sqls usado em sala aula web01 threeway.sql
 - Slide 23:
  implementar inserir
 
+---------------------- fim aula 02 ----------------------------
+
 - Slide 24:
  implementar alterar
 
