@@ -10,8 +10,6 @@
 
  Usar classe exemplo do eclipse
 
------------------------------------ fim aula ----------------------------------------
-
 
 - Slide 22:
  implementar obter (usar script do github para criação da tabela 'Cliente')
@@ -20,7 +18,7 @@ aulas-3way\sql\sqls usado em sala aula web01 threeway.sql
 - Slide 23:
  implementar inserir
 
----------------------- fim aula 02 ----------------------------
+---------------------- fim aula 02 (falta concluir o "obter()")----------------------------
 
 - Slide 24:
  implementar alterar
@@ -31,9 +29,13 @@ aulas-3way\sql\sqls usado em sala aula web01 threeway.sql
 - Slide 31:
  implementar remover
 
-------------------------------------------------------pendencias
+--------------------------pendencias
 *** implementado somente a consulta via jdbc
 
-implementar listagem dos resultado pelo for esch
+implementar listagem dos resultado pelo for each 
+- teste o SQL que seleciona todos os resultados no pgAdmin
+- percorra o resultado com o laço de repetição while
+(exemplo em Lab JDBC pag.08)
+
 
 ------------------------------
