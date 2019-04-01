@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function buscar(titulo){
+			alert("O valor recebido por parâmetro foi: "+titulo.value);
+
+			var livros = ["nome do livro 01", "nome do livro 02", "nome do livro 03"];
+			var filmes = ["Venon", "Vingadores", "Sinais"];
+
+			if(titulo.value == "livros"){
+				alert(livros);
+			}else if (titulo.value == "filmes") {
+				alert(filmes);
+			}
+			document.write("Hello World!");
+		}
+
+	</script>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<title></title>
+</head>
+<body>
+
+	<div class="col-sm-6">
+	<div class="panel panel-primary">
+		<div class="panel-heading">Cadastro</div>
+			<div class="panel-body">
+				<!--<form method="post" action="">-->
+					<form name="myForm" onsubmit="buscar(nome)">
+					<fieldset>
+						<div class="form-group">
+							<label>Digite o array a ser exibido</label>
+							<input type="text" class="form-control" name="nome" >
+						</div>
+						<div for="ligin" class="form-group">
+							<label>Usuário</label>
+							<input type="text" class="form-control" name="nome2" id="login" >
+						</div>
+					</fieldset>
+					<input type="submit" name="Salvar" class="btn btn-primary" >
+				</form>
+
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+</body>
+
+</html>
