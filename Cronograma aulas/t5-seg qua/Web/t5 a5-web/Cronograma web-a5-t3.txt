@@ -1,0 +1,52 @@
+
+
+
+-------- 03_Servlet_e_JSP.pdf
+- slide 07:
+	falar sobre tomcat:
+	mostrar página de download
+
+	implementar
+
+
+- Implementar hello-servlet
+	hello world (no slide e executando no eclipse) 
+	http://localhost:8080/hello-servlet/SaudacaoServlet
+
+	recebendo parâmentros /CapturaInformacoes
+
+
+- servlet-jsp-v1 com hello.jsp
+	Configurar welcome page 
+
+
+- servlet-jsp-v1 com bootstrap.jsp
+	ajustar para usar bootstrap
+	mostrar como debugar a aplicação
+
+
+-------- 03_Servlet_e_JSP.pdf
+- slide 09:
+	ajustar implementação anterior para receber parâmetro
+	criar tela para enviar parâmetro
+
+
+Exercício: mostrar nome e profissão na tela a partir de um formulário bootstrap
+(buscar exemplo de página em projeto servlet-jsp-v2 > bootstrap.jsp)
+
+
+
+============================================= aula terminada =================
+
+
+-------- 03_Servlet_e_JSP.pdf
+- slide 22:
+	c:forEach
+
+-------- 03_Servlet_e_JSP.pdf
+- slide 23:
+	passando parâmetros para c:forEach
+projeto exemplo integração front e back-end
+
+
+
