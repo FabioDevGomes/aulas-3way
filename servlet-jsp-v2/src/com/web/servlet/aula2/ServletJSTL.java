@@ -26,28 +26,28 @@ public class ServletJSTL extends HttpServlet {
 		List<Livro> listaLivros = new ArrayList<>();
 		
 		Livro livro = new Livro();
-		livro.setAutor("FÃ¡bio");
-		livro.setDescricao("Livro feito pelo FÃ¡bio");
+		livro.setAutor("Fábio");
+		livro.setDescricao("Livro feito pelo Fábio");
 		livro.setTitulo("O Livro");
 		
 		Livro livro2 = new Livro();
-		livro2.setAutor("FÃ¡bio 2");
-		livro2.setDescricao("Livro feito pelo FÃ¡bio 2");
+		livro2.setAutor("Fábio 2");
+		livro2.setDescricao("Livro feito pelo Fábio 2");
 		livro2.setTitulo("O Livro 2");
 		
 		Livro livro3 = new Livro();
-		livro3.setAutor("FÃ¡bio 3");
-		livro3.setDescricao("Livro feito pelo FÃ¡bio 3");
+		livro3.setAutor("Fábio 3");
+		livro3.setDescricao("Livro feito pelo Fábio 3");
 		livro3.setTitulo("O Livro 3");
 		
 		Livro livro4 = new Livro();
-		livro4.setAutor("FÃ¡bio 3");
-		livro4.setDescricao("Livro feito pelo FÃ¡bio 3");
+		livro4.setAutor("Fábio 3");
+		livro4.setDescricao("Livro feito pelo Fábio 3");
 		livro4.setTitulo("O Livro 3");
 		
 		Livro livro5 = new Livro();
-		livro5.setAutor("FÃ¡bio 3");
-		livro5.setDescricao("Livro feito pelo FÃ¡bio 3");
+		livro5.setAutor("Fábio 3");
+		livro5.setDescricao("Livro feito pelo Fábio 3");
 		livro5.setTitulo("O Livro 3");
 		
 		listaLivros.add(livro);
@@ -58,7 +58,7 @@ public class ServletJSTL extends HttpServlet {
 		
 		request.setAttribute("listaLivrosNoAtributo", listaLivros);
 		
-//		request.setAttribute("usuarioLogado", "FÃ¡bio Alves Gomes");
+//		request.setAttribute("usuarioLogado", "Fábio Alves Gomes");
 		request.setAttribute("usuarioLogado", livro.getAutor());
 		
 		
@@ -67,10 +67,11 @@ public class ServletJSTL extends HttpServlet {
 	    session.setAttribute("userName", "username na sessÃ£o direto do servlet");
 		
 		
-		
+	    //Mantem informações "settadas" na requisção/request
 		RequestDispatcher rd = getServletContext().getRequestDispatcher("/listagemJstl.jsp");
 		rd.forward(request, response);
 	    
+	    //Perde informações "settadas" na requisção/request
 //	    response.sendRedirect("/servlet-jsp-v2/listagemJstl.jsp");
 		
 	}
