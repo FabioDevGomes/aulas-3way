@@ -13,10 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import com.web.dao.LivroDao;
 import com.web.model.Livro;
 
-@WebServlet("/LivroController")
+@WebServlet("/livroController")
 public class LivroController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-//teste
 	private static final String INSERIR_OU_EDITAR = "/livro.jsp";
 	private static final String LISTAR_LIVROS = "/listarLivros.jsp";
 
@@ -27,7 +26,7 @@ public class LivroController extends HttpServlet {
 			throws ServletException, IOException {
 		String forward = "";
 		String action = request.getParameter("action");
-		String buscarLivro = request.getParameter("buscarLivro");
+		String buscarLivro = request.getParameter("buscarLivroFiltro");
 
 		if (action != null && action.equalsIgnoreCase("deletar")) {
 			int livroId = Integer.parseInt(request.getParameter("livroId"));

@@ -6,7 +6,7 @@
 </head>
 <body>
 
-	<form method="POST" action='LivroController'>
+	<form method="POST" action='livroController'>
 			Código Livro : 
 			<input type="text" readonly="readonly" name="livroCodigo" value="${livro.codigo}" /> 
 			<br /> Título : 

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.web.dao.LivroDao;
 import com.web.model.Livro;
 
-@WebServlet("/LivroController")
+@WebServlet("/livroController")
 public class LivroController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
