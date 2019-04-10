@@ -30,13 +30,13 @@ public class LivroController extends HttpServlet {
 
 		if (action.equalsIgnoreCase("deletar")) {
 			int livroId = Integer.parseInt(request.getParameter("livroId"));
-			dao.removeById(livroId);
+			dao.excluirPorId(livroId);
 			pagina = LISTAR_LIVROS;
 			request.setAttribute("livros", dao.listarTodos());
 		} else if (action.equalsIgnoreCase("editar")) {
 			pagina = INSERIR_OU_EDITAR;
 			int livroId = Integer.parseInt(request.getParameter("livroId"));
-			Livro livro = dao.consultar(livroId);
+			Livro livro = dao.consultarPorId(livroId);
 			request.setAttribute("livro", livro);
 		} else if (action.equalsIgnoreCase("listarLivros")) {
 			pagina = LISTAR_LIVROS;
@@ -60,11 +60,11 @@ public class LivroController extends HttpServlet {
 		String codigoLivro = request.getParameter("livroCodigo");
 
 		if ((codigoLivro == null || codigoLivro.isEmpty())) {
-			dao.save(livro);
+			dao.salvar(livro);
 			request.setAttribute("livros", dao.listarTodos());
 		} else {
 			livro.setCodigo(Integer.parseInt(codigoLivro));
-			dao.updateTitulo(livro);
+			dao.atualizar(livro);
 			request.setAttribute("livros", dao.listarTodos());
 		}
 		

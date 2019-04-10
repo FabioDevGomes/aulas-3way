@@ -20,7 +20,7 @@ public class LivroDao {
 	private static final String INSERT_SQL = "INSERT INTO LIVRO(TITULO, AUTOR, DESCRICAO, PRECO, IMAGEM) VALUES(?, ?, ?, ?, 'VALOR/IMAGEM')";
 	private static final String DELETE_SQL = "DELETE FROM LIVRO WHERE COD_LIVRO = ?";
 	
-	public Livro consultar(int codigo) {
+	public Livro consultarPorId(int codigo) {
 		Livro livro = null;
 		try (Connection conexao = FabricaConexao.getConexao();
 				PreparedStatement consulta = conexao.prepareStatement(OBTER_POR_ID_SQL);) {
@@ -45,7 +45,7 @@ public class LivroDao {
 		return livro;
 	}
 
-	public List<Livro> consultar(String titulo) {
+	public List<Livro> consultarPorTitulo(String titulo) {
 		ArrayList<Livro> lista = new ArrayList<Livro>();
 		try (Connection conexao = FabricaConexao.getConexao();
 				PreparedStatement consulta = conexao.prepareStatement(CONSULTAR_SQL);) {
@@ -96,7 +96,7 @@ public class LivroDao {
 		return lista;
 	}
 
-	public void updateTitulo(Livro livro) {
+	public void atualizar(Livro livro) {
 		try (Connection conexao = FabricaConexao.getConexao();
 				PreparedStatement consulta = conexao.prepareStatement(UPDATE_SQL);) {
 
@@ -112,7 +112,7 @@ public class LivroDao {
 		}
 	}
 
-	public void removeById(int id) {
+	public void excluirPorId(int id) {
 		try (Connection conexao = FabricaConexao.getConexao();
 				PreparedStatement consulta = conexao.prepareStatement(DELETE_SQL);) {
 
@@ -124,7 +124,7 @@ public class LivroDao {
 		}
 	}
 
-	public void save(Livro livro) {
+	public void salvar(Livro livro) {
 		try (Connection conexao = FabricaConexao.getConexao();
 				PreparedStatement consulta = conexao.prepareStatement(INSERT_SQL);){
 			consulta.setString(1, livro.getTitulo());

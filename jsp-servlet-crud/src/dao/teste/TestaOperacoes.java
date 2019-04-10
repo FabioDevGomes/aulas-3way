@@ -23,14 +23,14 @@ public class TestaOperacoes {
 		livro.setTitulo("Alterado");
 		livro.setAutor("Fábio Alves");
 		
-		dao.updateTitulo(livro);
+		dao.atualizar(livro);
 	}
 	
 	public static void testarConsulta() {
 		//passar por parâmetro
 		String titulo = "a";
 		
-		for (Livro  livro : dao.consultar(titulo)) {
+		for (Livro  livro : dao.consultarPorTitulo(titulo)) {
 			System.out.print(livro.getCodigo()+" ");
 			System.out.print(livro.getTitulo()+" ");
 			System.out.print(livro.getPreco()+" ");
@@ -40,7 +40,7 @@ public class TestaOperacoes {
 	}
 	
 	public static void testarDelete(int codigo) {
-		dao.removeById(codigo);
+		dao.excluirPorId(codigo);
 	}
 
 }
