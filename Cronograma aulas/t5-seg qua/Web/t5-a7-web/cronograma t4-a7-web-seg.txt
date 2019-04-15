@@ -9,13 +9,17 @@ https://danielniko.wordpress.com/2012/04/17/simple-crud-using-jsp-servlet-and-my
 
 - Adicionar dependências de BD e JSTL
 
+- Configurar o servidor (botão direito no projeto > Properties > Project Facets > Runtimes)
+
 - Copiar classes do projeto DAO para o projeto CRUD
 
 - Testar conexão
 
+- Implementar JSP's (Tela inicial, Listagem e Inclusão/Edição)
+
 - Implementar servlet
 
-- Implementar JSP's (2)
+
 
 
 
