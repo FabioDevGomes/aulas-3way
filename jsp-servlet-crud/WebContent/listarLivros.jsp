@@ -3,9 +3,11 @@
 <html>
 <head>
 <title>Livro</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 </head>
 <body>
-	<table border=1>
+<div class="container">
+	<table  class="table">
         <thead>
             <tr>
                 <th>Código Livro</th>
@@ -31,5 +33,6 @@
         </tbody>
     </table>
     <p><a href="livroController?action=insert">Livro</a></p>
+    </div>
 </body>
 </html>
