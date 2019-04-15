@@ -5,9 +5,9 @@ https://danielniko.wordpress.com/2012/04/17/simple-crud-using-jsp-servlet-and-my
 
 - criar dynamic web project
 
-- Converter para Maven project
+- Converter para Maven project (botão direito > Configure > Convert to Maven Project)
 
-- Adicionar dependências de BD e JSTL
+- Adicionar dependências de BD e JSTL (jstl 1.2 maven / standard 1.1.2 maven)
 
 - Configurar o servidor (botão direito no projeto > Properties > Project Facets > Runtimes)
 
