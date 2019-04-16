@@ -26,8 +26,8 @@
                     <td><c:out value="${livro.autor}" /></td>
                     <td><c:out value="${livro.descricao}" /></td>
                     <td><c:out value="${livro.preco}" /></td>
-                    <td><a href="livroController?action=editar&livroId=<c:out value="${livro.codigo}"/>">Update</a></td>
-                    <td><a href="livroController?action=deletar&livroId=<c:out value="${livro.codigo}"/>">Delete</a></td>
+                    <td><a href="livroController?action=editar&livroId=${livro.codigo}">Update</a></td>
+                    <td><a href="livroController?action=deletar&livroId=${livro.codigo}">Delete</a></td>
                 </tr>
             </c:forEach>
         </tbody>
