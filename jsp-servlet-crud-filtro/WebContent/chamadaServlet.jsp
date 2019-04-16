@@ -5,7 +5,8 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	</head>
 	<body>
-		<form action="livroController?action=listarLivros" method="Post">
+		<form action="livroController" >
+			 <input type="hidden" name="action" value="listarLivros">
 			<br/>
 			<div align="center">
 			    <input type="submit" value="Chamar Servlet de listagem" class="btn btn-primary">
