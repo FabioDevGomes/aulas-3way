@@ -24,32 +24,32 @@ public class LivroController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String forward = "";
+		String pagina = "";
 		String action = request.getParameter("action");
 		String buscarLivro = request.getParameter("buscarLivroFiltro");
 
 		if (action != null && action.equalsIgnoreCase("deletar")) {
 			int livroId = Integer.parseInt(request.getParameter("livroId"));
 			dao.removeById(livroId);
-			forward = LISTAR_LIVROS;
+			pagina = LISTAR_LIVROS;
 			request.setAttribute("livros", dao.listarTodos());
 		} else if (action != null && action.equalsIgnoreCase("editar")) {
-			forward = INSERIR_OU_EDITAR;
+			pagina = INSERIR_OU_EDITAR;
 			int codigoLivro = Integer.parseInt(request.getParameter("livroId"));
 			Livro livro = dao.consultar(codigoLivro);
 			request.setAttribute("livro", livro);
 		} else if (action != null && action.equalsIgnoreCase("listarLivros")) {
-			forward = LISTAR_LIVROS;
+			pagina = LISTAR_LIVROS;
 			request.setAttribute("livros", dao.listarTodos());
 		} else if (buscarLivro != null) {
 			List<Livro> livros = dao.consultar(buscarLivro);
 			request.setAttribute("livros", livros);
-			forward = LISTAR_LIVROS;
+			pagina = LISTAR_LIVROS;
 		} else {
-			forward = INSERIR_OU_EDITAR;
+			pagina = INSERIR_OU_EDITAR;
 		} 
 
-		RequestDispatcher view = request.getRequestDispatcher(forward);
+		RequestDispatcher view = request.getRequestDispatcher(pagina);
 		view.forward(request, response);
 	}
 

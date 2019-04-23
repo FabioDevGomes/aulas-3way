@@ -21,7 +21,7 @@ Ajustar para usar filtro na listagem
 Exercício:
 
 - implementação de Listagem e Inclusão de "Produtos" usando JSP e Servlets
-
+	id; nome; descrição; valor; fornecedor
 - criar dynamic web project
 
 - Converter para Maven project (botão direito > Configure > Convert to Maven Project)

@@ -15,7 +15,7 @@ public class LivroDao {
 
 	private static final String OBTER_POR_ID_SQL = "SELECT * FROM LIVRO WHERE COD_LIVRO = ?";
 	private static final String CONSULTAR_SQL = "SELECT * FROM LIVRO WHERE TITULO LIKE ?";
-	private static final String LISTAR_TODOS = "SELECT * FROM LIVRO ";
+	private static final String LISTAR_TODOS = "SELECT * FROM LIVRO ORDER BY COD_LIVRO";
 	private static final String UPDATE_SQL = "UPDATE LIVRO SET TITULO = ?, AUTOR = ?, DESCRICAO = ?, PRECO = ? WHERE COD_LIVRO = ?";
 	private static final String INSERT_SQL = "INSERT INTO LIVRO(TITULO, AUTOR, DESCRICAO, PRECO, IMAGEM) VALUES(?, ?, ?, ?, 'VALOR/IMAGEM')";
 	private static final String DELETE_SQL = "DELETE FROM LIVRO WHERE COD_LIVRO = ?";
