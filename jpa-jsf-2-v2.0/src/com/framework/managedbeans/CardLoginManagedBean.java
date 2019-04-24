@@ -26,6 +26,7 @@ public class CardLoginManagedBean {
 					new FacesMessage(FacesMessage.SEVERITY_ERROR, "Cartão não aceito!", "Erro no Login!"));
 			return null;
 		} else {
+			//testar: "/paginas/encerramentoPesquisa.xhtml?faces-redirect=true"
 			return "/acessoLiberado";
 		}
 	}

@@ -27,6 +27,7 @@ public class UsuarioManagedBean {
 	
 	public String incluirUsuarioDb(Usuario usuario) {
 		usuarioDAO.inserirUsuario(usuario);
+		//testar: "/paginas/encerramentoPesquisa.xhtml?faces-redirect=true"
 		return "/listagemUsuarios";
 	}
 
