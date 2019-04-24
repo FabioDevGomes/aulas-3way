@@ -5,7 +5,13 @@ Os Servlets são a base do desenvolvimento web em Java e, por este motivo, estão 
 
 ------------------- hello world JSF ----------------------
 implementar hello world com a turma
+---
+project name -> Properties -> Project facets: JavaServer Faces (gerar arquivo de configuração do JSF: faces-config.xml)
 
+Help -> Eclipse Marketplace -> Find(Jboss) -> Jboss tools(Kepler)4.1.1 Final. After installing this, i am getting the option to create XHTML pages.
+
+<url-pattern>*.xhtml</url-pattern>
+---
 
 jsf-api 2.1.7
 jsf-impl 2.1.7
@@ -40,5 +46,5 @@ Melhorar estilo com bootstrap:
 -----------------------
 Treinar capacidade de seguir um tutorial
 
-Validação CPF:
+Validação CPF: jsf-validacao-cpf
 https://www.devmedia.com.br/javaserver-faces-como-utilizar-metodos-de-managedbeans-no-xhtml/37390

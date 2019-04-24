@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Valida CPF</title>
+</h:head>
+<h:body>
+   <h:form>teste
+		<h:inputText value="#{validadorMB.cpf}" />
+		<h:commandButton value="VALIDAR" actionListener="#{validadorMB.validar}" />
+		<h:messages />
+	</h:form>
+</h:body>
+</html>
