@@ -1,0 +1,50 @@
+
+------------------- hello world JSF ----------------------
+
+Os Servlets são a base do desenvolvimento web em Java e, por este motivo, estão presentes em frameworks e APIs criados para esse fim, fornecendo a infraestrutura básica necessária para o seu funcionamento. Assim sendo, apesar de não utilizarmos mais Servlets diretamente, para que seja possível compreender como uma aplicação Java web funciona, é necessário entender o funcionamento do Servlet
+
+
+implementar hello world com a turma
+---
+project name -> Properties -> Project facets: JavaServer Faces (gerar arquivo de configuração do JSF: faces-config.xml)
+
+Help -> Eclipse Marketplace -> Find(Jboss) -> Jboss tools(Kepler)4.1.1 Final. After installing this, i am getting the option to create XHTML pages.
+
+<url-pattern>*.xhtml</url-pattern>
+---
+
+jsf-api 2.1.7
+jsf-impl 2.1.7
+primefaces 5.2
+
+
+
+Exercício:
+- implemente um projeto JSF que retorne pra tela 3 variáveis sendo elas: nome completo, idade e sexo; 
+Que serão inicializadas no método init() anotado com @PostConstruct
+
+- criar getter's para as variáveis
+
+
+
+Melhorar estilo com bootstrap:
+
+	bootstrap 3 examples
+	Bootstrap 3 Tutorial - W3Schools
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<div class="jumbotron text-center">
+		<h1><h:outputText value="#{helloMapeamento.nomeCompleto}" /></h1>
+		<p>Altere o tamanho dessa tela responsiva para ver o resultado!</p> 
+	</div>
+
+	acesse pelo celular para verificar o resultado
+
+-----------------------
+Treinar capacidade de seguir um tutorial
+
+Validação CPF: jsf-validacao-cpf
+https://www.devmedia.com.br/javaserver-faces-como-utilizar-metodos-de-managedbeans-no-xhtml/37390
