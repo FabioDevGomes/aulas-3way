@@ -1,0 +1,5 @@
+remove o arquivo após o "git add"
+git reset filename.txt
+git reset -p <file_name>
+git reset -p
+----------------------------------
