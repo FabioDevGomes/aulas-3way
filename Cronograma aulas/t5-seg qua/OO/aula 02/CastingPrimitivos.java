@@ -5,22 +5,18 @@ public class CastingPrimitivos {
 		int tipoInt = 12121;
 		long tipoLong = 4561212100l;
 		double tipoDouble = 454545;
+		double tipoDouble2 = 454.6;
 		float tipoFloatPrimitivo = 4545646;
 		short tShort = 5565;
 		char teste = 3; //char numérico
 		short tShort3 = 556665; //erro
 
 		// No caso do double sendo convertido para o int isso é possivel, 
-		//pois com o cast
-		// você indica ao Java que você tem ciência da perda de 
-		//precisão ao converter de double para int.
+		// pois com o cast você indica ao Java que você tem ciência
+		// da perda de precisão ao converter de double para int.
+		int convertido = (int) tipoDouble2;
+		System.out.println(convertido);
 		
-		
-		
-		
-		
-		
-
 		// erro: Já a transferência de dados de um tipo mais
 		// preciso para um menos preciso requer um casting explícito.
 		// Isso ocorre porque pode haver perda de dados durante a moldagem.

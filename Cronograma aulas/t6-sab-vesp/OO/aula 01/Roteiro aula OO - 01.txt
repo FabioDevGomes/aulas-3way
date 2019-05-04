@@ -29,8 +29,10 @@ Final do slide:
  - Incluir comentários informando qual é a declatação da classe, o método main, e a linha q imprime no console 
  - Alterar a palavra static para pegar experiência com erro de compilação
 
--------------------------------------------- fim da aula 01 / t5 - 04/02
-Slide 02
+
+----------------------------------------------------------
+java_oo_slides_02_identificadores_palavras-chave_tipos.pdf
+----------------------------------------------------------
 
 Slide 03:
  - implementar Hello World no Eclipse
@@ -44,8 +46,13 @@ Slide 04: declarar variáveis Slide2 pag. 4.
 
 
 Slide 05:
+
+Declare as seguintes variáveis e imprima seus valores no console do eclipse:
+
 tipo: String 	- nome: meuNome 	- valor: "Nome do implementador"; 
 tipo: int 	- nome: minhaIdade 	- valor: 25 (exemplo);
+tipo: double	- nome: altura 		- valor: 1.72 (exemplo);
+tipo: boolean	- nome: estudante	- valor: true / false (exemplo);
 ...
 
 
@@ -56,7 +63,7 @@ Slide 06: Declarar, Inicializar, Imprimir variáveis
 Slide 08: class TestaWrapper
 
 	Integer velocidade = new Integer(587);
-         
+        
         //converte a variável velocidade para tipo primitivo
         double total = velocidade.doubleValue();
         short total1 = velocidade.shortValue();
@@ -67,5 +74,8 @@ Slide 08: class TestaWrapper
          
         System.out.println("Valor de PI arredondado: "+valorPi);   
         System.out.println("Total: "+total);
+        
+        Float variavelFloat = new Float("1.1");
+        System.out.println(variavelFloat);
 
 
