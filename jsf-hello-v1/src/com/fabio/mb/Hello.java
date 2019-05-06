@@ -11,6 +11,9 @@ import javax.faces.bean.RequestScoped;
 public class Hello implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
+	//atributo opcional
+	private String message;
+	
     @PostConstruct
     public void init(){
         System.out.println(" Método init() executado na inicialização devido a anotação  @PostConstruct ");

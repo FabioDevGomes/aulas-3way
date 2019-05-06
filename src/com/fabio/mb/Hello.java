@@ -12,7 +12,6 @@ public class Hello  {
 	private String message2;
 	private String nomeCompleto;
 	
-	
     @PostConstruct
     public void init(){
         System.out.println(" Método init() executado na inicialização devido a anotação  @PostConstruct ");

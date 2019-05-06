@@ -10,6 +10,8 @@ target/
 .springBeans
 .metadata
 .recommenders
+.tern-project
+
 bin/
 .settings/
 
