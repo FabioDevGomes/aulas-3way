@@ -6,9 +6,9 @@ The bin path of the Maven installation like /usr/share/maven/ is just enough
 ---------
 
 - baixar e instalar o maven (m2e - Help > Install New Software)
-- mostrar onde configurar o proxy, se necessário <proxies> (5 min)
+- mostrar onde configurar o proxy, se necessário settings.xml <proxies> (5 min)
 - Navegar até o Local do repositório (5 min)
-- Mostrar onde muda o local... settings.xml <localRepository> (5 min)
+- Mostrar onde muda o diretório do repositório local... settings.xml <localRepository> (5 min)
 - Configurando as variáveis de ambiente M2_HOME (5 min)
 - checar versão (5 min)
 
