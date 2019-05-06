@@ -13,11 +13,11 @@ public class Hello implements Serializable {
 	
     @PostConstruct
     public void init(){
-        System.out.println(" MÈtodo init() executado na inicializaÁ„o devido a anotaÁ„o  @PostConstruct ");
+        System.out.println(" M√©todo init() executado na inicializa√ß√£o devido a anota√ß√£o  @PostConstruct ");
     }
      
     public String getMessage(){
-        return "Hello World JSF! v5 2";
+        return "Hello World JSF!, retornado pelo m√©todo getMessage()";
     }
  
 }

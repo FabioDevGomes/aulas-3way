@@ -14,8 +14,8 @@ public class Hello  {
 	
     @PostConstruct
     public void init(){
-        System.out.println(" Método init() executado na inicialização devido a anotação  @PostConstruct ");
-        nomeCompleto = "Fábio Alves Gomes";
+        System.out.println(" MÃ©todo init() executado na inicializaÃ§Ã£o devido a anotaÃ§Ã£o  @PostConstruct ");
+        nomeCompleto = "FÃ¡bio Alves Gomes";
         message = "Hello World JSF! 444";
         message2 = "Hello World JSF! 555";
     }
