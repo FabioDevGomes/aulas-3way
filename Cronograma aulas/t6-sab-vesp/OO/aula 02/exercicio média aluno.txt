@@ -1,4 +1,4 @@
-1 - criar 4 variáveis do tipo inteiro (int) para armazenar as notas de um aluno (de 0 a 10)
+1 - criar 4 variáveis do tipo double para armazenar as notas de um aluno (de 0 a 10)
 
 2 - somar as 4 e dividir por 4 para descobrir a média, atribuir a média para uma variável do tipo double
 "double media = (ntoa1 + nota2 ...) / 4;"
