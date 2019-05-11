@@ -17,6 +17,11 @@ java_oo_slides_03_operadores.pdf
     ("A operação lógica de var1 && var2 é verdadeira? " + resultadoELogico)
     ("A operação lógica de negação !var2 é verdadeira? " + resultadoNegacao)
 
+    boolean var1 = true;
+    boolean var2 = false;	
+    boolean resultado = var1 && var2;
+
+
 - Slide 09 - testar operadores de pré incremento e pós incremento
     imprima o valor da variável durante a aplicação do operador e após sem o operador
     ("aplicando o operador pós incremento: " + var1++)
@@ -38,7 +43,7 @@ java_oo_slides_04_estruturas_de_controle.pdf
     Implementar exercício média aluno (exercício média aluno.txt) (13 min)
 
     ---
-    Implementar exercício: Faça um programa q leia 3 números e mostre o maior deles
+    Implementar exercício: Faça um programa q declare 3 variáveis do tipo numérica (int) e mostre o maior valor
 
     Altere o programa pra ler os números do teclado
      Scanner scanner = new Scanner(System.in); //usar CTRL + Espaço para fazer a importação automática da biblioteca Scanner
