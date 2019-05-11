@@ -50,6 +50,8 @@ java_oo_slides_04_estruturas_de_controle.pdf
      int numero1 = scanner.nextInt();
     ---
 
+==== término da aula t6========================================
+
     Implementar exercício:
 	Implemente um programa que verifique se uma letra digitada (scanner.next()) é igual a "F" ou "M", conforme a letra escrever "F - Feminino", "M - Masculino" ou "Sexo inválido" caso seja digitado uma letra diferente das duas citadas
 	(pesquisar no google, "comparar String java")
@@ -65,9 +67,6 @@ java_oo_slides_04_estruturas_de_controle.pdf
     mude a declaração da variável contador para a linha acima do syso e mostre a mesma saída no console do eclipse
 
 - slide 08 - faça a impressão da variável contador exibir os número de 30 a 35
-
-
-==== terminar aula ========================================
 
 - //mostar imagens e explicar o que é um objeto, criar a classe Numero e instanciá-la como exemplo
 
