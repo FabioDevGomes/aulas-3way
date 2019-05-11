@@ -20,10 +20,6 @@ java_oo_slides_04_estruturas_de_controle.pdf
   int numero1 = scanner.nextInt();
 
 
-* - Faça um programa que leia do teclado 6 valores inteiros e positivos e: (25 min) 
-* - Calcule a média dos números lidos
-
-
 - slide 04 - implementar exercício: (15 min) 01
 	Implemente um programa que verifique se uma letra digitada é igual a "F" ou "M", conforme a letra escrever "F - Feminino"
 	"M - Masculino" ou "Sexo inválido" caso seja digitado uma letra diferente das duas citadas
