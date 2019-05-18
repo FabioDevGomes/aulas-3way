@@ -58,9 +58,9 @@ java_oo_slides_05_array-páginas-excluídas.pdf
 
 
 - Slide 7:
- Implementar
+    Implementar
 
-	Crie um array de Strings, ordene-o e exiba seus valores
+	- Crie um array de Strings, ordene-o e exiba seus valores
 
 
 --- Implemtente um array de inteiros com 10 posições e:
