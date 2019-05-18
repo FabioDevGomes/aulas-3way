@@ -32,14 +32,14 @@ java_oo_slides_05_array-páginas-excluídas.pdf
 	 1. Para cada conjunto de valores abaixo, escreva o código Java, que
 	preencha um array com os valores:
 	(Usando as duas formas de construir um array)
-	a) 10 9 8 7 6 5 4 3 2 1
-	b) 0 1 4 9 16 25 36 49 64 81 100
-	c) 1 2 3 4 5 10 20 30 40 50
+	a) 10 9 8 7 6 5 
+	b) 0 1 4 9 16 25 36 
+	c) 1 2 3 4 5 10 20 
 
 
 - Slide 4
 
-	 1-0. Implemente o código do slide, agora usando os tipos: double e String 
+	 1-0. Crie e percorra 2 arrays, agora usando os tipos: double e String 
 
 
 	 2. Crie um array de inteiros e retorne a quantidade de elementos do array que são números negativos.

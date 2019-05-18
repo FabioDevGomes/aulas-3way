@@ -1,0 +1,84 @@
+
+
+- slide 08 - for: 
+ implementar apostila
+
+============================= início aula ===================
+
+* - Faça um programa que leia do teclado 6 valores inteiros e positivos e: (25 min) 
+* - Calcule a média dos números lidos
+
+break: teste no for
+continue: teste no for
+
+------------------ slides_05_array.pdf
+
+- Slide 3
+	 1. Para cada conjunto de valores abaixo, escreva o código Java, que
+	preencha um array com os valores:
+	(Usando as duas formas de construir um array)
+	a) 10 9 8 7 6 5 4 3 2 1
+	b) 0 1 4 9 16 25 36 49 64 81 100
+	c) 1 2 3 4 5 10 20 30 40 50
+
+
+- Slide 4
+
+	 1-1. Reescreva o código, agora usando laços para alimentar e exibir o array, que
+	 preencha um array de double (de tamanho 5) com os valores do teclado, e exiba-os na mesma linha:
+
+
+	 2. Crie um array de inteiros (não precisar alimentar pelo teclado)
+	 e retorne a quantidade de elementos do array que são números negativos.
+
+
+	 4. Crie um método que recebe um array de inteiros positivos e substitui seus elementos
+	 de valor ímpar por -1 e os pares por +1.
+
+
+- Slide 7:
+
+- Slide 8:
+ Implementar :49
+
+- depois do último slide
+
+--- Implemtente um array de inteiros com 10 posições e:
+* - Encontre o maior valor
+* - Encontre o menor valor
+* - usar: Arrays.sort()
+
+
+
+------------ slides_06_base_da_programação_java_OO.pdf
+
+- Slide 02:
+ mostrar imagens
+
+- Slide 03:
+ imlementar com os coméntários
+
+
+========================fim aula (reapasar classe/objetos) ========================
+
+- Slide 08:
+ Ajusta código da classe Carro de acordo com os requisitos abaixo:
+
+ Criar a variável/atributo de classe do tipo "boolean" e com o nome "ligado" que recebe o valor "false";
+
+Dentro do método ligar() Verificar se a variável/atributo "ligado" é igual a "false":
+  se for, o método ligar deve alterar o seu valor para "true"
+  se não for, retornar o texto "o carro já está ligado"
+
+ Criar uma variável local do método para amazenar o retorno com o nome "retorno":
+  iniciar essa variável local, na primeira linha do método, com uma String vazia ""
+  retornar essa variável como resposta do método "return retorno;"
+
+- Slide 15:
+ Posso ter por exemplo uma classe chamada Conta que tem como variável/atributo 
+ uma outra classe chamada Cliente 
+
+
+
+
+
