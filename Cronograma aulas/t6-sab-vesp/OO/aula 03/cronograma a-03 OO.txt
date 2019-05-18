@@ -9,18 +9,19 @@ java_oo_slides_04_estruturas_de_controle.pdf
 	(pesquisar no google, "comparar String java")
 
 
-- implementar exercício:
+    implementar exercício:
 	Faça um programa que leia dois números e retorne se ele é par ou impar
 	(usar o operador resto da divisão (pesquisar no Google))
 
 - slide 06 - simule um loop infinito omitindo o pós incremento da variável contador
 
-- slide 07 - faça a impressão da variável contador exibir os número de 5 a 10
-    mude a declaração da variável contador para a linha acima do syso e mostre a mesma saída no console do eclipse
+- slide 07 
+	- faça a impressão da variável contador exibir os número de 5 a 10
 
-- slide 08 - faça a impressão da variável contador exibir os número de 30 a 35
+    	- mude a declaração da variável contador para a linha acima do syso e mostre a mesma saída no console do eclipse
 
-- //mostar imagens e explicar o que é um objeto, criar a classe Numero e instanciá-la como exemplo
+- slide 08 
+	- faça a impressão da variável contador exibir os número de 30 a 35
 
 
 ----------------------------------------------------
