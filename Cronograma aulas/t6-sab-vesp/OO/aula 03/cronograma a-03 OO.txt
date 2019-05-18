@@ -1,5 +1,30 @@
+
 ----------------------------------------------------
-java_oo_slides_05_array.pdf
+java_oo_slides_04_estruturas_de_controle.pdf
+----------------------------------------------------
+- slide 04 
+
+    Implementar exercício:
+	Implemente um programa que verifique se uma letra digitada (scanner.next()) é igual a "F" ou "M", conforme a letra escrever "F - Feminino", "M - Masculino" ou "Sexo inválido" caso seja digitado uma letra diferente das duas citadas
+	(pesquisar no google, "comparar String java")
+
+
+- implementar exercício:
+	Faça um programa que leia dois números e retorne se ele é par ou impar
+	(usar o operador resto da divisão (pesquisar no Google))
+
+- slide 06 - simule um loop infinito omitindo o pós incremento da variável contador
+
+- slide 07 - faça a impressão da variável contador exibir os número de 5 a 10
+    mude a declaração da variável contador para a linha acima do syso e mostre a mesma saída no console do eclipse
+
+- slide 08 - faça a impressão da variável contador exibir os número de 30 a 35
+
+- //mostar imagens e explicar o que é um objeto, criar a classe Numero e instanciá-la como exemplo
+
+
+----------------------------------------------------
+java_oo_slides_05_array-páginas-excluídas.pdf
 ----------------------------------------------------
 
 - Slide 3
@@ -13,24 +38,29 @@ java_oo_slides_05_array.pdf
 
 - Slide 4
 
-	 1-1. Reescreva o código, agora usando laços para alimentar e exibir o array, que
-	 preencha um array de double (de tamanho 5) com os valores do teclado, e exiba-os na mesma linha:
+	 1-0. Implemente o código do slide, agora usando os tipos: double e String 
 
 
-	 2. Crie um array de inteiros (não precisar alimentar pelo teclado)
-	 e retorne a quantidade de elementos do array que são números negativos.
+	 2. Crie um array de inteiros e retorne a quantidade de elementos do array que são números negativos.
 
 
-	 4. Crie um método que recebe um array de inteiros positivos e substitui seus elementos
+	 4. Crie programa que inicialize um array de inteiros positivos e substitui seus elementos
 	 de valor ímpar por -1 e os pares por +1.
 
 
-- Slide 7:
+- Slide 6:
 
-- Slide 8:
+	 1-1. Crie um array, agora usando laços para alimentar a partir do teclado, e exibir o array 
+	 de double (de tamanho 5) na mesma linha:
+	 - Exiba-os separando por um traço
+	 - elimine o traço se o ultimo número do array estiver sendo apresentado
+
+
+- Slide 7:
  Implementar
 
-- depois do último slide
+	Crie um array de Strings, ordene-o e exiba seus valores
+
 
 --- Implemtente um array de inteiros com 10 posições e:
 * - Encontre o maior valor

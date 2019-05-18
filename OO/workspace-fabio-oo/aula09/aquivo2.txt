@@ -1,0 +1,3 @@
+Texto que será gravado no arquivo
+Texto que será gravado na segunda linha do arquivo
+Texto que será gravado na tercecira linha do arquivo
