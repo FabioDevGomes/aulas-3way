@@ -50,6 +50,13 @@ java_oo_slides_05_array-páginas-excluídas.pdf
 
 --------------- fim aula t6 -------------------------
 
+	Extra:
+	-Crie um array de String
+	-Percorra e exiba seus valores no console do eclipse
+	-Verifique se dentro desse array existe a palavra 3way, 
+	se existir, exiba o texto no console: "a palavra 3way foi encontrada na posição X", 
+	se não existir informe com o texto "a palavra 3way não foi encontrada"
+
 
 - Slide 6:
 
@@ -72,9 +79,5 @@ java_oo_slides_05_array-páginas-excluídas.pdf
 
 
 
-
-
 - //mostar imagens e explicar o que é um objeto, criar a classe Numero e instanciá-la como exemplo
 
-- testar estrutura de controle switch case
-- testar estruturas de repetição, break e continue na sequência (tem tudo no slide)
