@@ -48,6 +48,8 @@ java_oo_slides_05_array-páginas-excluídas.pdf
 	 4. Crie programa que inicialize um array de inteiros positivos e substitui seus elementos
 	 de valor ímpar por -1 e os pares por +1.
 
+--------------- fim aula t6 -------------------------
+
 
 - Slide 6:
 
