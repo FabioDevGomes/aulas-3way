@@ -76,8 +76,3 @@ java_oo_slides_05_array-páginas-excluídas.pdf
 * - Encontre o maior valor
 * - Encontre o menor valor
 * - usar: Arrays.sort()
-
-
-
-- //mostar imagens e explicar o que é um objeto, criar a classe Numero e instanciá-la como exemplo
-
