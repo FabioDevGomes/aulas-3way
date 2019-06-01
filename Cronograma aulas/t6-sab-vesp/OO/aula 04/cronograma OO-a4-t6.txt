@@ -1,0 +1,80 @@
+---------------------------------------------------------------------
+slides_06_base_da_programação_java_OO v2.0.pdf
+---------------------------------------------------------------------
+
+- Slide 02:
+ mostrar imagens
+
+
+- Slide 03:
+ imlementar com os coméntários
+
+
+- Slide 08:
+ Ajusta código da classe Carro de acordo com os requisitos abaixo:
+
+ Criar a variável/atributo de classe do tipo "boolean" e com o nome "ligado" que recebe o valor "false";
+
+Dentro do método ligar() Verificar se a variável/atributo "ligado" é igual a "false":
+  se for, o método ligar deve alterar o seu valor para "true" e  retornar o texto "o carro foi ligado"
+  se não for, retornar o texto "o carro já está ligado"
+
+ Criar uma variável local (dentro do método) do tipo String para amazenar o retorno com o nome "retorno":
+  iniciar essa variável local, na primeira linha do método, com uma String vazia ""
+  retornar essa variável como resposta do método "return retorno;"
+
+
+- Slide 12:
+ Implementar exemplo da imagem de diagrama de classe classes.jpg
+
+
+- Slide 14:
+ Posso ter por exemplo uma classe chamada Conta que tem como variável/atributo 
+ uma outra classe chamada Cliente 
+
+
+ implemente essa abstração e em uma terceira classe (TestaAtributo) e chame o método
+ getNome() da classe Cliente a partir da classe Conta: 
+ conta.getCliente().getNome() // conta.cliente.nome
+
+
+Exercício:
+ Criar classe Conta Corrente e analisar quais seriam seus atributos e métodos
+
+	Titular
+	NumeroConta
+	saldo
+
+	depositar()	>> implementar
+	sacar()		>> implementar
+	transferir() 	>> não precisa implementar
+
+Criar classe Caneta com seus atributos e métodos de acordo com a imagem apresentada
+
+
+---------------------------------------------------------------------
+slides_07_metodo_construtores_membros_estaticos.pdf
+---------------------------------------------------------------------
+- Slide 04:
+ implementar
+
+- Slide 05:
+ Não implementar 
+ Não é super() e sim this(); 
+
+- Slide 06:
+ Testar construtores
+
+- Slide 08:
+ mostrar como são feitas as chamadas
+ incluir parâmetros... String, Integer
+
+- Slide 09:
+ implementar
+
+- Slide 10:
+ implementar
+
+- Slide 11:
+ implementar na classe Carro
+ sobrecarrege outro métodos e teste
