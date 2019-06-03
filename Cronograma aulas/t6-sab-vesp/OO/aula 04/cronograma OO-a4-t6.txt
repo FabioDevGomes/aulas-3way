@@ -9,6 +9,8 @@ slides_06_base_da_programação_java_OO v2.0.pdf
 - Slide 03:
  imlementar com os coméntários
 
+ Criar classe Caneta com seus atributos e métodos de acordo com a imagem apresentada
+
 
 - Slide 08:
  Ajusta código da classe Carro de acordo com os requisitos abaixo:
@@ -49,8 +51,6 @@ Exercício:
 	sacar()		>> implementar
 	transferir() 	>> não precisa implementar
 
-Criar classe Caneta com seus atributos e métodos de acordo com a imagem apresentada
-
 
 ---------------------------------------------------------------------
 slides_07_metodo_construtores_membros_estaticos.pdf
@@ -74,6 +74,8 @@ slides_07_metodo_construtores_membros_estaticos.pdf
 
 - Slide 10:
  implementar
+
+-------------------- fim aula t6 -------------------------
 
 - Slide 11:
  implementar na classe Carro
