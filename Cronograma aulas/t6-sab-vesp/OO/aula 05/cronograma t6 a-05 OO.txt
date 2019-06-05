@@ -1,0 +1,134 @@
+
+
+----------------------------------------------------
+slides_07_metodo_construtores_membros_estaticos.pdf
+----------------------------------------------------
+
+== Slide 11:
+ implementar na classe Carro
+ sobrecarrege outros métodos e teste
+
+Método com Array:
+ 4. Crie um método que recebe um array de inteiros positivos e substitui seus elementos
+	 de valor ímpar por -1 e os pares por +1.
+
+
+== Slide 12: 
+
+Os métodos static ou métodos da classe são funções que não dependem de nenhuma variável de instância, 
+quando invocados executam uma função sem a dependência do conteúdo de um objeto ou a execução da 
+instância de uma classe, conseguindo chamar direto qualquer método da classe e também manipulando alguns campos da classe.
+
+ Método main é estático
+Na execução de uma programa Java, a JVM (Java Virtual Machine) tenta chamar o método main da classe que foi 
+especificada. Quando declarado o método main como static permite que a JVM invoque o main sem 
+criar uma instância da classe, ou seja, a classe é conhecida como classe principal ou classe testadora, 
+que efetuará os testes e chamadas das classes para a execuções dos programas.
+
+ Arrays.sort(a, c); é estático
+
+ implementar Membros estáticos (10 min) :46
+
+== Slide 13:
+ implementar chamadas
+
+
+Escrever um método que receba dois números e exiba o resultado da sua soma e sua multiplicação
+ - Nome da classe: TestaSomaEstatica.java
+ - Sem retorno (void) e imprima o resultado dentro do método
+ - Cada operação deve estar em um método stático diferente
+ - Altere os métodos para retorna o resultado "void > double"
+ - Retire o modificado static dos métodos
+
+
+
+
+ Escopo de variáveis (20 minutos)
+ resolva o problema do escopo
+
+	mostrar: exercicio 4.1 apostila.png
+
+	exercicio 4.2 apostila (de duas formas, instanciando e alterando modificador).png
+
+
+----------------------------------------------------
+slides_08_herança_polimorfismo.pdf
+----------------------------------------------------
+
+== Slide 02:
+ apresentar a palavra chave extends e implementar diagrama
+
+== Slide 04:
+ implementar, será nossa super classe
+
+------------------------------------fim aula 7 t5 ------------------
+
+== Slide 05:
+ implementar
+ **dentro do método mover() da subClasse, chamar o método mover da superClasse antes do println
+ adicionar retorno 'String' no método mover() e mostrar no console do eclipse
+
+== Slide 06:
+ implementar
+ alterar super classe para modificador 'final' e observe a descrição dos erros de compilação
+
+== Slide 08:
+ implementar as outras classes para melhor visualizar a aplicação de herança
+
+
+== Slide 09:
+ implementar
+
+ declare um método q que tenha um parâmetro do tipo Veiculo e, dentro desse método criado chame o método mover() do parâmetro declarado, depois teste passando variáveis dos tipos das subclasses de Veiculos
+
+ ex:  		Carro carro = new Carro();
+		testarChamadaHeranca(carro);
+ (10min)
+
+
+------------------------------------fim aula 6 t4 ------------------
+
+
+== Slide 10:
+ implementar (9min) 
+
+ declare um método q que tenha um parâmetro do tipo array de Veiculos e; 
+ dentro desse método criado chame o método mover() percorrendo o array em um for; 
+ depois teste passando parâmetros dos tipos das subclasses de Veiculo  (10 min)
+
+== Slide 11:
+ implementar
+
+	No método (Anterior) polimórfico criado, verifique a classe e imprima o nome de cada objeto passado por parâmetro e imprima no console o nome da classe a qual o método está sendo chamdo
+
+	No exercício do do slide 10, chame o método move() somente se a instância da classe for do tipo Carro
+
+************************************** revisado até aqui *****************************
+== Slide 12:
+ explicar novamente a estrutura de declaração
+
+== Slide 14:
+ Implementar métodos get set para atributos/variáveis do tipo int, Integer, long, Long e Array de String
+ Depois use o método set para atribuir valores e o get para recuperar.
+
+----------Exercício final slide herança
+
+Crie as classes "Programador" e "GerenteProjetos", que também é um "Funcionário" (extends), e que possui um atributo "privado" número de 
+matrícula (faça o método Get e Set). 
+
+Crie na Funcionário o método exibirDados() e o sobrescreva na classe Programador e na classe GerenteProjetos.
+
+ - no método exibirDados() retorne: 
+	"Funcionário de matrícula XXXXX";
+	"Programador de matrícula XXXXX";
+	"Gerente de matrícula XXXXX";
+	
+Ex: Programador extends Funcionário 
+
+Teste a herança em uma quarta classe com o método main().
+
+declare uma variável do tipo Funcionário que receba uma instância (new) de Programador e chame o método exibeDados()
+declare uma variável do tipo Funcionário que receba uma instância (new) do tipo GerenteProjetos e chame o método exibeDados()
+
+---------------------------------------------------------
+
