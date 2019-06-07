@@ -103,17 +103,21 @@ slides_08_herança_polimorfismo.pdf
 
 	No exercício do do slide 10, chame o método move() somente se a instância da classe for do tipo Carro
 
-************************************** revisado até aqui *****************************
+
 == Slide 12:
  explicar novamente a estrutura de declaração
 
 == Slide 14:
  Implementar métodos get set para atributos/variáveis do tipo int, Integer, long, Long e Array de String
  Depois use o método set para atribuir valores e o get para recuperar.
+ Nome da classe: GettersSetters
+ Nome das variáveis: private int varInt (Seguir esse padrão)
+
+************************************** revisado até aqui *****************************
 
 ----------Exercício final slide herança
 
-Crie as classes "Programador" e "GerenteProjetos", que também é um "Funcionário" (extends), e que possui um atributo "privado" número de 
+Crie as classes "Programador" e "GerenteProjetos", que também é um "Funcionário" (Funcionário Super classe, "GerenteProjetos" extends Funcionario ), e que possui um atributo "privado" número de 
 matrícula (faça o método Get e Set). 
 
 Crie na Funcionário o método exibirDados() e o sobrescreva na classe Programador e na classe GerenteProjetos.
