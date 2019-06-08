@@ -12,7 +12,8 @@ slides_07_metodo_construtores_membros_estaticos.pdf
 Método com Array:
  4. Crie um método que recebe um array de inteiros positivos e substitui seus elementos
 	 de valor ímpar por -1 e os pares por +1.
- substituicaoValores(int[] parametro)
+ Classe: RecebeArray
+ public void substituicaoValores(int[] parametro)
 
 
 == Slide 12: 
