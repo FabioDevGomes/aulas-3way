@@ -7,10 +7,12 @@ slides_07_metodo_construtores_membros_estaticos.pdf
 == Slide 11:
  implementar na classe Carro
  sobrecarrege outros métodos e teste
+ ligar(String parametro)
 
 Método com Array:
  4. Crie um método que recebe um array de inteiros positivos e substitui seus elementos
 	 de valor ímpar por -1 e os pares por +1.
+ substituicaoValores(int[] parametro)
 
 
 == Slide 12: 
@@ -38,9 +40,7 @@ Escrever um método que receba dois números e exiba o resultado da sua soma e sua
  - Sem retorno (void) e imprima o resultado dentro do método
  - Cada operação deve estar em um método stático diferente
  - Altere os métodos para retorna o resultado "void > double"
- - Retire o modificado static dos métodos
-
-
+ - Retire o modificado static dos métodos e chame os métodos a partir de uma instância (new) da classe TestaSomaEstatica.java
 
 
  Escopo de variáveis (20 minutos)
@@ -117,7 +117,7 @@ slides_08_herança_polimorfismo.pdf
 
 ----------Exercício final slide herança
 
-Crie as classes "Programador" e "GerenteProjetos", que também é um "Funcionário" (Funcionário Super classe, "GerenteProjetos" extends Funcionario ), e que possui um atributo "privado" número de 
+Crie as classes "Programador" e "GerenteProjetos", que também é um "Funcionário" (Funcionário Super classe, "GerenteProjetos" extends Funcionario), e que possui um atributo "privado" número de 
 matrícula (faça o método Get e Set). 
 
 Crie na Funcionário o método exibirDados() e o sobrescreva na classe Programador e na classe GerenteProjetos.
