@@ -97,6 +97,9 @@ slides_08_herança_polimorfismo.pdf
  dentro desse método criado chame o método mover() percorrendo o array em um for; 
  depois teste passando parâmetros dos tipos das subclasses de Veiculo  (10 min)
 
+
+------------------------------------fim aula 5 t6 ------------------
+
 == Slide 11:
  implementar
 
@@ -114,7 +117,6 @@ slides_08_herança_polimorfismo.pdf
  Nome da classe: GettersSetters
  Nome das variáveis: private int varInt (Seguir esse padrão)
 
-************************************** revisado até aqui *****************************
 
 ----------Exercício final slide herança
 

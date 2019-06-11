@@ -1,0 +1,130 @@
+----------------------------------------------------
+slides_08_herança_polimorfismo.pdf
+----------------------------------------------------
+
+== Slide 10:
+ implementar (9min) 
+
+ declare um método q que tenha um parâmetro do tipo array de Veiculos e; 
+ dentro desse método criado chame o método mover() percorrendo o array em um for; 
+ depois teste passando parâmetros dos tipos das subclasses de Veiculo  (10 min)
+
+
+------------------------------------fim aula 5 t6 ------------------
+
+== Slide 11:
+ implementar
+
+	No método (Anterior) polimórfico criado, verifique a classe e imprima o nome de cada objeto passado por parâmetro e imprima no console o nome da classe a qual o método está sendo chamdo
+
+	No exercício do do slide 10, chame o método move() somente se a instância da classe for do tipo Carro
+
+
+== Slide 12:
+ imperde a sobrescrita pelas subclasses
+ explicar novamente a estrutura de declaração dos métodos
+
+== Slide 14:
+ Implementar métodos get set para atributos/variáveis do tipo int, Integer, long, Long e Array de String
+ Depois use o método set para atribuir valores e o get para recuperar.
+ Nome da classe: GettersSetters
+ Nome das variáveis: private int varInt (Seguir esse padrão)
+
+
+----------Exercício final slide herança
+
+Crie as classes "Programador" e "GerenteProjetos", que também são um "Funcionário" (Funcionário é a Super classe, "GerenteProjetos" extends Funcionario), e que possui um atributo "privado" nome e número de 
+matrícula (faça os métodos Get e Set). 
+
+Crie na Funcionário o método exibirDados() e o sobrescreva na classe Programador e na classe GerenteProjetos.
+
+ - no método exibirDados() retorne: 
+	"Funcionário <nome> tem a matrícula XXXXX";
+	"Programador <nome> de matrícula XXXXX";
+	"Gerente <nome> de matrícula XXXXX";
+	
+Ex: Programador extends Funcionário 
+
+Teste a herança em uma quarta classe com o método main().
+
+declare uma variável do tipo Funcionário que receba uma instância (new) de Programador e de GerenteProjetos, em seguida chame o método exibeDados() a partir de um outro método (chamarMetodoPolimorico(Funcionario func))
+
+
+--------------------------------------------------------------------
+Slides_09_classes_abstratas_internas_e_interfaces_pages_deleted.pdf
+--------------------------------------------------------------------
+
+
+- Slide 03:
+ "abstract" > ";"
+ 
+----não usar nessa turma-----
+ Adiciona método abstrato "tirarFerias()" na classe "Funcionário"
+ - Alterar a super-classe para abstract 
+ - Adicionar na super-classe o atributo booleano "emFerias" inicializado com "false"
+ - no método "tirarFerias()" das subclasses altere esse atributo para true 
+-----------------------------
+
+
+- Slide 04:
+  implementar (- a subclasse felino)
+
+- Slide 05:
+  implementar (Gato extends Animal) 
+  Cuidado... existe apenas um parâmentro no construtor
+
+- Slide 07:
+  implementar
+
+- Slide 08:
+  implementar
+  Adicione o método "raizQuadrada(Double valor)" abstato na classe Calculos
+	System.out.println("A raiz quadrada de "+ valor +" é = "+ Math.sqrt( valor ));
+
+- Slide 11: ******** não implementar ********
+  implementar, altere a string de retorno, cria mais métodos, 
+  teste a aplicação (em todos os exercícios se possível)
+
+
+************************************* revisado até aqui ******************************************
+
+
+- Slide 13:
+  lambda mais comumente usado com coleções, ainda não vimos
+
+- Slide 14:
+  lambda mais comumente usado com coleções, ainda não vimos
+
+- Slide 15:
+  implementar exemplos da pasta ENUM
+
+
+--------------------------------------------------------------------
+slides_10_excecões.pdf 
+--------------------------------------------------------------------
+
+Exception:
+
+
+slide 04 - (antes) mostrar estrura do bloco try catch (cerca de 10 min)
+ 
+==================== fim aula 09 t5 ================================
+
+slide 04 - implementar exemplo eclipse, mostrar diferença do e.printStackTrace(); na rastreabilidade (cerca de 25 min)
+ 
+
+slide 05 - alterar exemplo anterior para mult catch (cerca de 5 min)
+
+slide 06 - implemetar try com recursos (cerca de 12 min)
+ cada um em uma classe 
+
+
+
+slide 07 - implemetar throw e trhows (cerca de 15 min)
+ implementar primeira parte do "Exercício M F - lançar execption.txt"
+
+
+slide 09 - implemetar criar própria exeção e incluir no ex anterior (cerca de 15 min)
+ concluir implementação "Exercício M F - lançar execption.txt"
+
+
