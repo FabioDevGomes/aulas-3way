@@ -81,6 +81,10 @@ Slides_09_classes_abstratas_internas_e_interfaces_pages_deleted.pdf
   Adicione o método "raizQuadrada(Double valor)" abstato na classe Calculos
 	System.out.println("A raiz quadrada de "+ valor +" é = "+ Math.sqrt( valor ));
 
+	Para arredondar um número 'numero' para cima, usamos: Math.ceil(numero)
+	Para arredondar um número 'numero' para baixo, usamos: Math.floor(numero)
+
+
 - Slide 11: ******** não implementar ********
   implementar, altere a string de retorno, cria mais métodos, 
   teste a aplicação (em todos os exercícios se possível)
