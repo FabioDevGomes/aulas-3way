@@ -90,18 +90,16 @@ Slides_09_classes_abstratas_internas_e_interfaces_pages_deleted.pdf
   teste a aplicação (em todos os exercícios se possível)
 
 
-************************************* revisado até aqui ******************************************
-
-
 - Slide 13:
   lambda mais comumente usado com coleções, ainda não vimos
+  ----- implementar: Exemplo expressão lambda 01 lista.png
+
 
 - Slide 14:
-  lambda mais comumente usado com coleções, ainda não vimos
-
-- Slide 15:
   implementar exemplos da pasta ENUM
 
+
+************************************* revisado até aqui ******************************************
 
 --------------------------------------------------------------------
 slides_10_excecões.pdf 
