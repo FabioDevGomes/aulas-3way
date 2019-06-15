@@ -37,18 +37,23 @@ slides_08_herança_polimorfismo.pdf
 Crie as classes "Programador" e "GerenteProjetos", que também são um "Funcionário" (Funcionário é a Super classe, "GerenteProjetos" extends Funcionario), e que possui um atributo "privado" nome e número de 
 matrícula (faça os métodos Get e Set). 
 
+ projeto: heranca
+ pacote: com.threeway.heranca
+
 Crie na Funcionário o método exibirDados() e o sobrescreva na classe Programador e na classe GerenteProjetos.
 
- - no método exibirDados() retorne: 
-	"Funcionário <nome> tem a matrícula XXXXX";
-	"Programador <nome> de matrícula XXXXX";
-	"Gerente <nome> de matrícula XXXXX";
+ - no método public void exibirDados() retorne: 
+	"O Funcionário "+ nome +" tem a matrícula XXXXX"; (para a classe Funcinário)
+	"O Programador "+ getNome() +" de matrícula XXXXX"; (para a classe Programador)
+	"O Gerente de Projetos <nome> de matrícula XXXXX"; (para a classe Gerente)
 	
 Ex: Programador extends Funcionário 
 
-Crie uma quarta classe com o método main().
+Crie uma quarta classe (TestaHeranca) com o método main().
 
-declare duas variáveis do tipo Funcionário, uma que receba uma instância (new) de Programador e outra de GerenteProjetos, em seguida chame o método exibeDados() a partir de um outro método (chamarMetodoPolimorico(Funcionario func))
+declare duas variáveis do tipo Funcionário, uma que receba uma instância (new) de Programador e outra de GerenteProjetos, em seguida chame o método exibeDados() a partir de um outro método (private static void chamarMetodoPolimorfico(Funcionario func))
+
+Funcionario programador = new Programador();
 
 
 --------------------------------------------------------------------
