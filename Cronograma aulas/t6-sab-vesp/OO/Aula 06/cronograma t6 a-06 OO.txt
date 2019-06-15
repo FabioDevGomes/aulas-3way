@@ -16,6 +16,7 @@ slides_08_herança_polimorfismo.pdf
  implementar
 
 	No método (Anterior) polimórfico criado, verifique a classe e imprima o nome de cada objeto passado por parâmetro e imprima no console o nome da classe a qual o método está sendo chamdo
+	saída: "O método mover está sendo chamado a partir da classe XXXX"
 
 	No exercício do do slide 10, chame o método move() somente se a instância da classe for do tipo Carro
 
