@@ -21,7 +21,7 @@ slides_08_herança_polimorfismo.pdf
 
 
 == Slide 12:
- imperde a sobrescrita pelas subclasses
+ impede a sobrescrita pelas subclasses
  explicar novamente a estrutura de declaração dos métodos
 
 == Slide 14:
@@ -98,9 +98,6 @@ Slides_09_classes_abstratas_internas_e_interfaces_pages_deleted.pdf
 - Slide 14:
   implementar exemplos da pasta ENUM
 
-
-************************************* revisado até aqui ******************************************
-
 --------------------------------------------------------------------
 slides_10_excecões.pdf 
 --------------------------------------------------------------------
@@ -109,6 +106,8 @@ Exception:
 
 
 slide 04 - (antes) mostrar estrura do bloco try catch (cerca de 10 min)
+
+************************************* revisado até aqui ******************************************
  
 ==================== fim aula 09 t5 ================================
 
