@@ -35,6 +35,12 @@ Exercício: mostrar nome e profissão na tela a partir de um formulário bootstrap
 (buscar exemplo de página em projeto servlet-jsp-v2 > bootstrap.jsp)
 
 
+(Atualização t6)
+- slide 14: 
+- slide 15: 
+	Os valores não existem mais no managed bean, as mensagens de erro não são mais exibidas ao usuário, uma nova instância do managed bean foi criada, enfim, eles não entendem porque afinal a aplicação parou de funcionar!
+
+http://www.rponte.com.br/2008/07/12/repitam-comigo-redirect-nao-e-forward/
 
 ============================================= aula terminada =================
 
