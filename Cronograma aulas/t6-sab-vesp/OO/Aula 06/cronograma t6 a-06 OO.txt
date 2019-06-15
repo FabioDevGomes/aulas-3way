@@ -46,9 +46,9 @@ Crie na Funcionário o método exibirDados() e o sobrescreva na classe Programador
 	
 Ex: Programador extends Funcionário 
 
-Teste a herança em uma quarta classe com o método main().
+Crie uma quarta classe com o método main().
 
-declare uma variável do tipo Funcionário que receba uma instância (new) de Programador e de GerenteProjetos, em seguida chame o método exibeDados() a partir de um outro método (chamarMetodoPolimorico(Funcionario func))
+declare duas variáveis do tipo Funcionário, uma que receba uma instância (new) de Programador e outra de GerenteProjetos, em seguida chame o método exibeDados() a partir de um outro método (chamarMetodoPolimorico(Funcionario func))
 
 
 --------------------------------------------------------------------
