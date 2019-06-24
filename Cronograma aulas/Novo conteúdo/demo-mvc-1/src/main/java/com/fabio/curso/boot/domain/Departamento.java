@@ -8,6 +8,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 //transforma essa classe em uma entidade gerenciada pela JPA 
+@SuppressWarnings("serial")
 @Entity
 @Table(name="DEPARTAMENTOS")
 public class Departamento extends AbstractEntity<Long>{
