@@ -81,6 +81,13 @@
 			<artifactId>jquery-mask-plugin</artifactId>
 			<version>1.14.15</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.4-1206-jdbc42</version>
+		</dependency>
+
 	</dependencies>
 
 
