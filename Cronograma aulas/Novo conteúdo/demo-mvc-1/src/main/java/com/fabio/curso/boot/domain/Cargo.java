@@ -24,7 +24,7 @@ public class Cargo extends AbstractEntity<Long>{
 	
 	//Informa o lado forte (Funcinario) e fraco (Cargo) do relacionamento
 	@OneToMany(mappedBy = "cargo")
-	private List<Funcinario> funcinarios;
+	private List<Funcionario> funcinarios;
 
 	public String getNome() {
 		return nome;
@@ -42,11 +42,11 @@ public class Cargo extends AbstractEntity<Long>{
 		this.departamento = departamento;
 	}
 
-	public List<Funcinario> getFuncinarios() {
+	public List<Funcionario> getFuncinarios() {
 		return funcinarios;
 	}
 
-	public void setFuncinarios(List<Funcinario> funcinarios) {
+	public void setFuncinarios(List<Funcionario> funcinarios) {
 		this.funcinarios = funcinarios;
 	}
 	

@@ -14,7 +14,7 @@ import javax.persistence.Table;
 @SuppressWarnings("serial")
 @Entity
 @Table(name = "FUNCIONARIOS")
-public class Funcinario extends AbstractEntity<Long>{
+public class Funcionario extends AbstractEntity<Long>{
 	
 	@Column(nullable = false, unique = true)
 	private String nome;
