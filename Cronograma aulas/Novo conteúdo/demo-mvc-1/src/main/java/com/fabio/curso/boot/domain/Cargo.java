@@ -19,7 +19,7 @@ public class Cargo extends AbstractEntity<Long>{
 	private String nome;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_departamento-fk") //nome da chave estrangeira que teremos na tabela CARGOS
+	@JoinColumn(name = "id_departamento_fk") //nome da chave estrangeira que teremos na tabela CARGOS
 	private Departamento departamento;
 	
 	//Informa o lado forte (Funcinario) e fraco (Cargo) do relacionamento

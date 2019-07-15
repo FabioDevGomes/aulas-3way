@@ -30,6 +30,7 @@ public class Funcionario extends AbstractEntity<Long>{
 	
 	//Operações de CRUD refletem no objeto Endereco
 	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "endereco_id_fk")
 	private Endereco endereco;
 	
 	@ManyToOne
