@@ -22,7 +22,7 @@ public class Nio2 {
 		linhas.add("Texto que será gravado na tercecira linha do arquivo");
 		
 		try {
-			Files.write(path, linhas, Charset.forName("UTF-8"));
+			Files.write(path, linhas, Charset.forName("iso-8859-1"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
