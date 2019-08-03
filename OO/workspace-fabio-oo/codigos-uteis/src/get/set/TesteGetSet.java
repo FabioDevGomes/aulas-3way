@@ -1,6 +1,17 @@
 package get.set;
 
+import heranca.SubClasse;
+import util.conta.ContaCorrente;
+
 public class TesteGetSet {
+	
+	
+	ContaCorrente c = new ContaCorrente() {
+		void sacar(double quantidade) {
+	        double novoSaldo = this.saldo - quantidade; 
+	        this.saldo = novoSaldo;
+	    }
+	};
 
 	private int varInt;
 	private int varInt2;
