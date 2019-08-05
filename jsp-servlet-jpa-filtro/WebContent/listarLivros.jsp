@@ -46,7 +46,7 @@
 	            </c:forEach>
 	        </tbody>
 	    </table>
-	    <p><a href="/jsp-servlet-crud/livroController?action=insert">Novo Livro</a></p>
+	    <p><a href="/jsp-servlet-crud-filtro/livroController?action=insert">Novo Livro</a></p>
     </div>
 </body>
 </html>
