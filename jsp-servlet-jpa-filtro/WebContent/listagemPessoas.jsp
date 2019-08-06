@@ -24,11 +24,10 @@
 		<table  class="table">
 	        <thead>
 	            <tr>
-	                <th>Código Livro</th>
-	                <th>Título</th>
-	                <th>Autor</th>
-	                <th>Descrição</th>
-	                <th>Preco</th>
+	                <th>Id</th>
+	                <th>Nome</th>
+	                <th>Data Nascimento</th>
+	                <th>E-mail</th>
 	                <th colspan=2>Action</th>
 	            </tr>
 	        </thead>
