@@ -18,8 +18,16 @@
 								<input type="text" readonly="readonly" name="pessoaId" value="${pessoa.id}" class="form-control"/> 
 							</div>
 							<div class="form-group">
-								Título : 
+								Nome : 
 								<input type="text"	name="nome" value="${pessoa.nome}" class="form-control"/> 
+							</div>
+							<div class="form-group">
+								Data nascimento : 
+								<input type="date"	name="dataNascimento" value="${pessoa.dataNascimento}" class="form-control"/> 
+							</div>
+							<div class="form-group">
+								E-mail : 
+								<input type="text"	name="email" value="${pessoa.email}" class="form-control"/> 
 							</div>
 							<div class="form-group">
 								<input	type="submit" value="Submit" class="btn btn-primary"/>

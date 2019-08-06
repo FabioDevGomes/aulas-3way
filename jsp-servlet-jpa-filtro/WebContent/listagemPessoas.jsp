@@ -33,19 +33,19 @@
 	            </tr>
 	        </thead>
 	        <tbody>
-	            <c:forEach items="${pessoas}" var="pessoas">
+	            <c:forEach items="${pessoas}" var="pessoa">
 	                <tr>
 	                    <td><c:out value="${pessoa.id}" /></td>
 	                    <td><c:out value="${pessoa.nome}" /></td>
 	                    <td><c:out value="${pessoa.dataNascimento}" /></td>
 	                    <td><c:out value="${pessoa.email}" /></td>
-	                    <td><a href="livroController?action=editar&livroId=<c:out value="${pessoa.id}"/>">Update</a></td>
-	                    <td><a href="livroController?action=deletar&livroId=<c:out value="${pessoa.id}"/>">Delete</a></td>
+	                    <td><a href="pessoaController?action=editar&pessoaId=<c:out value="${pessoa.id}"/>">Update</a></td>
+	                    <td><a href="pessoaController?action=deletar&pessoaId=<c:out value="${pessoa.id}"/>">Delete</a></td>
 	                </tr>
 	            </c:forEach>
 	        </tbody>
 	    </table>
-	    <p><a href="/jsp-servlet-crud-filtro/livroController?action=insert">Nova Pessoa</a></p>
+	    <p><a href="/jsp-servlet-jpa/pessoaController?action=insert">Nova Pessoa</a></p>
     </div>
 </body>
 </html>

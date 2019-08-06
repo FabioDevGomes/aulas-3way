@@ -1,6 +1,8 @@
 package com.web.servlet;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
@@ -26,24 +28,19 @@ public class PessoaController extends HttpServlet {
 			throws ServletException, IOException {
 		String pagina = "";
 		String action = request.getParameter("action");
-		String livroFiltro = request.getParameter("livroFiltro");
 
 		if (action != null && action.equalsIgnoreCase("deletar")) {
-			int livroId = Integer.parseInt(request.getParameter("livroId"));
-//			dao.removeById(livroId);
+			long livroId = Long.parseLong(request.getParameter("pessoaId"));
+			dao.excluir(livroId);
+			request.setAttribute("pessoas", dao.listarTodos());
 			pagina = LISTAGEM_PESSOAS;
-//			request.setAttribute("livros", dao.listarTodos());
 		} else if (action != null && action.equalsIgnoreCase("editar")) {
+			long livroId = Long.parseLong(request.getParameter("pessoaId"));
+			Pessoa pessoaEditar = dao.consultarPorId(livroId);
+			request.setAttribute("pessoa", pessoaEditar);
 			pagina = INSERIR_OU_EDITAR;
-			int codigoLivro = Integer.parseInt(request.getParameter("livroId"));
-//			Livro livro = dao.consultar(codigoLivro);
-//			request.setAttribute("livro", livro);
-		} else if (action != null && action.equalsIgnoreCase("listarLivros")) {
-			pagina = LISTAGEM_PESSOAS;
-//			request.setAttribute("livros", dao.listarTodos());
-		} else if (livroFiltro != null) {
-//			List<Livro> livros = dao.consultar(livroFiltro);
-//			request.setAttribute("livros", livros);
+		} else if (action != null && action.equalsIgnoreCase("listarPessoas")) {
+			request.setAttribute("pessoas", dao.listarTodos());
 			pagina = LISTAGEM_PESSOAS;
 		} else {
 			pagina = INSERIR_OU_EDITAR;
@@ -58,19 +55,19 @@ public class PessoaController extends HttpServlet {
 			throws ServletException, IOException {
 		Pessoa pessoa = new Pessoa();
 		pessoa.setNome(request.getParameter("nome"));
-		pessoa.setDataNascimento(new Date());
+		pessoa.setEmail(request.getParameter("email"));
 		
-		String codigoLivro = request.getParameter("pessoaId");
-		
+		String mydate= request.getParameter("dataNascimento");
+		try {
+			Date dataNascimento = new SimpleDateFormat("yyyy-MM-dd").parse(mydate);
+			pessoa.setDataNascimento(dataNascimento);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}  
 
-		if ((codigoLivro == null || codigoLivro.isEmpty())) {
-			dao.salvar(pessoa);
-			request.setAttribute("pessoas", dao.listarTodos());
-		} else {
-//			livro.setCodigo(Integer.parseInt(codigoLivro));
-//			dao.updateTitulo(livro);
-//			request.setAttribute("livros", dao.listarTodos());
-		}
+		dao.salvar(pessoa);
+		request.setAttribute("pessoas", dao.listarTodos());
+
 		RequestDispatcher view = request.getRequestDispatcher(LISTAGEM_PESSOAS);
 		view.forward(request, response);
 	}

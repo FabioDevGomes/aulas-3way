@@ -19,7 +19,7 @@
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 			<property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" /> <!-- DB Dialect -->
-			<property name="hibernate.hbm2ddl.auto" value="create" /> <!-- create / create-drop / update -->
+			<property name="hibernate.hbm2ddl.auto" value="update" /> <!-- create / create-drop / update -->
 		</properties>
 	</persistence-unit>
 </persistence>

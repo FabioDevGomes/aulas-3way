@@ -55,6 +55,7 @@ public class PessoaDAO {
 			entityManager.getTransaction().commit();
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
 			entityManager.close();
 		}
 		return pessoa;
@@ -99,6 +100,6 @@ public class PessoaDAO {
 	@SuppressWarnings("unchecked")
 	public List<Pessoa> listarTodos() {
 		EntityManager entityManager = getEntityManager();
-		return entityManager.createQuery("Select p from " + Pessoa.class.getSimpleName() + " p").getResultList();
+		return entityManager.createQuery("Select p from Pessoa p").getResultList();
 	}
 }
