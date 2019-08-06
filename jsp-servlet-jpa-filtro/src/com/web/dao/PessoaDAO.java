@@ -25,6 +25,8 @@ public class PessoaDAO {
 			// Cria um entity manager.
 			entityManager = factory.createEntityManager();
 			// Fecha o factory para liberar os recursos utilizado.
+		} catch (Exception e) {
+			e.printStackTrace();
 		} finally {
 			factory.close();
 		}
