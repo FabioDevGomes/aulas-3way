@@ -1,5 +1,7 @@
 package com.web.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -11,10 +13,9 @@ import com.web.model.Pessoa;
  * entity Pessoa.
  */
 public class PessoaDAO {
+
 	/**
 	 * Método utilizado para obter o entity manager.
-	 * 
-	 * @return
 	 */
 	private EntityManager getEntityManager() {
 		EntityManagerFactory factory = null;
@@ -28,19 +29,15 @@ public class PessoaDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			factory.close();
+			// factory.close();
 		}
 		return entityManager;
 	}
 
 	/**
 	 * Método utilizado para salvar ou atualizar as informações de uma pessoa.
-	 * 
-	 * @param pessoa
-	 * @return
-	 * @throws java.lang.Exception
 	 */
-	public Pessoa salvar(Pessoa pessoa) throws Exception {
+	public Pessoa salvar(Pessoa pessoa) {
 		EntityManager entityManager = getEntityManager();
 		try {
 			// Inicia uma transação com o banco de dados.
@@ -56,7 +53,8 @@ public class PessoaDAO {
 			}
 			// Finaliza a transação.
 			entityManager.getTransaction().commit();
-		} finally {
+		} catch (Exception e) {
+			e.printStackTrace();
 			entityManager.close();
 		}
 		return pessoa;
@@ -64,8 +62,6 @@ public class PessoaDAO {
 
 	/**
 	 * Método que apaga a pessoa do banco de dados.
-	 * 
-	 * @param id
 	 */
 	public void excluir(Long id) {
 		EntityManager entityManager = getEntityManager();
@@ -86,9 +82,6 @@ public class PessoaDAO {
 
 	/**
 	 * Consulta o pessoa pelo ID.
-	 * 
-	 * @param id
-	 * @return o objeto Pessoa.
 	 */
 	public Pessoa consultarPorId(Long id) {
 		EntityManager entityManager = getEntityManager();
@@ -100,5 +93,12 @@ public class PessoaDAO {
 			entityManager.close();
 		}
 		return pessoa;
+	}
+
+	// Listar todas as pessoas.
+	@SuppressWarnings("unchecked")
+	public List<Pessoa> listarTodos() {
+		EntityManager entityManager = getEntityManager();
+		return entityManager.createQuery("Select p from " + Pessoa.class.getSimpleName() + " p").getResultList();
 	}
 }

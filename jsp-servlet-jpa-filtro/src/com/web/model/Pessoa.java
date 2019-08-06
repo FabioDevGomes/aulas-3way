@@ -15,11 +15,14 @@ public class Pessoa {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	
 	@Column(nullable = false)
 	private String nome;
+	
 	@Temporal(TemporalType.DATE)
 	@Column(name = "dataNasc", nullable = false)
 	private Date dataNascimento;
+	
 	private String email;
 
 	public Date getDataNascimento() {
