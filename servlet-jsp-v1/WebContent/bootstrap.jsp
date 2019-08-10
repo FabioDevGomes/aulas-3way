@@ -6,6 +6,13 @@
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script type="text/javascript">
+		function buscar(varNome){
+		//	alert(varNome);
+			alert(varNome.value);
+		}
+
+	</script>
 </head>
 <body>
 	<div class="col-sm-6">
@@ -13,7 +20,7 @@
 			<div class="panel-heading">Cadastro</div>
 			<div class="panel-body">
 				<!--<form method="post" action="">-->
-				<form action="helloServlet">
+				<form onsubmit="buscar(nome)">
 					<fieldset>
 						<div class="form-group">
 							<label>Nome Completo</label> 
