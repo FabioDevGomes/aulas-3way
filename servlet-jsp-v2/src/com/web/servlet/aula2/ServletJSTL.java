@@ -55,6 +55,10 @@ public class ServletJSTL extends HttpServlet {
 		listaLivros.add(livro3);
 		listaLivros.add(livro4);
 		listaLivros.add(livro5);
+
+//		Simular erro geral
+//		Livro livro6 = null;
+//		livro6.setAutor("");
 		
 		request.setAttribute("listaLivrosNoAtributo", listaLivros);
 		
