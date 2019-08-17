@@ -56,11 +56,22 @@ public class ServletJSTL extends HttpServlet {
 		listaLivros.add(livro4);
 		listaLivros.add(livro5);
 
+		request.setAttribute("listaLivrosNoAtributo", listaLivros);
+		
+		
+		//Mantem informações "settadas" na requisção/request
+		RequestDispatcher rd = getServletContext()
+				.getRequestDispatcher("/listagemJstl.jsp");
+		rd.forward(request, response);
+		
+		
+		
+		
+		
 //		Simular erro geral
 //		Livro livro6 = null;
 //		livro6.setAutor("");
 		
-		request.setAttribute("listaLivrosNoAtributo", listaLivros);
 		
 //		request.setAttribute("usuarioLogado", "Fábio Alves Gomes");
 		request.setAttribute("usuarioLogado", livro.getAutor());
@@ -71,9 +82,6 @@ public class ServletJSTL extends HttpServlet {
 	    session.setAttribute("userName", "username na sessÃ£o direto do servlet");
 		
 		
-	    //Mantem informações "settadas" na requisção/request
-		RequestDispatcher rd = getServletContext().getRequestDispatcher("/listagemJstl.jsp");
-		rd.forward(request, response);
 	    
 	    //Perde informações "settadas" na requisção/request
 //	    response.sendRedirect("/servlet-jsp-v2/listagemJstl.jsp");
