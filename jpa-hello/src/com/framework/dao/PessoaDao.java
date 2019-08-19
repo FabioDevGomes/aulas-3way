@@ -10,23 +10,22 @@ import com.framework.model.Pessoa;
 
 public class PessoaDao {
 
-	EntityManager entityManager;
-	
 	//	Nossa classe PessoaDao segue o padr�o de projeto 
 	//	Singleton que garante que apenas uma inst�ncia dessa 
 	//	classe ser� criada durante toda a aplica��o
 	private static PessoaDao instance;
+	EntityManager entityManager;
 
+	private PessoaDao() {
+		entityManager = getEntityManager();
+	}
+	
 	public static PessoaDao getInstance() {
 		if (instance == null) {
 			instance = new PessoaDao();
 		}
 
 		return instance;
-	}
-
-	private PessoaDao() {
-		entityManager = getEntityManager();
 	}
 
 	private EntityManager getEntityManager() {
@@ -52,7 +51,6 @@ public class PessoaDao {
 	public Pessoa getById(final int id) {
 		return entityManager.find(Pessoa.class, id);
 	}
-
 	
 	//	utiliza o createQuery que recebe um JPQL 
 	//	(Java Persistence Query Language) que � uma alternativa ao SQL 
@@ -60,7 +58,6 @@ public class PessoaDao {
 	public List<Pessoa> findAll() {
 		return entityManager.createQuery("FROM " + Pessoa.class.getName()).getResultList();
 	}
-
 	
 	//	O m�todo merge segue o mesmo princ�pio do m�todo persist(), 
 	//	a �nica diferen�a � que o merge atualiza o registro e n�o 
