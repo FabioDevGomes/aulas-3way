@@ -7,7 +7,7 @@ import javax.persistence.Persistence;
 
 import com.framework.model.Pessoa;
 
-public class TestaPersistencia {
+public class TestaPersistenceXML {
 
 	public static void main(String[] args) {
 		
