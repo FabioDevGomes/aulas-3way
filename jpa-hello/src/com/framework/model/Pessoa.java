@@ -16,6 +16,11 @@ public class Pessoa {
 	
 	//getters and setters
 	
+	@Override
+	public String toString() {
+		return "Pessoa [id=" + id + ", nome=" + nome + ", cpf=" + cpf + "]";
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -35,9 +40,5 @@ public class Pessoa {
 		this.cpf = cpf;
 	}
 	
-	@Override
-	public String toString() {
-		return "Pessoa [id=" + id + ", nome=" + nome + ", cpf=" + cpf + "]";
-	}
 
 }
