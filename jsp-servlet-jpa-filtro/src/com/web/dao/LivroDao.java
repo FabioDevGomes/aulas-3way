@@ -133,7 +133,6 @@ public class LivroDao {
 			consulta.setDouble(4, livro.getPreco());
 
 			consulta.execute();
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
