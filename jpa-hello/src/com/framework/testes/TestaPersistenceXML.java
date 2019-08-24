@@ -10,21 +10,19 @@ import com.framework.model.Pessoa;
 public class TestaPersistenceXML {
 
 	public static void main(String[] args) {
-		
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("jpa-hello");
 		EntityManager entityManager = factory.createEntityManager();
 		
 		Pessoa pessoa = new Pessoa();
 		pessoa.setCpf("84209623253");
-		pessoa.setNome("Febioee 2223344");
+		pessoa.setNome("Febio Metallica");
 		
 		entityManager.getTransaction().begin();
 		entityManager.persist(pessoa);
 		entityManager.getTransaction().commit();
 		
-		
-		
-		List<Pessoa> todasPessoaJPA = entityManager.createQuery("FROM " + Pessoa.class.getName()).getResultList();
+		List<Pessoa> todasPessoaJPA = 
+				entityManager.createQuery("FROM " + Pessoa.class.getName()).getResultList();
 		for (Pessoa pessoaLaco : todasPessoaJPA) {
 			//implementar toString() via suporte da ferramenta
 			System.out.println(pessoaLaco);
