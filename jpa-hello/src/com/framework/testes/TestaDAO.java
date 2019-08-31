@@ -13,9 +13,6 @@ public class TestaDAO {
 		
 		incluirPessoa();
 //		alterarPessoa();
-//		
-//		pessoaDao.removeById(1);
-//		
 //		listarTodasPessoas();
 		
 	}
