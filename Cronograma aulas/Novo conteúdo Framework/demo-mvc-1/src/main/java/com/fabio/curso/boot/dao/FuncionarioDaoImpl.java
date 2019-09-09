@@ -6,6 +6,6 @@ import com.fabio.curso.boot.domain.Cargo;
 import com.fabio.curso.boot.domain.Funcionario;
 
 @Repository
-public class FuncionarioDaoImpl extends AbstractDao<Funcionario, Long> implements FuncionarioDao {
+public class FuncionarioDaoImpl extends AbstractDao<Funcionario> implements FuncionarioDao {
 
 }

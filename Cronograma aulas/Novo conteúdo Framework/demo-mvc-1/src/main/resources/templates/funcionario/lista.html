@@ -119,13 +119,20 @@
 		                        <td th:text="${f.cargo.nome}">Auxiliar de RH</td>
 		                        <td>
 		                            <button type="button" class="btn btn-secondary btn-sm" data-container="body"
-		                                    data-toggle="popover" data-placement="top"
-		                                    data-content="Rua das Oliveiras, 260 Fundos - Centro, Porto Alegre - RS - 97050-015">
+		                                    data-toggle="popover" data-placement="top" th:attr="data-content=${#strings.concat(
+		                                    f.endereco.logradouro, ', ',
+		                                    f.endereco.numero, ' ',
+		                                    f.endereco.complemento, ' - ',
+		                                    f.endereco.bairro, ', ',
+		                                    f.endereco.cidade, ' - ',
+		                                    f.endereco.uf.sigla, ' - ',
+		                                    f.endereco.cep
+		                                    )}">
 		                                <span class="oi oi-eye" title="Visualizar" aria-hidden="true"></span>
 		                            </button>
 		                        </td>
-		                        <td>01/10/2014</td>
-		                        <td></td>
+		                        <td th:text="${#temporals.format(f.dataEntrada, 'dd/MM/yyyy')}">01/10/2014</td>
+		                        <td th:text="${#temporals.format(f.dataSaida, 'dd/MM/yyyy')}"></td>
 		                        <td colspan="2">
 		                            <a class="btn btn-info btn-sm" href="/funcionarios/editar/1" role="button">
 		                                <span class="oi oi-brush" title="Editar" aria-hidden="true"></span>

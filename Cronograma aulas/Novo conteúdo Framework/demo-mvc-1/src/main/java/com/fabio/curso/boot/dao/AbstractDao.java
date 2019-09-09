@@ -1,6 +1,5 @@
 package com.fabio.curso.boot.dao;
 
-import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
@@ -8,7 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
-public class AbstractDao<T, PK extends Serializable> {
+public class AbstractDao<T> {
 
 	@SuppressWarnings("unchecked")
 	private final Class<T> entityClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
@@ -28,11 +27,11 @@ public class AbstractDao<T, PK extends Serializable> {
 		entityManager.merge(entity);
 	}
 
-	public void delete(PK id) {
+	public void delete(Long id) {
 		entityManager.remove(entityManager.getReference(entityClass, id));
 	}
 
-	public T findById(PK id) {
+	public T findById(Long id) {
 		return entityManager.find(entityClass, id);
 	}
 	
