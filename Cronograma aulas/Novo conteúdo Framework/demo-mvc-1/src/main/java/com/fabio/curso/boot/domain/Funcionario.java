@@ -1,11 +1,15 @@
 package com.fabio.curso.boot.domain;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
@@ -19,7 +23,11 @@ import org.springframework.format.annotation.NumberFormat.Style;
 @SuppressWarnings("serial")
 @Entity
 @Table(name = "FUNCIONARIOS")
-public class Funcionario extends AbstractEntity<Long>{
+public class Funcionario implements Serializable{
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	
 	@Column(nullable = false, unique = true)
 	private String nome;
@@ -91,6 +99,14 @@ public class Funcionario extends AbstractEntity<Long>{
 
 	public void setCargo(Cargo cargo) {
 		this.cargo = cargo;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 	
 }

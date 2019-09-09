@@ -1,15 +1,24 @@
 package com.fabio.curso.boot.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @SuppressWarnings("serial")
 @Entity
 @Table(name = "ENDERECOS")
-public class Endereco extends AbstractEntity<Long> {
+public class Endereco implements Serializable {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
 	@Column(nullable = false)
 	private String logradouro;
@@ -86,6 +95,14 @@ public class Endereco extends AbstractEntity<Long> {
 
 	public void setComplemento(String complemento) {
 		this.complemento = complemento;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 	
 }
