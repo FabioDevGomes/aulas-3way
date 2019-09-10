@@ -20,11 +20,8 @@ import com.web.model.Livro;
 @WebServlet("/ServletJSTL")
 public class ServletJSTL extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<Livro> listaLivros = new ArrayList<>();
-		
 		Livro livro = new Livro();
 		livro.setAutor("Fábio");
 		livro.setDescricao("Livro feito pelo Fábio");
@@ -50,6 +47,7 @@ public class ServletJSTL extends HttpServlet {
 		livro5.setDescricao("Livro feito pelo Fábio 3");
 		livro5.setTitulo("O Livro 3");
 		
+		List<Livro> listaLivros = new ArrayList<>();
 		listaLivros.add(livro);
 		listaLivros.add(livro2);
 		listaLivros.add(livro3);
@@ -58,10 +56,8 @@ public class ServletJSTL extends HttpServlet {
 
 		request.setAttribute("listaLivrosNoAtributo", listaLivros);
 		
-		
 		//Mantem informações "settadas" na requisção/request
-		RequestDispatcher rd = getServletContext()
-				.getRequestDispatcher("/listagemJstl.jsp");
+		RequestDispatcher rd = getServletContext().getRequestDispatcher("/listagemJstl.jsp");
 		rd.forward(request, response);
 		
 		
@@ -72,21 +68,19 @@ public class ServletJSTL extends HttpServlet {
 //		Livro livro6 = null;
 //		livro6.setAutor("");
 		
-		
 //		request.setAttribute("usuarioLogado", "Fábio Alves Gomes");
 		request.setAttribute("usuarioLogado", livro.getAutor());
 		
-		
 		HttpSession session = request.getSession();
-//	    String username = (String)request.getAttribute("un");
 	    session.setAttribute("userName", "username na sessÃ£o direto do servlet");
-		
-		
 	    
 	    //Perde informações "settadas" na requisção/request
 //	    response.sendRedirect("/servlet-jsp-v2/listagemJstl.jsp");
-		
 	}
+	
+	
+	
+	
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);

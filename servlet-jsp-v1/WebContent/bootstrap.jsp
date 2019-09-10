@@ -4,31 +4,23 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>Página Nome Profissão</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<script type="text/javascript">
-		function buscar(varNome){
-		//	alert(varNome);
-			alert(varNome.value);
-		}
-
-	</script>
 </head>
 <body>
 	<div class="col-sm-6">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Cadastro</div>
 			<div class="panel-body">
-				<!--<form method="post" action="">-->
-				<form onsubmit="buscar(nome)">
+				<form action="helloServlet">
 					<fieldset>
 						<div class="form-group">
-							<label>Nome Completo</label> 
+							<label>Nome</label> 
 							<input type="text" class="form-control" name="nome">
 						</div>
 						<div class="form-group">
-							<label>Usuário</label> 
-							<input type="text" class="form-control"	name="nome2">
+							<label>Profissão</label> 
+							<input type="text" class="form-control"	name="profissao">
 						</div>
 					</fieldset>
 					<input type="submit" name="Salvar" class="btn btn-primary">
