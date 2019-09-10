@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+    <h:outputStylesheet library="css" name="bootstrap.min.css" />
+    <title>JSF CRUD Example</title>
+    <style type="text/css">
+        .updateBtnStyle {
+        	width: 80px !important;        	
+        }
+    </style>
+</h:head>
+<h:body>
+        <h:form id="form" class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-2"></div>
+                <h2 style="text-align: center" class="col-sm-4">Edit Student Record</h2>
+            </div>
+            <hr/>
+            <div class="form-group">
+                <h:outputLabel for="username" class="control-label col-sm-2">User Name:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="name-id" value="#{editRecordObj.name}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="email" class="control-label col-sm-2">Email:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="email-id" value="#{editRecordObj.email}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="password" class="control-label col-sm-2">Password:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputSecret id="password-id" value="#{editRecordObj.password}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="gender" class="control-label col-sm-2">Gender:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:selectOneRadio value="#{editRecordObj.gender}">
+                        <f:selectItem itemValue="M" itemLabel="Male" /><f:selectItem itemValue="F" itemLabel="Female" />
+                    </h:selectOneRadio>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="address" class="control-label col-sm-2">Address:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputTextarea value="#{editRecordObj.address}" cols="50" rows="5" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
+                    <h:commandButton value="Update" action="#{studentBean.updateStudentDetails(editRecordObj)}" class="btn btn-primary updateBtnStyle" />
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>
