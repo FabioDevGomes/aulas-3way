@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Tela de Listagem com JSTL</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	</head>
 	<body>
-		<table>
-	<%-- 		<c:forEach items="${listaLivrosNoAtributo}" var="livro"> --%>
+		<table class="table table-striped">
 			<c:forEach items="${requestScope.listaLivrosNoAtributo}" var="livro">
 				<tr>
 					<td><c:out value="${livro.titulo}"></c:out></td>
@@ -16,12 +16,5 @@
 				</tr>
 			</c:forEach>
 		</table>
-		<c:set var="operacao" scope="session" value="${4000*4}"/>  
-		<c:out value="${operacao}"/>  
-		
-		<c:set var="usuario" scope="session" value="${requestScope.usuarioLogado}"/>
-		<c:out value="${usuario}"/>  
-		
-		<c:out value="${sessionScope.userName}"/>  
 	</body>
 </html>

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <html>
 	<head>
-		<title>Chamar tela de listagem com JSTL</title>
+		<title>Chamada para tela de listagem com JSTL</title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	</head>
 	<body>
