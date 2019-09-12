@@ -5,7 +5,7 @@ import java.util.List;
 import com.framework.dao.PessoaDao;
 import com.framework.model.Pessoa;
 
-public class TestaDAO {
+public class TestaPessoaDAO {
 	static PessoaDao pessoaDao = PessoaDao.getInstance();
 
 	public static void main(String[] args) {
