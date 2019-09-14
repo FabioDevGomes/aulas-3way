@@ -9,10 +9,9 @@ import javax.persistence.Persistence;
 import com.framework.model.Pessoa;
 
 public class PessoaDao {
-
-	//	Nossa classe PessoaDao segue o padrï¿½o de projeto 
-	//	Singleton que garante que apenas uma instï¿½ncia dessa 
-	//	classe serï¿½ criada durante toda a aplicaï¿½ï¿½o
+	//	Nossa classe PessoaDao segue o padrão de projeto 
+	//	Singleton que garante que apenas uma instância dessa 
+	//	classe será criada durante toda a aplicação
 	private static PessoaDao instance;
 	EntityManager entityManager;
 
@@ -24,18 +23,20 @@ public class PessoaDao {
 		if (instance == null) {
 			instance = new PessoaDao();
 		}
-
 		return instance;
 	}
 
 	private EntityManager getEntityManager() {
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory("jpa-hello");
 		if (entityManager == null) {
+			EntityManagerFactory factory = Persistence.createEntityManagerFactory("jpa-hello");
 			entityManager = factory.createEntityManager();
 		}
-
 		return entityManager;
 	}
+	
+	
+	
+	
 
 	public void persist(Pessoa pessoa) {
 		try {
@@ -51,6 +52,12 @@ public class PessoaDao {
 	public Pessoa getById(final int id) {
 		return entityManager.find(Pessoa.class, id);
 	}
+	
+	
+	
+	
+	
+	
 	
 	//	utiliza o createQuery que recebe um JPQL 
 	//	(Java Persistence Query Language) que ï¿½ uma alternativa ao SQL 
@@ -72,6 +79,10 @@ public class PessoaDao {
 			entityManager.getTransaction().rollback();
 		}
 	}
+	
+	
+	
+	
 
 	public void remove(Pessoa pessoa) {
 		try {

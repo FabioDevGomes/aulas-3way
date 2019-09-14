@@ -8,15 +8,12 @@ import com.framework.model.Pessoa;
 public class TestaPessoaDAO {
 	static PessoaDao pessoaDao = PessoaDao.getInstance();
 
+	
 	public static void main(String[] args) {
-//		implementar depois extrair para métodos
-		
 		incluirPessoa();
-//		alterarPessoa();
-//		listarTodasPessoas();
-		
+		System.out.println("testando instâncias do padrão Singleton");
 	}
-
+	
 	private static void listarTodasPessoas() {
 		List<Pessoa> todasPessoaJPA = pessoaDao.findAll();
 		for (Pessoa pessoaLaco : todasPessoaJPA) {
@@ -32,12 +29,13 @@ public class TestaPessoaDAO {
 		
 		pessoaDao.persist(pessoa);
 	}
+	
 
-	private static void alterarPessoa() {
-		Pessoa pessoaAlterar = pessoaDao.getById(2);
-		pessoaAlterar.setNome("Outro cara alterado");
-		
-		pessoaDao.merge(pessoaAlterar);
-	}
+//	private static void alterarPessoa() {
+//		Pessoa pessoaAlterar = pessoaDao.getById(2);
+//		pessoaAlterar.setNome("Outro cara alterado");
+//		
+//		pessoaDao.merge(pessoaAlterar);
+//	}
 
 }
