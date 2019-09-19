@@ -14,8 +14,8 @@ public class TestaPersistenceXML {
 		EntityManager entityManager = factory.createEntityManager();
 		
 		Pessoa pessoa = new Pessoa();
-		pessoa.setCpf("84209623253");
-		pessoa.setNome("Febio Metallica");
+		pessoa.setCpf("842.096.233-55");
+		pessoa.setNome("Fabio Metallica 2020");
 		
 		entityManager.getTransaction().begin();
 		entityManager.persist(pessoa);

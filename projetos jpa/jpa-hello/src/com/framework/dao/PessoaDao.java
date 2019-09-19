@@ -28,7 +28,8 @@ public class PessoaDao {
 
 	private EntityManager getEntityManager() {
 		if (entityManager == null) {
-			EntityManagerFactory factory = Persistence.createEntityManagerFactory("jpa-hello");
+			EntityManagerFactory factory = 
+					Persistence.createEntityManagerFactory("jpa-hello");
 			entityManager = factory.createEntityManager();
 		}
 		return entityManager;
@@ -60,14 +61,14 @@ public class PessoaDao {
 	
 	
 	//	utiliza o createQuery que recebe um JPQL 
-	//	(Java Persistence Query Language) que ï¿½ uma alternativa ao SQL 
+	//	(Java Persistence Query Language) que é uma alternativa ao SQL 
 	@SuppressWarnings("unchecked")
 	public List<Pessoa> findAll() {
 		return entityManager.createQuery("FROM " + Pessoa.class.getName()).getResultList();
 	}
 	
-	//	O mï¿½todo merge segue o mesmo princï¿½pio do mï¿½todo persist(), 
-	//	a ï¿½nica diferenï¿½a ï¿½ que o merge atualiza o registro e nï¿½o 
+	//	O método merge segue o mesmo princípio do método persist(), 
+	//	a única diferença é que o merge atualiza o registro e não 
 	//	apenas insere ele no banco
 	public void merge(Pessoa pessoa) {
 		try {
@@ -79,6 +80,10 @@ public class PessoaDao {
 			entityManager.getTransaction().rollback();
 		}
 	}
+	
+	
+	
+	
 	
 	
 	
@@ -98,7 +103,8 @@ public class PessoaDao {
 
 	public void removeById(final int id) {
 		try {
-			Pessoa pessoa = getById(id);
+			Pessoa pessoa = new Pessoa();
+			pessoa.setId(id);
 			remove(pessoa);
 		} catch (Exception ex) {
 			ex.printStackTrace();
