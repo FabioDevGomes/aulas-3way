@@ -7,14 +7,14 @@
 		<properties>
 
 			<!-- LOCAL NOTEBOOK -->
-			<!-- <property name="javax.persistence.jdbc.user" value="postgres"/> -->
-			<!-- <property name="javax.persistence.jdbc.password" value="123456"/> -->
-			<!-- <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/postgres"/> -->
+			<property name="javax.persistence.jdbc.user" value="postgres"/>
+			<property name="javax.persistence.jdbc.password" value="123456"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/postgres"/>
 
 			<!-- CAIXA -->
-			<property name="javax.persistence.jdbc.user" value="postgres" />
-			<property name="javax.persistence.jdbc.password" value="postgres" />
-			<property name="hibernate.connection.url" value="jdbc:postgresql://go7875sx018.goiania.caixa:5432/user" />
+<!-- 			<property name="javax.persistence.jdbc.user" value="postgres" /> -->
+<!-- 			<property name="javax.persistence.jdbc.password" value="postgres" /> -->
+<!-- 			<property name="hibernate.connection.url" value="jdbc:postgresql://go7875sx018.goiania.caixa:5432/user" /> -->
 
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 			<property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider" />
