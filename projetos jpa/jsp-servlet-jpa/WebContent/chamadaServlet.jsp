@@ -9,7 +9,15 @@
 			 <input type="hidden" name="action" value="listarLivros">
 			<br/>
 			<div align="center">
-			    <input type="submit" value="Chamar Servlet de listagem" class="btn btn-primary">
+			    <input type="submit" value="Chamar Servlet de listagem de Livros" class="btn btn-primary">
+			</div>
+		</form>
+		
+		<form action="pessoaController" >
+			 <input type="hidden" name="action" value="listarPessoas">
+			<br/>
+			<div align="center">
+			    <input type="submit" value="Chamar Servlet de listagem de Pessoas" class="btn btn-primary">
 			</div>
 		</form>
 	</body>
